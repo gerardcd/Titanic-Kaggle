@@ -1,0 +1,215 @@
+---
+title: "data_cleaning"
+author: "Gerard Cegarra Dueñas"
+date: "December 27, 2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r libraries, include=FALSE, echo=FALSE}
+#install.packages("withr")
+#install.packages("mice")
+#install.packages("dyplr")
+#install.packages("stringr")
+#install.packages("MASS")
+#install.packages("VIM")
+#install.packages("glue")
+library(dplyr)
+library(stringr)
+library(mice)
+library(MASS)
+library(VIM)
+library(glue)
+library(nortest)
+```
+
+# 1. Descripció del dataset
+# 2. Integració i selecció de les dades
+
+Es mostren el resum de les dades i el tipus de cada variable.
+
+```{r data_reading}
+train <- read.csv("data/train.csv", stringsAsFactors = FALSE)
+test <- read.csv("data/test.csv", stringsAsFactors = FALSE)
+
+data <- bind_rows(train, test)
+summary(data)
+sapply(data, class)
+```
+
+Es pot observar com les variables `Cabin` i `Embarked` tenen valors buits representats per un string buit. De manera anàloga, la variable `Fare` conté valors `0` que també es poden entendre com a valors buits. Aquests valors se substitueixen de moment per `NA`.
+
+```{r nas}
+data$Cabin[data$Cabin == ""] <- NA
+data$Embarked[data$Embarked == ""] <- NA
+data$Fare[data$Fare == 0] <- NA
+```
+
+## 2.1. Creació de nous atributs
+
+En aquest apartat es creen nous atributs a partir de la manipulació de variables ja existents en el conjunt de dades. De la variable `Name`, es pot extreure el títol de la persona (`Title`) i el seu cognom (`FamilyName`). A partir de les variables `Parch`i `SibSp`, es pot calcular el total del nombre de familiars a bord de cadascún dels passatgers (`FamilySize`). Agafant la primera lletra de la variable `Cabin`, es pot extreure la coberta a la qual estava ubicada la cabina del passatger. Finalment, a partir de la variable `Ticket`es poden extreure categories que informen sobre l'origen de compra del tiquet del passatger.
+
+```{r new_attributes}
+
+get_family_name <- function(row){
+  str_split(row["Name"], ", ")[[1]][1]
+}
+get_family_size <- function(row){
+  as.numeric(row["Parch"]) + as.numeric(row["SibSp"]) + 1
+}
+get_title <- function(row){
+  str_replace(str_split(row["Name"], "[,.]")[[1]][2], " ", "")
+}
+get_cabin_letter <- function(row){
+  if (is.na(row["Cabin"])) return(NA)
+  return(substr(row["Cabin"], 1, 1))
+}
+get_ticket_src <- function(row){
+  ticket <- row["Ticket"]
+  
+  if (!is.na(as.numeric(ticket))){
+    return('N')
+  }
+  
+  ticket <- trim(str_replace(ticket, "[./]", ""))
+  
+  return(substr(ticket, 1, 1))
+}
+get_cabin_rooms <- function(row){
+  if (is.na(row["Cabin"])) return(0)
+  return(length(str_split(row["Cabin"], " ")[[1]]))
+}
+get_cabin_fare <- function(row){
+  if (is.na(row["Cabin"])) return(row["Fare"])
+  return(as.numeric(row["Fare"]) / as.numeric(row["CabinRooms"]))
+}
+get_ticket_fare <- function(row){
+  pass <- data$Fare[data$Ticket == row["Ticket"]]
+  return(
+    sum(pass) / max(as.numeric(row["CabinRooms"]), 1)
+  )
+}
+
+data$FamilyName <- apply(data, FUN=get_family_name, MARGIN=1)
+data$FamilySize <- apply(data, FUN=get_family_size, MARGIN=1)
+data$Title <- apply(data, FUN=get_title, MARGIN=1)
+data$CabinLetter <- apply(data, FUN=get_cabin_letter, MARGIN=1)
+data$TicketSrc <- as.factor(apply(data, FUN=get_ticket_src, MARGIN=1))
+
+data$CabinRooms <- apply(data, FUN=get_cabin_rooms, MARGIN=1)
+data$CabinFare <- as.numeric(apply(data, FUN=get_cabin_fare, MARGIN=1))
+data$TicketFare <- as.numeric(apply(data, FUN=get_ticket_fare, MARGIN=1))
+head(data)
+```
+
+## 2.2. Discretització i normalització de les variables
+
+A continuació s'afegeixen algunes variables noves més, fruit de la discretització dels valors de les variables `Age` i `FamilySize`. Aquestes variables seran creades com a factors per a poder usar-les en els mètodes d'anàlisi posteriors. En el cas de la variable `Pclass`, mantenir els seus valors numèrics és una opció correcte ja que les diferents categories mantenen una relació ordenada entre elles.
+
+```{r discretization}
+data$AgeCat <- as.factor(cut(data$Age, c(0, 20, 60, 80), c("young", "adult", "senior")))
+data$FamilySizeCat <- as.factor(cut(data$FamilySize, c(0, 1, 3, 11), c("single", "medium", "large")))
+```
+
+Quant a la variable `Title`, els títols menys representats s'afegiran a una nova categoria `Other`.
+
+```{r other_titles}
+summary(factor(data$Title))
+data$TitleCat <- data$Title
+data$TitleCat[!(data$TitleCat %in% c("Master", "Miss", "Mrs", "Mr"))] <- "Other"
+data$TitleCat <- as.factor(data$TitleCat)
+summary(data$TitleCat)
+```
+
+## 3.1. Valors buits
+
+En primer lloc, els registres amb el valor `NA` a les variables `Cabin` i `CabinLetter` representen passatgers sense una habitació assignada. Es crea una categoria `N` per a la variable `CabinLetter` que indica aquesta situació.
+
+```{r cabin_na}
+data$Cabin[is.na(data$Cabin)] <- 'N'
+data$CabinLetter[is.na(data$CabinLetter)] <- 'N'
+```
+
+A continuació es mostra el nombre de valors buits per cada variable del dataset. Les variables `Age` i `AgeCat`, `Fare` i `Embarked` presenten valors buits, a part de la variable a predir `Survived`.
+
+```{r nulls}
+sapply(data, function(x) sum(is.na(x)))
+```
+
+Quant a l'edat dels passatgers, la imputació de valors es farà a la variable `AgeCat`, ja que és la variable que s'utilitzarà posteriorment per a l'anàlisi, i a més, a l'estar categoritzada per franges, la imputació afegirà menys soroll.
+
+Els passatgers amb l'edat no informada i que tenen el títol `Master` es poden imputar amb la categoria `young`, ja que aquest títol s'utilitza per als nens amb edat inferior o igual a 11 anys.
+
+```{r young_imputation}
+data$AgeCat[is.na(data$Age) & data$Title == "Master"] <- "young"
+```
+
+Per als valors de la variable `AgeCat` de la resta de registres, així com també per a les variables `Fare` i `Embarked`, s'utilitza l'algorisme kNN com a mètode d'imputació. Les variables amb valors únics no seran utilitzades com a referència durant la imputació. Tampoc les versions originals d'aquelles variables que hagin sigut categoritzades. Es descarta també la variable `Survived`, ja que no és present a les dades de test.
+
+```{r knn_imputation}
+
+data <- kNN(
+  data,
+  variable = c("AgeCat", "Fare", "Embarked"),
+  dist_var = c("Pclass", "Sex", "SibSp", "Parch", "Ticket", "CabinLetter", "FamilySizeCat", "TitleCat", "TicketSrc"),
+  k = 10
+)
+```
+
+## 3.2 Valors extrems
+
+L'única variable que pot presentar valors extrems és la variable `Fare`, ja que els valors de la resta de variables numériques cauen dins un rang raonable segons el coneixement que tenim del domini. A continuació es mostra el diagrama de caixes de la variable `Fare` per a tots els registres, i també separats per classe.
+
+```{r outliers}
+
+par(mfrow=c(2, 2))
+bpt <- boxplot(data$Fare, xlab="Totes les classes", ylab="Fare")
+bp1 <- boxplot(data$Fare[data$Pclass == 1], xlab="Primera classe", ylab="Fare")
+bp2 <- boxplot(data$Fare[data$Pclass == 2], xlab="Segona classe", ylab="Fare")
+bp3 <- boxplot(data$Fare[data$Pclass == 3], xlab="Tercera classe", ylab="Fare")
+length(bpt$out); length(bp1$out); length(bp2$out); length(bp3$out)
+```
+
+Segons la regla intercuartílica, en prendre els valors de la variable `Fare` de tot el conjunt de dades, 172 d'aquests valors es podrien considerar atípics, ja que s'allunyen més de 3 desviacions estàndard de la mitjana. Tot i això, en prendre els valors separats per classe, el total de valors que es podrien considerar com a valors extrems es redueix a 102, distribuits entre 29, 12 i 65 entre la primera, segona i tercera classe respectivament. Aquests registres no s'exclouran del conjunt de dades per al posterior anàlisi, ja que la desviació dels seus valors no semblen desorbitats donada la distribució de la variable i no es pot assegurar que siguin errors de mesura.
+
+# 4. Anàlisi de les dades
+
+
+## 4.1. Selecció de les dades
+
+L'objectiu d'aquest estudi és estimar la probabilitat de supervivència dels passatgers del conjunt de dades de test. 
+
+### 4.1.1 Comprovació de normalitat
+
+En aquest apartat, es comprova la normalitat de les variables numèriques que seran usades per a la predicció de la variable `Survived`. La variable `Fare` sembla presentar una distribució exponencial inversa, tal i com es pot veure a la següent visualització, i per tant, la comprovació de normalitat es dura a terme sobre la transformació logarítmica d'aquesta variable.
+
+```{r fare_dist}
+par(mfrow=c(1,2))
+hist(data$Fare, xlab="Totes les classes", ylab="Fare")
+hist(log(data$Fare), xlab="Totes les classes", ylab="Fare")
+```
+
+El test de normalitat sobre la distribució de les dades es du a terme mitjançant el test de Lilliefors. En tots els casos, el p-valor resultant del test és practicament 0, de manera que es pot rebutjar la hipòtesi nul·la de que els valors han sigut mesurats d'una distribució normal per a totes les variables.
+
+```{r normality_test}
+lillie.test(log(data$Fare))
+lillie.test(data$Age)
+lillie.test(data$Parch)
+lillie.test(data$SibSp)
+lillie.test(data$FamilySize)
+```
+
+### 4.1.2 Tests d'hipòtesis i comparació de distribucions
+
+A continuació es comparen les distribucions de les variables del conjunt d'entrenament sota una separació en dos grups dels registres per la variable `Survived`. Per cadascuna de les variables numèriques, es duen a terme tests d'hipòtesis sobre la mitjana poblacional dels dos grups. Per a les variables categoriques, es comprova si hi ha una diferència estadisticament significativa entre la distribució poblacional de les categories respecte els dos grups.
+
+Per a poder aplicar els test d'hiòtesis sobre les variables numèriques, cal demostrar la normalitat de la mitjana mostral i la homoscedasticitat de les mostres. Tot i hem comprovat que no es pot assumir la distribució normal en la població de les variables numèriques, podem assumir pel Teorema Central del Límit que la mitjana mostral d'aquestes sí que tindrà una distribució normal, donat que la mida de la mostra és prou gran. 
+
+
+
+
+
+
