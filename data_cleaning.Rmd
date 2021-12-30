@@ -184,7 +184,7 @@ L'objectiu d'aquest estudi és estimar la probabilitat de supervivència dels pa
 
 ### 4.1.1 Comprovació de normalitat
 
-En aquest apartat, es comprova la normalitat de les variables numèriques que seran usades per a la predicció de la variable `Survived`. La variable `Fare` sembla presentar una distribució exponencial inversa, tal i com es pot veure a la següent visualització, i per tant, la comprovació de normalitat es dura a terme sobre la transformació logarítmica d'aquesta variable.
+En aquest apartat, es comprova la normalitat de les variables numèriques que seran usades per a la predicció de la variable `Survived`. La variable `Fare` sembla presentar una distribució exponencial inversa, tal i com es pot veure a la següent visualització, i per tant, la comprovació de normalitat es dura a terme també sobre la transformació logarítmica d'aquesta variable.
 
 ```{r fare_dist}
 par(mfrow=c(1,2))
@@ -195,21 +195,51 @@ hist(log(data$Fare), xlab="Totes les classes", ylab="Fare")
 El test de normalitat sobre la distribució de les dades es du a terme mitjançant el test de Lilliefors. En tots els casos, el p-valor resultant del test és practicament 0, de manera que es pot rebutjar la hipòtesi nul·la de que els valors han sigut mesurats d'una distribució normal per a totes les variables.
 
 ```{r normality_test}
-lillie.test(log(data$Fare))
-lillie.test(data$Age)
-lillie.test(data$Parch)
-lillie.test(data$SibSp)
-lillie.test(data$FamilySize)
+numVars <- c("Fare", "Age", "Parch", "SibSp", "FamilySize")
+
+print("Lilliefors p-value:")
+
+cat("Log(Fare): ")
+cat(lillie.test(log(data$Fare))$p.value); cat("\n")
+
+for (var in numVars){
+  cat(var); cat(": ")
+  cat(lillie.test(data[[var]])$p.value); cat("\n")
+}
 ```
 
 ### 4.1.2 Tests d'hipòtesis i comparació de distribucions
 
 A continuació es comparen les distribucions de les variables del conjunt d'entrenament sota una separació en dos grups dels registres per la variable `Survived`. Per cadascuna de les variables numèriques, es duen a terme tests d'hipòtesis sobre la mitjana poblacional dels dos grups. Per a les variables categoriques, es comprova si hi ha una diferència estadisticament significativa entre la distribució poblacional de les categories respecte els dos grups.
 
-Per a poder aplicar els test d'hiòtesis sobre les variables numèriques, cal demostrar la normalitat de la mitjana mostral i la homoscedasticitat de les mostres. Tot i hem comprovat que no es pot assumir la distribució normal en la població de les variables numèriques, podem assumir pel Teorema Central del Límit que la mitjana mostral d'aquestes sí que tindrà una distribució normal, donat que la mida de la mostra és prou gran. 
+Per a poder aplicar els test d'hiòtesis sobre les variables numèriques, cal demostrar la normalitat de la mitjana mostral i la homoscedasticitat de les mostres. Tot i hem comprovat que no es pot assumir la distribució normal de la població de les variables numèriques, podem assumir pel Teorema Central del Límit que la mitjana mostral d'aquestes sí que tindrà una distribució normal, donat que la mida de la mostra és prou gran. Quant a la comprovació de la igualtat de variancies, es realitza el test sobre les dues mostres de cada variable.
 
+```{r var_test}
+dataS0 <- data[data$Survived == 0, ]
+dataS1 <- data[data$Survived == 1, ]
 
+print("F test on variance p-value:")
+for (var in numVars){
+  cat(var); cat(": ")
+  cat(var.test(dataS0[[var]], dataS1[[var]])$p.value); cat("\n")
+}
+```
 
+Les mostres de les variables `Age` i `Parch` semblen presentar una variància igual sota un interval de confiança del 95%. En el cas de les variables `Fare`, `SibSp` i `FamilySize`, no hi ha homoscedasticitat. Amb aquesta informació, es realitzen els test de contrast d'hipòtesis sobre la mitjana.
 
+```{r test_contrast}
+homVars <- c(F, T, T, F, F)
 
+print("Welch Two Sample t-test p-values:")
+i=1
+for (var in numVars){
+  cat(var); cat(": ")
+  t <- t.test(dataS0[[var]], dataS1[[var]], var.equal=homVars[i])
+  cat("p-value: "); cat(t$p.value); cat("\n")
+  cat("estimate: "); cat(t$estimate); cat("\n")
+  i <- i + 1
+}
+```
+
+Amb un nivell de confiança del 95%, no es pot descartar la hipòtesi nul·la de que les mitjanes mostrals de les variables `SibSp` i `FamilySize` son iguals, entre els grups de passatgers que sobreviuen i els que no. Les variables `Age` i `Parch` sí que semblen mostrar una diferència significativa tot i que no podriem assumir-la amb un interval de confiança del 99%. Les mitjanes estimades ens indiquen que els sobrevivents són una mica més joves en mitana i tenen més parents a bord del tipus pare/fill. En el cas de la variable `Fare`, la diferència és molt significativa amb un p-valor pròxim a 0 i unes mitjanes estimades que indiquen que els sobrevivents van pagar, en mitjana, un preu més de dues vegades superior.
 
