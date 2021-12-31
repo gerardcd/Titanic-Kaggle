@@ -17,6 +17,9 @@ knitr::opts_chunk$set(echo = TRUE)
 #install.packages("MASS")
 #install.packages("VIM")
 #install.packages("glue")
+#install.packages("varhandle")
+#install.packages("pROC")
+#install.packages("caret")
 library(dplyr)
 library(stringr)
 library(mice)
@@ -24,6 +27,9 @@ library(MASS)
 library(VIM)
 library(glue)
 library(nortest)
+library(varhandle)
+library(pROC)
+library(caret)
 ```
 
 # 1. Descripció del dataset
@@ -34,6 +40,9 @@ Es mostren el resum de les dades i el tipus de cada variable.
 ```{r data_reading}
 train <- read.csv("data/train.csv", stringsAsFactors = FALSE)
 test <- read.csv("data/test.csv", stringsAsFactors = FALSE)
+
+train$Train <- TRUE
+test$Train <- FALSE
 
 data <- bind_rows(train, test)
 summary(data)
@@ -70,7 +79,7 @@ get_cabin_letter <- function(row){
 get_ticket_src <- function(row){
   ticket <- row["Ticket"]
   
-  if (!is.na(as.numeric(ticket))){
+  if (check.numeric(ticket)){
     return('N')
   }
   
@@ -102,6 +111,9 @@ data$TicketSrc <- as.factor(apply(data, FUN=get_ticket_src, MARGIN=1))
 data$CabinRooms <- apply(data, FUN=get_cabin_rooms, MARGIN=1)
 data$CabinFare <- as.numeric(apply(data, FUN=get_cabin_fare, MARGIN=1))
 data$TicketFare <- as.numeric(apply(data, FUN=get_ticket_fare, MARGIN=1))
+```
+
+```{r head_data}
 head(data)
 ```
 
@@ -153,7 +165,7 @@ Per als valors de la variable `AgeCat` de la resta de registres, així com tamb�
 
 data <- kNN(
   data,
-  variable = c("AgeCat", "Fare", "Embarked"),
+  variable = c("Embarked", "Fare", "AgeCat"),
   dist_var = c("Pclass", "Sex", "SibSp", "Parch", "Ticket", "CabinLetter", "FamilySizeCat", "TitleCat", "TicketSrc"),
   k = 10
 )
@@ -182,6 +194,8 @@ Segons la regla intercuartílica, en prendre els valors de la variable `Fare` de
 
 L'objectiu d'aquest estudi és estimar la probabilitat de supervivència dels passatgers del conjunt de dades de test. 
 
+FALTA ACABAR
+
 ### 4.1.1 Comprovació de normalitat
 
 En aquest apartat, es comprova la normalitat de les variables numèriques que seran usades per a la predicció de la variable `Survived`. La variable `Fare` sembla presentar una distribució exponencial inversa, tal i com es pot veure a la següent visualització, i per tant, la comprovació de normalitat es dura a terme també sobre la transformació logarítmica d'aquesta variable.
@@ -208,7 +222,7 @@ for (var in numVars){
 }
 ```
 
-### 4.1.2 Tests d'hipòtesis i comparació de distribucions
+### 4.1.2 Tests d'hipòtesis continues
 
 A continuació es comparen les distribucions de les variables del conjunt d'entrenament sota una separació en dos grups dels registres per la variable `Survived`. Per cadascuna de les variables numèriques, es duen a terme tests d'hipòtesis sobre la mitjana poblacional dels dos grups. Per a les variables categoriques, es comprova si hi ha una diferència estadisticament significativa entre la distribució poblacional de les categories respecte els dos grups.
 
@@ -241,5 +255,52 @@ for (var in numVars){
 }
 ```
 
-Amb un nivell de confiança del 95%, no es pot descartar la hipòtesi nul·la de que les mitjanes mostrals de les variables `SibSp` i `FamilySize` son iguals, entre els grups de passatgers que sobreviuen i els que no. Les variables `Age` i `Parch` sí que semblen mostrar una diferència significativa tot i que no podriem assumir-la amb un interval de confiança del 99%. Les mitjanes estimades ens indiquen que els sobrevivents són una mica més joves en mitana i tenen més parents a bord del tipus pare/fill. En el cas de la variable `Fare`, la diferència és molt significativa amb un p-valor pròxim a 0 i unes mitjanes estimades que indiquen que els sobrevivents van pagar, en mitjana, un preu més de dues vegades superior.
+Amb un nivell de confiança del 95%, no es pot descartar la hipòtesi nul·la de que les mitjanes mostrals de les variables `SibSp` i `FamilySize` son iguals entre els grups de passatgers que sobreviuen i els que no. Les variables `Age` i `Parch` sí que semblen mostrar una diferència significativa tot i que no podriem assumir-la amb un interval de confiança del 99%. Les mitjanes estimades ens indiquen que els sobrevivents són una mica més joves en mitana i tenen més parents a bord del tipus pare/fill. En el cas de la variable `Fare`, la diferència és molt significativa amb un p-valor pròxim a 0 i unes mitjanes estimades que indiquen que els sobrevivents van pagar, en mitjana, un preu més de dues vegades superior.
 
+### 4.1.3 Tests d'hipòtesis categoriques
+
+INTRODUCCIÓ
+
+```{r chisq_test}
+catVars <- c("Sex", "Embarked", "CabinLetter", "TicketSrc", "AgeCat", "FamilySizeCat", "TitleCat")
+
+print("Chi squred test p-value:")
+for (var in catVars){
+  cat(var); cat(": ")
+  t <- table(data$Survived, as.factor(data[[var]]))
+  cat(chisq.test(t)$p.value); cat("\n")
+}
+```
+
+## 4.3. Regressió
+
+INTRODUCCIÓ
+
+```{r regression}
+regVars <- c("Survived", "Fare", "Parch", "SibSp", "Sex", "Embarked", "CabinLetter", "TicketSrc", "AgeCat", "FamilySizeCat", "TitleCat")
+
+train <- data[data$Train <- TRUE, regVars]
+
+for (var in catVars){
+  train[[var]] <- as.factor(train[[var]])
+}
+
+n <- nrow(train)
+ntrain <- round(n * 0.8)
+ntest <- n - ntrain
+
+t_train <- train[1:ntrain,]
+t_test <- train[ntrain:n,]
+
+model <- glm(t_train$Survived ~ t_train$Fare + t_train$Parch + t_train$SibSp + as.factor(t_train$Sex) + as.factor(t_train$Embarked) + as.factor(t_train$CabinLetter) + as.factor(t_train$TicketSrc) + as.factor(t_train$AgeCat) + as.factor(t_train$FamilySizeCat) + as.factor(t_train$TitleCat))
+
+summary(model)
+prob <- predict(model, t_test, type="response")
+#r <- roc(model, prob, data=train)
+#plot(r)
+
+precision <- posPredValue(prob, t_test$Survived, positive="1")
+recall <- sensitivity(prob, t_test$Survived, positive="1")
+
+F1 <- (2 * precision * recall) / (precision + recall)
+```
