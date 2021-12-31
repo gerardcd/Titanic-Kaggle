@@ -20,6 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
 #install.packages("varhandle")
 #install.packages("pROC")
 #install.packages("caret")
+#install.packages("ResourceSelection")
 library(dplyr)
 library(stringr)
 library(mice)
@@ -30,12 +31,14 @@ library(nortest)
 library(varhandle)
 library(pROC)
 library(caret)
+library(ResourceSelection)
+library(e1071)
 ```
 
 # 1. Descripció del dataset
 # 2. Integració i selecció de les dades
 
-Es mostren el resum de les dades i el tipus de cada variable.
+Es mostren el resum de les dades i el tipus de cada variable. Les dades de tipus text no es transformen a factors de moment per a poder-les manipular amb més facilitat. El conjunt de dades d'entrenament i de test es combinen en un únic conjunt amb una columna addicional `Train` que indica la procedencia de cada registre.
 
 ```{r data_reading}
 train <- read.csv("data/train.csv", stringsAsFactors = FALSE)
@@ -49,7 +52,7 @@ summary(data)
 sapply(data, class)
 ```
 
-Es pot observar com les variables `Cabin` i `Embarked` tenen valors buits representats per un string buit. De manera anàloga, la variable `Fare` conté valors `0` que també es poden entendre com a valors buits. Aquests valors se substitueixen de moment per `NA`.
+Es pot observar com les variables `Cabin` i `Embarked` tenen valors buits representats per un string buit. De manera anàloga, la variable `Fare` conté valors `0` que també es poden entendre com a valors buits. Aquests valors se substitueixen per `NA`.
 
 ```{r nas}
 data$Cabin[data$Cabin == ""] <- NA
@@ -59,7 +62,7 @@ data$Fare[data$Fare == 0] <- NA
 
 ## 2.1. Creació de nous atributs
 
-En aquest apartat es creen nous atributs a partir de la manipulació de variables ja existents en el conjunt de dades. De la variable `Name`, es pot extreure el títol de la persona (`Title`) i el seu cognom (`FamilyName`). A partir de les variables `Parch`i `SibSp`, es pot calcular el total del nombre de familiars a bord de cadascún dels passatgers (`FamilySize`). Agafant la primera lletra de la variable `Cabin`, es pot extreure la coberta a la qual estava ubicada la cabina del passatger. Finalment, a partir de la variable `Ticket`es poden extreure categories que informen sobre l'origen de compra del tiquet del passatger.
+En aquest apartat es creen nous atributs a partir de la manipulació de variables ja existents en el conjunt de dades. De la variable `Name`, es pot extreure el títol de la persona (`Title`) i el seu cognom (`FamilyName`). A partir de les variables `Parch`i `SibSp`, es pot calcular el total del nombre de familiars a bord de cadascún dels passatgers (`FamilySize`). Agafant la primera lletra de la variable `Cabin`, es pot extreure la coberta a la qual estava ubicada la cabina del passatger. Finalment, a partir de la variable `Ticket` es poden extreure categories que informen sobre el venedor del tiquet del passatger.
 
 ```{r new_attributes}
 
@@ -87,31 +90,15 @@ get_ticket_src <- function(row){
   
   return(substr(ticket, 1, 1))
 }
-get_cabin_rooms <- function(row){
-  if (is.na(row["Cabin"])) return(0)
-  return(length(str_split(row["Cabin"], " ")[[1]]))
-}
-get_cabin_fare <- function(row){
-  if (is.na(row["Cabin"])) return(row["Fare"])
-  return(as.numeric(row["Fare"]) / as.numeric(row["CabinRooms"]))
-}
-get_ticket_fare <- function(row){
-  pass <- data$Fare[data$Ticket == row["Ticket"]]
-  return(
-    sum(pass) / max(as.numeric(row["CabinRooms"]), 1)
-  )
-}
 
 data$FamilyName <- apply(data, FUN=get_family_name, MARGIN=1)
 data$FamilySize <- apply(data, FUN=get_family_size, MARGIN=1)
 data$Title <- apply(data, FUN=get_title, MARGIN=1)
 data$CabinLetter <- apply(data, FUN=get_cabin_letter, MARGIN=1)
 data$TicketSrc <- as.factor(apply(data, FUN=get_ticket_src, MARGIN=1))
-
-data$CabinRooms <- apply(data, FUN=get_cabin_rooms, MARGIN=1)
-data$CabinFare <- as.numeric(apply(data, FUN=get_cabin_fare, MARGIN=1))
-data$TicketFare <- as.numeric(apply(data, FUN=get_ticket_fare, MARGIN=1))
 ```
+
+Es mostren les primeres files del conjunt de dades per a il·lustrar els atributs creats.
 
 ```{r head_data}
 head(data)
@@ -119,7 +106,7 @@ head(data)
 
 ## 2.2. Discretització i normalització de les variables
 
-A continuació s'afegeixen algunes variables noves més, fruit de la discretització dels valors de les variables `Age` i `FamilySize`. Aquestes variables seran creades com a factors per a poder usar-les en els mètodes d'anàlisi posteriors. En el cas de la variable `Pclass`, mantenir els seus valors numèrics és una opció correcte ja que les diferents categories mantenen una relació ordenada entre elles.
+A continuació s'afegeixen algunes variables noves més, fruit de la discretització dels valors de les variables `Age` i `FamilySize`. Aquestes variables seran creades com a factors per a poder usar-les en els mètodes d'anàlisi posteriors. En el cas de la variable `Pclass`, mantenir els seus valors numèrics és una opció correcte, ja que les diferents categories mantenen una relació ordenada entre elles.
 
 ```{r discretization}
 data$AgeCat <- as.factor(cut(data$Age, c(0, 20, 60, 80), c("young", "adult", "senior")))
@@ -138,20 +125,20 @@ summary(data$TitleCat)
 
 ## 3.1. Valors buits
 
-En primer lloc, els registres amb el valor `NA` a les variables `Cabin` i `CabinLetter` representen passatgers sense una habitació assignada. Es crea una categoria `N` per a la variable `CabinLetter` que indica aquesta situació.
+En primer lloc, els registres amb el valor `NA` a les variables `Cabin` i `CabinLetter` representen passatgers sense una cabina assignada. Es crea una categoria `N` per a les variables `Cabin` i `CabinLetter` que indiquen aquesta situació.
 
 ```{r cabin_na}
 data$Cabin[is.na(data$Cabin)] <- 'N'
 data$CabinLetter[is.na(data$CabinLetter)] <- 'N'
 ```
 
-A continuació es mostra el nombre de valors buits per cada variable del dataset. Les variables `Age` i `AgeCat`, `Fare` i `Embarked` presenten valors buits, a part de la variable a predir `Survived`.
+A continuació es mostra el nombre de valors buits per cada variable del dataset. Les variables `Age` i `AgeCat`, `Fare` i `Embarked` presenten valors buits, a part de la variable a predir `Survived` en el conjunt de test.
 
 ```{r nulls}
 sapply(data, function(x) sum(is.na(x)))
 ```
 
-Quant a l'edat dels passatgers, la imputació de valors es farà a la variable `AgeCat`, ja que és la variable que s'utilitzarà posteriorment per a l'anàlisi, i a més, a l'estar categoritzada per franges, la imputació afegirà menys soroll.
+Quant a l'edat dels passatgers, la imputació de valors es farà a la variable `AgeCat`, que és la variable que s'utilitzarà posteriorment per a l'anàlisi, i a més, a l'estar categoritzada per franges la imputació afegirà menys soroll.
 
 Els passatgers amb l'edat no informada i que tenen el títol `Master` es poden imputar amb la categoria `young`, ja que aquest títol s'utilitza per als nens amb edat inferior o igual a 11 anys.
 
@@ -159,7 +146,7 @@ Els passatgers amb l'edat no informada i que tenen el títol `Master` es poden i
 data$AgeCat[is.na(data$Age) & data$Title == "Master"] <- "young"
 ```
 
-Per als valors de la variable `AgeCat` de la resta de registres, així com també per a les variables `Fare` i `Embarked`, s'utilitza l'algorisme kNN com a mètode d'imputació. Les variables amb valors únics no seran utilitzades com a referència durant la imputació. Tampoc les versions originals d'aquelles variables que hagin sigut categoritzades. Es descarta també la variable `Survived`, ja que no és present a les dades de test.
+Per als valors de la variable `AgeCat` de la resta de registres, així com per a les variables `Fare` i `Embarked`, s'utilitza l'algorisme kNN com a mètode d'imputació. Les variables amb valors únics no seran utilitzades com a referència durant la imputació. Tampoc les versions originals d'aquelles variables que hagin sigut categoritzades. Es descarta també la variable `Survived`, ja que no és present a les dades de test. L'ordre d'imputació de les variables es defineix de forma ascendent pel nombre de valors buits de cada variable. Com que els valors imputats d'una variable s'utilitzen pel càlcul de la següent, seguint aquest ordre minimitzem el soroll que les variables amb més valors buits afegeixen a la resta.
 
 ```{r knn_imputation}
 
@@ -185,28 +172,35 @@ bp3 <- boxplot(data$Fare[data$Pclass == 3], xlab="Tercera classe", ylab="Fare")
 length(bpt$out); length(bp1$out); length(bp2$out); length(bp3$out)
 ```
 
-Segons la regla intercuartílica, en prendre els valors de la variable `Fare` de tot el conjunt de dades, 172 d'aquests valors es podrien considerar atípics, ja que s'allunyen més de 3 desviacions estàndard de la mitjana. Tot i això, en prendre els valors separats per classe, el total de valors que es podrien considerar com a valors extrems es redueix a 102, distribuits entre 29, 12 i 65 entre la primera, segona i tercera classe respectivament. Aquests registres no s'exclouran del conjunt de dades per al posterior anàlisi, ja que la desviació dels seus valors no semblen desorbitats donada la distribució de la variable i no es pot assegurar que siguin errors de mesura.
+Segons la regla intercuartílica, en prendre els valors de la variable `Fare` de tot el conjunt de dades, 174 d'aquests valors es podrien considerar atípics, ja que s'allunyen més de 3 desviacions estàndard de la mitjana. Tot i això, en prendre els valors separats per classe, el total de valors que es podrien considerar com a valors extrems es redueix a 102, distribuits entre 29, 12 i 65 entre la primera, segona i tercera classe respectivament. Aquests registres no s'exclouran del conjunt de dades per al posterior anàlisi perquè la desviació dels seus valors no semblen desorbitats donada la distribució de la variable i no es pot assegurar que siguin errors de mesura.
 
 # 4. Anàlisi de les dades
 
+L'objectiu d'aquest estudi és estimar la probabilitat de supervivència dels passatgers del conjunt de dades de test. També es duen a terme proves de contrast d'hipòtesis de les variables principals sobre la seva distribució al voltant de la variable `Survived`.
 
 ## 4.1. Selecció de les dades
 
-L'objectiu d'aquest estudi és estimar la probabilitat de supervivència dels passatgers del conjunt de dades de test. 
+De totes les variables del conjunt, s'estudiaran les següents:
+* Numèriques: `Age`, `SibSp`, `Parch`, `Fare` i `FamilySize`.  
+* Categòriques: `Survived`, `Pclass`, `Sex`, `Embarked`, `CabinLetter`, `TicketSrc`, `AgeCat`, `FamilySizeCat` i `TitleCat`.
 
-FALTA ACABAR
+## 4.2 Comprovació de la normalitat i homogeneïtat de la variància
 
-### 4.1.1 Comprovació de normalitat
+Per a poder aplicar les proves de contrast d'hipòtesis sobre les variables continues, cal assegurar que la mitjana mostral d'aquestes segueix una distribució normal. També és necessàri tenir en compte si al fer la separació de les dades sota els valors de la variable `Survived` els dos grups presenten homoscedasticitat o no. 
 
-En aquest apartat, es comprova la normalitat de les variables numèriques que seran usades per a la predicció de la variable `Survived`. La variable `Fare` sembla presentar una distribució exponencial inversa, tal i com es pot veure a la següent visualització, i per tant, la comprovació de normalitat es dura a terme també sobre la transformació logarítmica d'aquesta variable.
+### 4.2.1 Comprovació de la normalitat
+
+En aquest apartat, es comprova la normalitat de les variables numèriques. La variable `Fare` sembla presentar una distribució exponencial inversa, tal i com es pot veure a la següent visualització, i per tant, la comprovació de normalitat es durà a terme també sobre la transformació logarítmica d'aquesta variable.
 
 ```{r fare_dist}
 par(mfrow=c(1,2))
-hist(data$Fare, xlab="Totes les classes", ylab="Fare")
-hist(log(data$Fare), xlab="Totes les classes", ylab="Fare")
+hist(data$Fare)
+hist(log(data$Fare))
 ```
 
-El test de normalitat sobre la distribució de les dades es du a terme mitjançant el test de Lilliefors. En tots els casos, el p-valor resultant del test és practicament 0, de manera que es pot rebutjar la hipòtesi nul·la de que els valors han sigut mesurats d'una distribució normal per a totes les variables.
+El test de normalitat sobre la distribució de les dades es porta a terme mitjançant el test de Lilliefors. En tots els casos, el p-valor resultant del test és practicament 0, de manera que es pot rebutjar la hipòtesi nul·la de que els valors han sigut mesurats d'una distribució normal per a totes les variables, amb un nivell de confiança del 95%.
+
+Tot i que hem comprovat que no es pot assumir la distribució normal de la població de les variables numèriques, podem assumir pel Teorema Central del Límit que la mitjana mostral d'aquestes sí que tindrà una distribució normal, donat que la mida de la mostra és prou gran.
 
 ```{r normality_test}
 numVars <- c("Fare", "Age", "Parch", "SibSp", "FamilySize")
@@ -222,11 +216,9 @@ for (var in numVars){
 }
 ```
 
-### 4.1.2 Tests d'hipòtesis continues
+### 4.1.2 Comprovació de la homogeneïtat de la variància
 
-A continuació es comparen les distribucions de les variables del conjunt d'entrenament sota una separació en dos grups dels registres per la variable `Survived`. Per cadascuna de les variables numèriques, es duen a terme tests d'hipòtesis sobre la mitjana poblacional dels dos grups. Per a les variables categoriques, es comprova si hi ha una diferència estadisticament significativa entre la distribució poblacional de les categories respecte els dos grups.
-
-Per a poder aplicar els test d'hiòtesis sobre les variables numèriques, cal demostrar la normalitat de la mitjana mostral i la homoscedasticitat de les mostres. Tot i hem comprovat que no es pot assumir la distribució normal de la població de les variables numèriques, podem assumir pel Teorema Central del Límit que la mitjana mostral d'aquestes sí que tindrà una distribució normal, donat que la mida de la mostra és prou gran. Quant a la comprovació de la igualtat de variancies, es realitza el test sobre les dues mostres de cada variable.
+Quant a la comprovació de la igualtat de variancies, es realitza el test sobre les dues mostres de cada variable al separar els seus registres pels valors de la variable `Survived`. Les mostres de les variables `Age` i `Parch` semblen presentar una variància igual amb un interval de confiança del 95%. En el cas de les variables `Fare`, `SibSp` i `FamilySize`, no hi ha homoscedasticitat. Amb aquesta informació, es realitzaran els test de contrast d'hipòtesis sobre la mitjana.
 
 ```{r var_test}
 dataS0 <- data[data$Survived == 0, ]
@@ -239,7 +231,11 @@ for (var in numVars){
 }
 ```
 
-Les mostres de les variables `Age` i `Parch` semblen presentar una variància igual sota un interval de confiança del 95%. En el cas de les variables `Fare`, `SibSp` i `FamilySize`, no hi ha homoscedasticitat. Amb aquesta informació, es realitzen els test de contrast d'hipòtesis sobre la mitjana.
+## 4.3 Proves estadístiques
+
+### 4.3.1 Contrast d'hipòtesis de variables contínues
+
+A continuació es comparen les distribucions de les variables del conjunt d'entrenament sota la separació en dos grups dels registres per la variable `Survived`. Per cadascuna de les variables numèriques, es duen a terme tests d'hipòtesis sobre la mitjana poblacional dels dos grups. Per a les variables categoriques, es comprova si hi ha una diferència estadisticament significativa entre la distribució poblacional de les categories respecte els dos grups.
 
 ```{r test_contrast}
 homVars <- c(F, T, T, F, F)
@@ -257,13 +253,10 @@ for (var in numVars){
 
 Amb un nivell de confiança del 95%, no es pot descartar la hipòtesi nul·la de que les mitjanes mostrals de les variables `SibSp` i `FamilySize` son iguals entre els grups de passatgers que sobreviuen i els que no. Les variables `Age` i `Parch` sí que semblen mostrar una diferència significativa tot i que no podriem assumir-la amb un interval de confiança del 99%. Les mitjanes estimades ens indiquen que els sobrevivents són una mica més joves en mitana i tenen més parents a bord del tipus pare/fill. En el cas de la variable `Fare`, la diferència és molt significativa amb un p-valor pròxim a 0 i unes mitjanes estimades que indiquen que els sobrevivents van pagar, en mitjana, un preu més de dues vegades superior.
 
-### 4.1.3 Tests d'hipòtesis categoriques
-
-INTRODUCCIÓ
 
 ```{r chisq_test}
-catVars <- c("Sex", "Embarked", "CabinLetter", "TicketSrc", "AgeCat", "FamilySizeCat", "TitleCat")
-
+catVars <- c("Pclass", "Sex", "Embarked", "CabinLetter", "TicketSrc", "AgeCat", "FamilySizeCat", "TitleCat")
+ 
 print("Chi squred test p-value:")
 for (var in catVars){
   cat(var); cat(": ")
@@ -272,12 +265,17 @@ for (var in catVars){
 }
 ```
 
-## 4.3. Regressió
+Quant a les variables categoriques, totes semblen presentar una diferència significativa en la seva distribució amb un interval de confiança del 95%. Aquelles variables amb un p-valor més baix (`Sex` i `TitleCat`) són les que probablement influeixen més a la probabilitat de supervivència d'un passatger.
 
-INTRODUCCIÓ
+## 4.3.2. Regressió logística
+
+Finalment, es construeix un model de regressió logística per a estimar la probabilitat de supervivència a partir de les variables seleccionades. Els registres del conjunt d'entrenament se separen en primer lloc en dos subconjunts d'entrenament i test per a avaluar la bondat del model construit. A partir de la regressió construida amb les variables d'entrenament, s'avalua l'exactitud del model per a diferents thresholds de decisió sobre les dades de test. Dels valors provats, el 0.5 és el que dona el millor resultat amb una exactitud de 0.8715084. Es pot comprovar a la corba ROC com aquest threshold és una de les millors opcions en quant al balanç entre els ràtios de positius vertaders i falsos.
+
+També s'observa als coeficients del model com les variables categòriques amb un p-valor més baix en l'anàlisi de comparació de la distribució (`Sex` i `TitleCat`), són de les que tenen valors més significatius a l'hora de predir la probabilitat de supervivència.
 
 ```{r regression}
 train <- data[data$Train == TRUE,]
+test <- data[data$Train == FALSE,]
 
 n <- nrow(train)
 ntrain <- round(n * 0.8)
@@ -286,6 +284,7 @@ ntest <- n - ntrain
 t_train <- train[1:ntrain,]
 t_test <- train[ntrain:n,]
 
+detach()
 attach(t_train, warn.conflicts = FALSE)
 model <- glm(Survived ~ Fare + Parch + SibSp + Sex + Embarked + CabinLetter + TicketSrc + AgeCat + FamilySizeCat + TitleCat)
 
@@ -293,27 +292,35 @@ summary(model)
 prob <- predict(model, t_test, type="response")
 ground <- t_test$Survived == 1
 
-for (t in c(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9)){
+tprs <- c()
+fprs <- c()
+ts <- (1:9)/10
+
+for (t in ts){
   pred <- prob > t
-  accuracy <- sum(pred == ground) / length(pred)
-  cat(t); cat(": "); cat(accuracy); cat("\n")
+  acc <- sum(pred == ground) / length(pred)
+  tpr <- sum(pred == TRUE & ground == TRUE) / sum(ground == TRUE)
+  fpr <- sum(pred == TRUE & ground == FALSE) / sum(ground == FALSE)
+  tprs <- append(tprs, tpr); fprs <- append(fprs, fpr)
+  cat(t); cat(": "); cat(acc); cat("\n")
 }
+
+plot(fprs, tprs, type="b", col="orange")
+text(fprs, tprs + 0.05, labels=round(ts, 2))
 ```
 
-PREDICCIÓ FINAL
+Per acabar d'avaluar la bondat de l'ajustament de la regressió, un nou model de regressió logística és entrenat sobre tot el conjunt de dades d'entrenament i es prediu el valor de la variable `Survived` del conjunt de test (del qual desconeixem els valors reals). Aquest resultat obté una exactitud de 0.77751 a la plataforma Kaggle.
 
 ```{r result}
-detach()
-attach(train, warn.conflicts = FALSE)
-
-test <- data[data$Train == FALSE,]
-
-model <- glm(Survived ~ Fare + Parch + SibSp + Sex + Embarked + CabinLetter + TicketSrc + AgeCat + FamilySizeCat + TitleCat)
-
 apply_threshold <- function(row){
   if (as.numeric(row["Prob"]) > 0.5) return(1)
   return(0)
 }
+
+detach()
+attach(train, warn.conflicts = FALSE)
+
+model <- glm(Survived ~ Fare + Parch + SibSp + Sex + Embarked + CabinLetter + TicketSrc + AgeCat + FamilySizeCat + TitleCat)
 
 test$Prob <- predict(model, test, type="response")
 test$Survived <- apply(test, FUN=apply_threshold, MARGIN=1)
