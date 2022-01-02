@@ -181,12 +181,20 @@ L'objectiu d'aquest estudi és estimar la probabilitat de supervivència dels pa
 ## 4.1. Selecció de les dades
 
 De totes les variables del conjunt, s'estudiaran les següents:
+
 * Numèriques: `Age`, `SibSp`, `Parch`, `Fare` i `FamilySize`.  
 * Categòriques: `Survived`, `Pclass`, `Sex`, `Embarked`, `CabinLetter`, `TicketSrc`, `AgeCat`, `FamilySizeCat` i `TitleCat`.
 
+Els anàlisis que s'aplicaran són els següents:
+
+* Numèriques: proves d'hipòtesis sobre la mitjana d'una variable en dues mostres.
+* Categòriques: proves d'hipòtesis sobre la dependència de dues variables (`Survived` respecte les demés).
+
+Els dos grups de variables s'utilitzaran també per a crear un model de regressió logística que predigui la variable `Survived`.
+
 ## 4.2 Comprovació de la normalitat i homogeneïtat de la variància
 
-Per a poder aplicar les proves de contrast d'hipòtesis sobre les variables continues, cal assegurar que la mitjana mostral d'aquestes segueix una distribució normal. També és necessàri tenir en compte si al fer la separació de les dades sota els valors de la variable `Survived` els dos grups presenten homoscedasticitat o no. 
+Per a poder aplicar les proves de contrast d'hipòtesis sobre les variables numèriques, cal assegurar que la mitjana mostral d'aquestes segueix una distribució normal. També és necessàri tenir en compte si al fer la separació de les dades sota els valors de la variable `Survived`, els dos grups presenten homoscedasticitat o no.
 
 ### 4.2.1 Comprovació de la normalitat
 
@@ -198,7 +206,7 @@ hist(data$Fare)
 hist(log(data$Fare))
 ```
 
-El test de normalitat sobre la distribució de les dades es porta a terme mitjançant el test de Lilliefors. En tots els casos, el p-valor resultant del test és practicament 0, de manera que es pot rebutjar la hipòtesi nul·la de que els valors han sigut mesurats d'una distribució normal per a totes les variables, amb un nivell de confiança del 95%.
+El test de normalitat sobre la distribució de les dades es porta a terme mitjançant el test de Lilliefors. En tots els casos, el p-valor resultant del test és practicament 0, de manera que es pot rebutjar la hipòtesi nul·la de que els valors han sigut mesurats d'una distribució normal, per a totes les variables, amb un nivell de confiança del 95%.
 
 Tot i que hem comprovat que no es pot assumir la distribució normal de la població de les variables numèriques, podem assumir pel Teorema Central del Límit que la mitjana mostral d'aquestes sí que tindrà una distribució normal, donat que la mida de la mostra és prou gran.
 
@@ -251,7 +259,7 @@ for (var in numVars){
 }
 ```
 
-Amb un nivell de confiança del 95%, no es pot descartar la hipòtesi nul·la de que les mitjanes mostrals de les variables `SibSp` i `FamilySize` son iguals entre els grups de passatgers que sobreviuen i els que no. Les variables `Age` i `Parch` sí que semblen mostrar una diferència significativa tot i que no podriem assumir-la amb un interval de confiança del 99%. Les mitjanes estimades ens indiquen que els sobrevivents són una mica més joves en mitana i tenen més parents a bord del tipus pare/fill. En el cas de la variable `Fare`, la diferència és molt significativa amb un p-valor pròxim a 0 i unes mitjanes estimades que indiquen que els sobrevivents van pagar, en mitjana, un preu més de dues vegades superior.
+Amb un nivell de confiança del 95%, no es pot descartar la hipòtesi nul·la de que les mitjanes mostrals de les variables `SibSp` i `FamilySize` son iguals entre els grups de passatgers que sobreviuen i els que no. Les variables `Age` i `Parch` sí que semblen mostrar una diferència significativa tot i que no podriem assumir-la amb un interval de confiança del 99%. Les mitjanes estimades ens indiquen que els sobrevivents són una mica més joves en mitjana i tenen més parents a bord del tipus pare/fill. En el cas de la variable `Fare`, la diferència és molt significativa amb un p-valor pròxim a 0 i unes mitjanes estimades que indiquen que els sobrevivents van pagar, en mitjana, un preu més de dues vegades superior.
 
 
 ```{r chisq_test}
@@ -269,9 +277,9 @@ Quant a les variables categoriques, totes semblen presentar una diferència sign
 
 ## 4.3.2. Regressió logística
 
-Finalment, es construeix un model de regressió logística per a estimar la probabilitat de supervivència a partir de les variables seleccionades. Els registres del conjunt d'entrenament se separen en primer lloc en dos subconjunts d'entrenament i test per a avaluar la bondat del model construit. A partir de la regressió construida amb les variables d'entrenament, s'avalua l'exactitud del model per a diferents thresholds de decisió sobre les dades de test. Dels valors provats, el 0.5 és el que dona el millor resultat amb una exactitud de 0.8715084. Es pot comprovar a la corba ROC com aquest threshold és una de les millors opcions en quant al balanç entre els ràtios de positius vertaders i falsos.
+Finalment, es construeix un model de regressió logística per a estimar la probabilitat de supervivència a partir de les variables seleccionades. Els registres del conjunt d'entrenament se separen en primer lloc en dos subconjunts d'entrenament i test per a avaluar la bondat del model construit. A partir de la regressió construida amb les dades del subconjunt d'entrenament, s'avalua l'exactitud del model per a diferents thresholds de decisió sobre les dades del subconjunt test. Dels valors provats, un threshold de 0.5 és el que dona el millor resultat amb una exactitud de 0.8715084. Es pot comprovar a la corba ROC com aquest threshold és una de les millors opcions en quant al balanç entre els ràtios de positius vertaders i falsos.
 
-També s'observa als coeficients del model com les variables categòriques amb un p-valor més baix en l'anàlisi de comparació de la distribució (`Sex` i `TitleCat`), són de les que tenen valors més significatius a l'hora de predir la probabilitat de supervivència.
+També s'observa als coeficients del model com les variables categòriques amb un p-valor més baix en l'anàlisi de comparació de la distribució (`Sex` i `TitleCat`), són de les que tenen valors més significatius a l'hora de predir la probabilitat de supervivència. Es penalitza la categoria `male` de la variable `Sex` i totes les categories de la variable `TitleCat` tret de la categoria `Master`.
 
 ```{r regression}
 train <- data[data$Train == TRUE,]
@@ -327,3 +335,4 @@ test$Survived <- apply(test, FUN=apply_threshold, MARGIN=1)
 
 write.csv(test[, c("PassengerId", "Survived")], "data/result.csv", row.names = FALSE, quote = FALSE)
 ```
+
