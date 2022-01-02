@@ -1,8 +1,10 @@
 ---
-title: "data_cleaning"
+title: "Tipologia i cicle de vida de les dades"
 author: "Gerard Cegarra Dueñas"
 date: "December 27, 2021"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -18,9 +20,10 @@ knitr::opts_chunk$set(echo = TRUE)
 #install.packages("VIM")
 #install.packages("glue")
 #install.packages("varhandle")
-#install.packages("pROC")
 #install.packages("caret")
 #install.packages("ResourceSelection")
+#install.packages("ggplot2")
+#install.packages("gridExtra")
 library(dplyr)
 library(stringr)
 library(mice)
@@ -29,13 +32,29 @@ library(VIM)
 library(glue)
 library(nortest)
 library(varhandle)
-library(pROC)
 library(caret)
 library(ResourceSelection)
 library(e1071)
+library(ggplot2)
+library(gridExtra)
 ```
 
 # 1. Descripció del dataset
+
+Per a aquest projecte s'ha escollit el dataset de la plataforma Kaggle de la competició "Titanic - Machine Learning from Disaster". Les dades estan separades en dos conjunts: entrenament i test. En el conjunt d'entrenament es troben 891 registres corresponents a passatgers que estaven al Titanic en el moment del seu naufragi. Una de les 13 variables indica si el passatger en qüestió va sobreviure a la tragedia. El conjunt de test conté 418 passatgers amb les mateixes variables però sense estar informada la variable que indica la supervivència del passatger. L'objectiu de la competició és predir amb exactitud quines de les 418 persones del conjunt de test van sobreviure i quines no. Les variables del conjunt de dades són les següents:
+
+* `PassengerId`: identificador únic del passatger en el conjunt de dades.
+* `Survival`: variable que indica la supervivència del passatger.
+* `Pclass`: classe del ticket del passatger (primera, segona o tercera).
+* `Sex`: sexe biològic del passatger.
+* `Age`: edat del passatger.
+* `SibSp`: nombre de parents del passatger a bord (del tipus conjuge/germà).
+* `Parch`: nombre de parents del passatger a bord (del tipus pare/fill).
+* `Ticket`: número de bitllet del passatger.
+* `Fare`: preu que ha pagat el passatger per estar a bord del vaixell.
+* `Cabin`: cabina assignada al passatger.
+* `Embarked`: lloc d'embarcament del passatger.
+
 # 2. Integració i selecció de les dades
 
 Es mostren el resum de les dades i el tipus de cada variable. Les dades de tipus text no es transformen a factors de moment per a poder-les manipular amb més facilitat. El conjunt de dades d'entrenament i de test es combinen en un únic conjunt amb una columna addicional `Train` que indica la procedencia de cada registre.
@@ -146,7 +165,7 @@ Els passatgers amb l'edat no informada i que tenen el títol `Master` es poden i
 data$AgeCat[is.na(data$Age) & data$Title == "Master"] <- "young"
 ```
 
-Per als valors de la variable `AgeCat` de la resta de registres, així com per a les variables `Fare` i `Embarked`, s'utilitza l'algorisme kNN com a mètode d'imputació. Les variables amb valors únics no seran utilitzades com a referència durant la imputació. Tampoc les versions originals d'aquelles variables que hagin sigut categoritzades. Es descarta també la variable `Survived`, ja que no és present a les dades de test. L'ordre d'imputació de les variables es defineix de forma ascendent pel nombre de valors buits de cada variable. Com que els valors imputats d'una variable s'utilitzen pel càlcul de la següent, seguint aquest ordre minimitzem el soroll que les variables amb més valors buits afegeixen a la resta.
+Per als valors de la variable `AgeCat` de la resta de registres, així com per a les variables `Fare` i `Embarked`, s'utilitza l'algorisme kNN com a mètode d'imputació. Les variables amb valors únics no seran utilitzades com a referència durant la imputació. Tampoc les versions originals d'aquelles variables que hagin sigut categoritzades. Es descarta també la variable `Survived`, ja que no és present a les dades de test. L'ordre d'imputació de les variables es defineix de forma ascendent pel nombre de valors buits de cada variable. Com que els valors imputats d'una variable s'utilitzen pel càlcul de la següent, seguint aquest ordre es minimitza el soroll que les variables amb més valors buits afegeixen a la resta.
 
 ```{r knn_imputation}
 
@@ -158,7 +177,7 @@ data <- kNN(
 )
 ```
 
-## 3.2 Valors extrems
+## 3.2. Valors extrems
 
 L'única variable que pot presentar valors extrems és la variable `Fare`, ja que els valors de la resta de variables numériques cauen dins un rang raonable segons el coneixement que tenim del domini. A continuació es mostra el diagrama de caixes de la variable `Fare` per a tots els registres, i també separats per classe.
 
@@ -172,7 +191,7 @@ bp3 <- boxplot(data$Fare[data$Pclass == 3], xlab="Tercera classe", ylab="Fare")
 length(bpt$out); length(bp1$out); length(bp2$out); length(bp3$out)
 ```
 
-Segons la regla intercuartílica, en prendre els valors de la variable `Fare` de tot el conjunt de dades, 174 d'aquests valors es podrien considerar atípics, ja que s'allunyen més de 3 desviacions estàndard de la mitjana. Tot i això, en prendre els valors separats per classe, el total de valors que es podrien considerar com a valors extrems es redueix a 102, distribuits entre 29, 12 i 65 entre la primera, segona i tercera classe respectivament. Aquests registres no s'exclouran del conjunt de dades per al posterior anàlisi perquè la desviació dels seus valors no semblen desorbitats donada la distribució de la variable i no es pot assegurar que siguin errors de mesura.
+Segons la regla intercuartílica, en prendre els valors de la variable `Fare` de tot el conjunt de dades, 174 d'aquests valors es podrien considerar atípics, ja que s'allunyen més de 3 desviacions estàndard de la mitjana. Tot i això, en prendre els valors separats per classe, el total de valors que es podrien considerar com a valors extrems es redueix a 102, distribuits en grups de 29, 12 i 65 passatgers entre la primera, segona i tercera classe respectivament. Aquests registres no s'exclouran del conjunt de dades per al posterior anàlisi perquè la desviació dels seus valors no semblen desorbitats donada la distribució de la variable i no es pot assegurar que siguin errors de mesura.
 
 # 4. Anàlisi de les dades
 
@@ -192,11 +211,11 @@ Els anàlisis que s'aplicaran són els següents:
 
 Els dos grups de variables s'utilitzaran també per a crear un model de regressió logística que predigui la variable `Survived`.
 
-## 4.2 Comprovació de la normalitat i homogeneïtat de la variància
+## 4.2. Comprovació de la normalitat i homogeneïtat de la variància
 
 Per a poder aplicar les proves de contrast d'hipòtesis sobre les variables numèriques, cal assegurar que la mitjana mostral d'aquestes segueix una distribució normal. També és necessàri tenir en compte si al fer la separació de les dades sota els valors de la variable `Survived`, els dos grups presenten homoscedasticitat o no.
 
-### 4.2.1 Comprovació de la normalitat
+### 4.2.1. Comprovació de la normalitat
 
 En aquest apartat, es comprova la normalitat de les variables numèriques. La variable `Fare` sembla presentar una distribució exponencial inversa, tal i com es pot veure a la següent visualització, i per tant, la comprovació de normalitat es durà a terme també sobre la transformació logarítmica d'aquesta variable.
 
@@ -224,7 +243,7 @@ for (var in numVars){
 }
 ```
 
-### 4.1.2 Comprovació de la homogeneïtat de la variància
+### 4.2.2. Comprovació de la homogeneïtat de la variància
 
 Quant a la comprovació de la igualtat de variancies, es realitza el test sobre les dues mostres de cada variable al separar els seus registres pels valors de la variable `Survived`. Les mostres de les variables `Age` i `Parch` semblen presentar una variància igual amb un interval de confiança del 95%. En el cas de les variables `Fare`, `SibSp` i `FamilySize`, no hi ha homoscedasticitat. Amb aquesta informació, es realitzaran els test de contrast d'hipòtesis sobre la mitjana.
 
@@ -239,9 +258,9 @@ for (var in numVars){
 }
 ```
 
-## 4.3 Proves estadístiques
+## 4.3. Proves estadístiques
 
-### 4.3.1 Contrast d'hipòtesis de variables contínues
+### 4.3.1. Proves de contrast d'hipòtesis
 
 A continuació es comparen les distribucions de les variables del conjunt d'entrenament sota la separació en dos grups dels registres per la variable `Survived`. Per cadascuna de les variables numèriques, es duen a terme tests d'hipòtesis sobre la mitjana poblacional dels dos grups. Per a les variables categoriques, es comprova si hi ha una diferència estadisticament significativa entre la distribució poblacional de les categories respecte els dos grups.
 
@@ -259,7 +278,7 @@ for (var in numVars){
 }
 ```
 
-Amb un nivell de confiança del 95%, no es pot descartar la hipòtesi nul·la de que les mitjanes mostrals de les variables `SibSp` i `FamilySize` son iguals entre els grups de passatgers que sobreviuen i els que no. Les variables `Age` i `Parch` sí que semblen mostrar una diferència significativa tot i que no podriem assumir-la amb un interval de confiança del 99%. Les mitjanes estimades ens indiquen que els sobrevivents són una mica més joves en mitjana i tenen més parents a bord del tipus pare/fill. En el cas de la variable `Fare`, la diferència és molt significativa amb un p-valor pròxim a 0 i unes mitjanes estimades que indiquen que els sobrevivents van pagar, en mitjana, un preu més de dues vegades superior.
+Amb un nivell de confiança del 95%, no es pot descartar la hipòtesi nul·la de que les mitjanes poblacionals de les variables `SibSp` i `FamilySize` son iguals entre els grups de passatgers que sobreviuen i els que no. Les variables `Age` i `Parch` sí que semblen mostrar una diferència significativa tot i que no podriem assumir-la amb un interval de confiança del 99%. Les mitjanes de la mostra ens indiquen que els sobrevivents són una mica més joves en mitjana i tenen més parents a bord del tipus pare/fill. En el cas de la variable `Fare`, la diferència és molt significativa amb un p-valor pròxim a 0 i unes mitjanes que indiquen que els sobrevivents van pagar, en mitjana, un preu més de dues vegades superior.
 
 
 ```{r chisq_test}
@@ -275,13 +294,13 @@ for (var in catVars){
 
 Quant a les variables categoriques, totes semblen presentar una diferència significativa en la seva distribució amb un interval de confiança del 95%. Aquelles variables amb un p-valor més baix (`Sex` i `TitleCat`) són les que probablement influeixen més a la probabilitat de supervivència d'un passatger.
 
-## 4.3.2. Regressió logística
+### 4.3.2. Regressió logística
 
 Finalment, es construeix un model de regressió logística per a estimar la probabilitat de supervivència a partir de les variables seleccionades. Els registres del conjunt d'entrenament se separen en primer lloc en dos subconjunts d'entrenament i test per a avaluar la bondat del model construit. A partir de la regressió construida amb les dades del subconjunt d'entrenament, s'avalua l'exactitud del model per a diferents thresholds de decisió sobre les dades del subconjunt test. Dels valors provats, un threshold de 0.5 és el que dona el millor resultat amb una exactitud de 0.8715084. Es pot comprovar a la corba ROC com aquest threshold és una de les millors opcions en quant al balanç entre els ràtios de positius vertaders i falsos.
 
 També s'observa als coeficients del model com les variables categòriques amb un p-valor més baix en l'anàlisi de comparació de la distribució (`Sex` i `TitleCat`), són de les que tenen valors més significatius a l'hora de predir la probabilitat de supervivència. Es penalitza la categoria `male` de la variable `Sex` i totes les categories de la variable `TitleCat` tret de la categoria `Master`.
 
-```{r regression}
+```{r regression, results=FALSE, message=FALSE}
 train <- data[data$Train == TRUE,]
 test <- data[data$Train == FALSE,]
 
@@ -303,7 +322,9 @@ ground <- t_test$Survived == 1
 tprs <- c()
 fprs <- c()
 ts <- (1:9)/10
+```
 
+```{r model_eval}
 for (t in ts){
   pred <- prob > t
   acc <- sum(pred == ground) / length(pred)
@@ -313,8 +334,11 @@ for (t in ts){
   cat(t); cat(": "); cat(acc); cat("\n")
 }
 
-plot(fprs, tprs, type="b", col="orange")
+plot(fprs, tprs, type="b", col="orange", ylim=c(0,1.1), xlim=c(0,1), main="Corba ROC del model")
+abline(a=c(0,0), b=c(1,1))
 text(fprs, tprs + 0.05, labels=round(ts, 2))
+
+print(model$coefficients)
 ```
 
 Per acabar d'avaluar la bondat de l'ajustament de la regressió, un nou model de regressió logística és entrenat sobre tot el conjunt de dades d'entrenament i es prediu el valor de la variable `Survived` del conjunt de test (del qual desconeixem els valors reals). Aquest resultat obté una exactitud de 0.77751 a la plataforma Kaggle.
@@ -335,4 +359,84 @@ test$Survived <- apply(test, FUN=apply_threshold, MARGIN=1)
 
 write.csv(test[, c("PassengerId", "Survived")], "data/result.csv", row.names = FALSE, quote = FALSE)
 ```
+
+# 5. Representació dels resultats
+
+En aquest apartat es visualitzen els resultats obtinguts en les anàlisis de les dades de l'apartat anterior. 
+
+Sobre les variables numèriques, s'ha pogut comprobar com per algunes d'aquestes (`Age`, `Parch` i `Fare`) la seva mitjana és diferent segons si es mesura sobre la mostra de passatgers sobrevivents o no sobrevivents. A continuació es visualitza la distribució d'aquestes variables en ambdues mostres.
+
+```{r cont_visualization, echo=FALSE, results=FALSE, message=FALSE}
+library(plyr)
+library(gridExtra)
+
+d <- na.omit(data)
+d$Survived <- factor(d$Survived)
+
+plot_hist <- function(var, cdat, binwidth=1){
+  ggplot(d, aes(x=d[[var]], fill=Survived)) +
+    geom_histogram(binwidth=binwidth, alpha=.5, position="identity") +
+    geom_vline(data=cdat, aes(xintercept=var.mean,  colour=Survived), linetype="dashed", size=.5) +
+    ggtitle(var) +
+    theme_bw(base_size=9)
+}  
+
+plot_dist <- function(var, cdat){
+  ggplot(d, aes(x=d[[var]], colour=Survived)) +
+    geom_density() +
+    geom_vline(data=cdat, aes(xintercept=var.mean,  colour=Survived), linetype="dashed", size=.5) +
+    ggtitle(var) +
+    theme_bw(base_size=9)
+}
+
+p1 <- plot_hist("Age", ddply(d, "Survived", summarise, var.mean=mean(Age)), binwidth = 5)
+p2 <- plot_dist("Age", ddply(d, "Survived", summarise, var.mean=mean(Age)))
+
+p3 <- plot_hist("Parch", ddply(d, "Survived", summarise, var.mean=mean(Parch)))
+p4 <- plot_dist("Parch", ddply(d, "Survived", summarise, var.mean=mean(Parch)))
+
+p5 <- plot_hist("Fare", ddply(d, "Survived", summarise, var.mean=mean(Fare)), binwidth = 20)
+p6 <- plot_dist("Fare", ddply(d, "Survived", summarise, var.mean=mean(Fare)))
+
+grid.arrange(p1, p2, p3, p4, p5, p6, ncol=2)
+
+```
+
+Quant a les variables categoriques, totes elles presenten una distribució diferent segons si s'observen per a la mostra de sobrevivents o no sobrevivents. A les seguents visualitzacions es mostren les distribucions d'aquestes variables per les dues mostres.
+
+```{r cat_visualization, echo=FALSE, results=FALSE, message=FALSE}
+
+plot_cat <- function(var){
+  ggplot(data = d, aes(x = d[[var]], fill = Survived)) + 
+  geom_bar() +
+  ggtitle(var) +
+  stat_count(geom = "text", 
+             aes(label = stat(count)),
+             position="stack", colour="black", size=2) +
+  theme_bw(base_size=9)
+}
+
+p1 <- plot_cat("Pclass")
+p2 <- plot_cat("Sex")
+p3 <- plot_cat("Embarked")
+p4 <- plot_cat("CabinLetter")
+p5 <- plot_cat("TicketSrc")
+p6 <- plot_cat("AgeCat")
+p7 <- plot_cat("FamilySizeCat")
+p8 <- plot_cat("TitleCat")
+
+grid.arrange(p1, p2, p3, p4, ncol=2)
+grid.arrange(p5, p6, p7, p8, ncol=2)
+```
+
+# 6. Conclusions
+
+De les proves de contrast i les visualitzacions sobre les variables es poden extreure diverses conclusions:
+
+* `AgeCat`: els passatgers entre 0 i 20 anys tenen més probabilitat de sobreviure mentre que els majors de 60 són els que ho tenen més difícil.
+* `Parch` i `FamilySizeCat`: les persones que viatjen soles tenen menys probabilitat de supervivència. Les families d'entre 2 i 4 persones tenen més probabilitat de supervivència, així com les persones que viatjen amb d'entre 1 i 3 familiars del tipus pare/fill.
+* `Fare`, `Pclass` i `CabinLetter`: els passatgers de primera classe o que han pagat més pel seu bitllet tenen més probabilitat de spuervivència. A més, les persones que viatjen en una cabina sobreviuen més que la resta.
+* `Sex` i `TitleCat`: els homes adults tenen menys probabilitat de supervivència que les dones. Les dones casades tenen una mica més de probabilitat de sobreviure que les que no ho estan.
+
+D'altra banda, el model de regressió logística construit sobre les dades preprocessades aconsegueix predir correctament el 77.75% del conjunt de test. Es pot considerar un resultat prou satisfactori donat que les dades contenen un soroll inherent al problema que no és possible predir amb les variables de les que es disposen. L'exactitud del model demostra com els factors estudiats tenen una influència real en les probabilitats de supervivència dels passatgers del Titanic, reflexant els comportaments i valors estructurals de la societat de l'època. 
 
