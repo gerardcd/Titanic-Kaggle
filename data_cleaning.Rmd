@@ -3,9 +3,9 @@ title: "Tipologia i cicle de vida de les dades - PRAC 2"
 author: "Gerard Cegarra Dueñas"
 date: "4 de gener de 2022"
 output:
-  pdf_document: 
-    toc: yes
   html_document: 
+    toc: yes
+  pdf_document: 
     toc: yes
 ---
 
@@ -178,7 +178,7 @@ data <- kNN(
   k = 10
 )
 
-write.csv(data, "data/clean.csv", row.names = FALSE, quote = FALSE)
+write.csv(data, "data/clean.csv", row.names = FALSE)
 ```
 
 ## 3.2. Valors extrems
