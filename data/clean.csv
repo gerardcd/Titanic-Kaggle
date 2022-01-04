@@ -1,0 +1,1310 @@
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked,Train,FamilyName,FamilySize,Title,CabinLetter,TicketSrc,AgeCat,FamilySizeCat,TitleCat,Embarked_imp,Fare_imp,AgeCat_imp
+1,0,3,Braund, Mr. Owen Harris,male,22,1,0,A/5 21171,7.25,N,S,TRUE,Braund,2,Mr,N,A,adult,medium,Mr,FALSE,FALSE,FALSE
+2,1,1,Cumings, Mrs. John Bradley (Florence Briggs Thayer),female,38,1,0,PC 17599,71.2833,C85,C,TRUE,Cumings,2,Mrs,C,P,adult,medium,Mrs,FALSE,FALSE,FALSE
+3,1,3,Heikkinen, Miss. Laina,female,26,0,0,STON/O2. 3101282,7.925,N,S,TRUE,Heikkinen,1,Miss,N,S,adult,single,Miss,FALSE,FALSE,FALSE
+4,1,1,Futrelle, Mrs. Jacques Heath (Lily May Peel),female,35,1,0,113803,53.1,C123,S,TRUE,Futrelle,2,Mrs,C,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+5,0,3,Allen, Mr. William Henry,male,35,0,0,373450,8.05,N,S,TRUE,Allen,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+6,0,3,Moran, Mr. James,male,NA,0,0,330877,8.4583,N,Q,TRUE,Moran,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+7,0,1,McCarthy, Mr. Timothy J,male,54,0,0,17463,51.8625,E46,S,TRUE,McCarthy,1,Mr,E,N,adult,single,Mr,FALSE,FALSE,FALSE
+8,0,3,Palsson, Master. Gosta Leonard,male,2,3,1,349909,21.075,N,S,TRUE,Palsson,5,Master,N,N,young,large,Master,FALSE,FALSE,FALSE
+9,1,3,Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg),female,27,0,2,347742,11.1333,N,S,TRUE,Johnson,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+10,1,2,Nasser, Mrs. Nicholas (Adele Achem),female,14,1,0,237736,30.0708,N,C,TRUE,Nasser,2,Mrs,N,N,young,medium,Mrs,FALSE,FALSE,FALSE
+11,1,3,Sandstrom, Miss. Marguerite Rut,female,4,1,1,PP 9549,16.7,G6,S,TRUE,Sandstrom,3,Miss,G,P,young,medium,Miss,FALSE,FALSE,FALSE
+12,1,1,Bonnell, Miss. Elizabeth,female,58,0,0,113783,26.55,C103,S,TRUE,Bonnell,1,Miss,C,N,adult,single,Miss,FALSE,FALSE,FALSE
+13,0,3,Saundercock, Mr. William Henry,male,20,0,0,A/5. 2151,8.05,N,S,TRUE,Saundercock,1,Mr,N,A,young,single,Mr,FALSE,FALSE,FALSE
+14,0,3,Andersson, Mr. Anders Johan,male,39,1,5,347082,31.275,N,S,TRUE,Andersson,7,Mr,N,N,adult,large,Mr,FALSE,FALSE,FALSE
+15,0,3,Vestrom, Miss. Hulda Amanda Adolfina,female,14,0,0,350406,7.8542,N,S,TRUE,Vestrom,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+16,1,2,Hewlett, Mrs. (Mary D Kingcome) ,female,55,0,0,248706,16,N,S,TRUE,Hewlett,1,Mrs,N,N,adult,single,Mrs,FALSE,FALSE,FALSE
+17,0,3,Rice, Master. Eugene,male,2,4,1,382652,29.125,N,Q,TRUE,Rice,6,Master,N,N,young,large,Master,FALSE,FALSE,FALSE
+18,1,2,Williams, Mr. Charles Eugene,male,NA,0,0,244373,13,N,S,TRUE,Williams,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+19,0,3,Vander Planke, Mrs. Julius (Emelia Maria Vandemoortele),female,31,1,0,345763,18,N,S,TRUE,Vander Planke,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+20,1,3,Masselmani, Mrs. Fatima,female,NA,0,0,2649,7.225,N,C,TRUE,Masselmani,1,Mrs,N,N,adult,single,Mrs,FALSE,FALSE,TRUE
+21,0,2,Fynney, Mr. Joseph J,male,35,0,0,239865,26,N,S,TRUE,Fynney,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+22,1,2,Beesley, Mr. Lawrence,male,34,0,0,248698,13,D56,S,TRUE,Beesley,1,Mr,D,N,adult,single,Mr,FALSE,FALSE,FALSE
+23,1,3,McGowan, Miss. Anna "Annie",female,15,0,0,330923,8.0292,N,Q,TRUE,McGowan,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+24,1,1,Sloper, Mr. William Thompson,male,28,0,0,113788,35.5,A6,S,TRUE,Sloper,1,Mr,A,N,adult,single,Mr,FALSE,FALSE,FALSE
+25,0,3,Palsson, Miss. Torborg Danira,female,8,3,1,349909,21.075,N,S,TRUE,Palsson,5,Miss,N,N,young,large,Miss,FALSE,FALSE,FALSE
+26,1,3,Asplund, Mrs. Carl Oscar (Selma Augusta Emilia Johansson),female,38,1,5,347077,31.3875,N,S,TRUE,Asplund,7,Mrs,N,N,adult,large,Mrs,FALSE,FALSE,FALSE
+27,0,3,Emir, Mr. Farred Chehab,male,NA,0,0,2631,7.225,N,C,TRUE,Emir,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+28,0,1,Fortune, Mr. Charles Alexander,male,19,3,2,19950,263,C23 C25 C27,S,TRUE,Fortune,6,Mr,C,N,young,large,Mr,FALSE,FALSE,FALSE
+29,1,3,O'Dwyer, Miss. Ellen "Nellie",female,NA,0,0,330959,7.8792,N,Q,TRUE,O'Dwyer,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+30,0,3,Todoroff, Mr. Lalio,male,NA,0,0,349216,7.8958,N,S,TRUE,Todoroff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+31,0,1,Uruchurtu, Don. Manuel E,male,40,0,0,PC 17601,27.7208,N,C,TRUE,Uruchurtu,1,Don,N,P,adult,single,Other,FALSE,FALSE,FALSE
+32,1,1,Spencer, Mrs. William Augustus (Marie Eugenie),female,NA,1,0,PC 17569,146.5208,B78,C,TRUE,Spencer,2,Mrs,B,P,adult,medium,Mrs,FALSE,FALSE,TRUE
+33,1,3,Glynn, Miss. Mary Agatha,female,NA,0,0,335677,7.75,N,Q,TRUE,Glynn,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+34,0,2,Wheadon, Mr. Edward H,male,66,0,0,C.A. 24579,10.5,N,S,TRUE,Wheadon,1,Mr,N,C,senior,single,Mr,FALSE,FALSE,FALSE
+35,0,1,Meyer, Mr. Edgar Joseph,male,28,1,0,PC 17604,82.1708,N,C,TRUE,Meyer,2,Mr,N,P,adult,medium,Mr,FALSE,FALSE,FALSE
+36,0,1,Holverson, Mr. Alexander Oskar,male,42,1,0,113789,52,N,S,TRUE,Holverson,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+37,1,3,Mamee, Mr. Hanna,male,NA,0,0,2677,7.2292,N,C,TRUE,Mamee,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+38,0,3,Cann, Mr. Ernest Charles,male,21,0,0,A./5. 2152,8.05,N,S,TRUE,Cann,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,FALSE
+39,0,3,Vander Planke, Miss. Augusta Maria,female,18,2,0,345764,18,N,S,TRUE,Vander Planke,3,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+40,1,3,Nicola-Yarred, Miss. Jamila,female,14,1,0,2651,11.2417,N,C,TRUE,Nicola-Yarred,2,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+41,0,3,Ahlin, Mrs. Johan (Johanna Persdotter Larsson),female,40,1,0,7546,9.475,N,S,TRUE,Ahlin,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+42,0,2,Turpin, Mrs. William John Robert (Dorothy Ann Wonnacott),female,27,1,0,11668,21,N,S,TRUE,Turpin,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+43,0,3,Kraeff, Mr. Theodor,male,NA,0,0,349253,7.8958,N,C,TRUE,Kraeff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+44,1,2,Laroche, Miss. Simonne Marie Anne Andree,female,3,1,2,SC/Paris 2123,41.5792,N,C,TRUE,Laroche,4,Miss,N,S,young,large,Miss,FALSE,FALSE,FALSE
+45,1,3,Devaney, Miss. Margaret Delia,female,19,0,0,330958,7.8792,N,Q,TRUE,Devaney,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+46,0,3,Rogers, Mr. William John,male,NA,0,0,S.C./A.4. 23567,8.05,N,S,TRUE,Rogers,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,TRUE
+47,0,3,Lennon, Mr. Denis,male,NA,1,0,370371,15.5,N,Q,TRUE,Lennon,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,TRUE
+48,1,3,O'Driscoll, Miss. Bridget,female,NA,0,0,14311,7.75,N,Q,TRUE,O'Driscoll,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+49,0,3,Samaan, Mr. Youssef,male,NA,2,0,2662,21.6792,N,C,TRUE,Samaan,3,Mr,N,N,adult,medium,Mr,FALSE,FALSE,TRUE
+50,0,3,Arnold-Franchi, Mrs. Josef (Josefine Franchi),female,18,1,0,349237,17.8,N,S,TRUE,Arnold-Franchi,2,Mrs,N,N,young,medium,Mrs,FALSE,FALSE,FALSE
+51,0,3,Panula, Master. Juha Niilo,male,7,4,1,3101295,39.6875,N,S,TRUE,Panula,6,Master,N,N,young,large,Master,FALSE,FALSE,FALSE
+52,0,3,Nosworthy, Mr. Richard Cater,male,21,0,0,A/4. 39886,7.8,N,S,TRUE,Nosworthy,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,FALSE
+53,1,1,Harper, Mrs. Henry Sleeper (Myna Haxtun),female,49,1,0,PC 17572,76.7292,D33,C,TRUE,Harper,2,Mrs,D,P,adult,medium,Mrs,FALSE,FALSE,FALSE
+54,1,2,Faunthorpe, Mrs. Lizzie (Elizabeth Anne Wilkinson),female,29,1,0,2926,26,N,S,TRUE,Faunthorpe,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+55,0,1,Ostby, Mr. Engelhart Cornelius,male,65,0,1,113509,61.9792,B30,C,TRUE,Ostby,2,Mr,B,N,senior,medium,Mr,FALSE,FALSE,FALSE
+56,1,1,Woolner, Mr. Hugh,male,NA,0,0,19947,35.5,C52,S,TRUE,Woolner,1,Mr,C,N,adult,single,Mr,FALSE,FALSE,TRUE
+57,1,2,Rugg, Miss. Emily,female,21,0,0,C.A. 31026,10.5,N,S,TRUE,Rugg,1,Miss,N,C,adult,single,Miss,FALSE,FALSE,FALSE
+58,0,3,Novel, Mr. Mansouer,male,28.5,0,0,2697,7.2292,N,C,TRUE,Novel,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+59,1,2,West, Miss. Constance Mirium,female,5,1,2,C.A. 34651,27.75,N,S,TRUE,West,4,Miss,N,C,young,large,Miss,FALSE,FALSE,FALSE
+60,0,3,Goodwin, Master. William Frederick,male,11,5,2,CA 2144,46.9,N,S,TRUE,Goodwin,8,Master,N,C,young,large,Master,FALSE,FALSE,FALSE
+61,0,3,Sirayanian, Mr. Orsen,male,22,0,0,2669,7.2292,N,C,TRUE,Sirayanian,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+62,1,1,Icard, Miss. Amelie,female,38,0,0,113572,80,B28,S,TRUE,Icard,1,Miss,B,N,adult,single,Miss,TRUE,FALSE,FALSE
+63,0,1,Harris, Mr. Henry Birkhardt,male,45,1,0,36973,83.475,C83,S,TRUE,Harris,2,Mr,C,N,adult,medium,Mr,FALSE,FALSE,FALSE
+64,0,3,Skoog, Master. Harald,male,4,3,2,347088,27.9,N,S,TRUE,Skoog,6,Master,N,N,young,large,Master,FALSE,FALSE,FALSE
+65,0,1,Stewart, Mr. Albert A,male,NA,0,0,PC 17605,27.7208,N,C,TRUE,Stewart,1,Mr,N,P,adult,single,Mr,FALSE,FALSE,TRUE
+66,1,3,Moubarek, Master. Gerios,male,NA,1,1,2661,15.2458,N,C,TRUE,Moubarek,3,Master,N,N,young,medium,Master,FALSE,FALSE,FALSE
+67,1,2,Nye, Mrs. (Elizabeth Ramell),female,29,0,0,C.A. 29395,10.5,F33,S,TRUE,Nye,1,Mrs,F,C,adult,single,Mrs,FALSE,FALSE,FALSE
+68,0,3,Crease, Mr. Ernest James,male,19,0,0,S.P. 3464,8.1583,N,S,TRUE,Crease,1,Mr,N,S,young,single,Mr,FALSE,FALSE,FALSE
+69,1,3,Andersson, Miss. Erna Alexandra,female,17,4,2,3101281,7.925,N,S,TRUE,Andersson,7,Miss,N,N,young,large,Miss,FALSE,FALSE,FALSE
+70,0,3,Kink, Mr. Vincenz,male,26,2,0,315151,8.6625,N,S,TRUE,Kink,3,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+71,0,2,Jenkin, Mr. Stephen Curnow,male,32,0,0,C.A. 33111,10.5,N,S,TRUE,Jenkin,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,FALSE
+72,0,3,Goodwin, Miss. Lillian Amy,female,16,5,2,CA 2144,46.9,N,S,TRUE,Goodwin,8,Miss,N,C,young,large,Miss,FALSE,FALSE,FALSE
+73,0,2,Hood, Mr. Ambrose Jr,male,21,0,0,S.O.C. 14879,73.5,N,S,TRUE,Hood,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+74,0,3,Chronopoulos, Mr. Apostolos,male,26,1,0,2680,14.4542,N,C,TRUE,Chronopoulos,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+75,1,3,Bing, Mr. Lee,male,32,0,0,1601,56.4958,N,S,TRUE,Bing,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+76,0,3,Moen, Mr. Sigurd Hansen,male,25,0,0,348123,7.65,F G73,S,TRUE,Moen,1,Mr,F,N,adult,single,Mr,FALSE,FALSE,FALSE
+77,0,3,Staneff, Mr. Ivan,male,NA,0,0,349208,7.8958,N,S,TRUE,Staneff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+78,0,3,Moutal, Mr. Rahamin Haim,male,NA,0,0,374746,8.05,N,S,TRUE,Moutal,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+79,1,2,Caldwell, Master. Alden Gates,male,0.83,0,2,248738,29,N,S,TRUE,Caldwell,3,Master,N,N,young,medium,Master,FALSE,FALSE,FALSE
+80,1,3,Dowdell, Miss. Elizabeth,female,30,0,0,364516,12.475,N,S,TRUE,Dowdell,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+81,0,3,Waelens, Mr. Achille,male,22,0,0,345767,9,N,S,TRUE,Waelens,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+82,1,3,Sheerlinck, Mr. Jan Baptist,male,29,0,0,345779,9.5,N,S,TRUE,Sheerlinck,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+83,1,3,McDermott, Miss. Brigdet Delia,female,NA,0,0,330932,7.7875,N,Q,TRUE,McDermott,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+84,0,1,Carrau, Mr. Francisco M,male,28,0,0,113059,47.1,N,S,TRUE,Carrau,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+85,1,2,Ilett, Miss. Bertha,female,17,0,0,SO/C 14885,10.5,N,S,TRUE,Ilett,1,Miss,N,S,young,single,Miss,FALSE,FALSE,FALSE
+86,1,3,Backstrom, Mrs. Karl Alfred (Maria Mathilda Gustafsson),female,33,3,0,3101278,15.85,N,S,TRUE,Backstrom,4,Mrs,N,N,adult,large,Mrs,FALSE,FALSE,FALSE
+87,0,3,Ford, Mr. William Neal,male,16,1,3,W./C. 6608,34.375,N,S,TRUE,Ford,5,Mr,N,W,young,large,Mr,FALSE,FALSE,FALSE
+88,0,3,Slocovski, Mr. Selman Francis,male,NA,0,0,SOTON/OQ 392086,8.05,N,S,TRUE,Slocovski,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,TRUE
+89,1,1,Fortune, Miss. Mabel Helen,female,23,3,2,19950,263,C23 C25 C27,S,TRUE,Fortune,6,Miss,C,N,adult,large,Miss,FALSE,FALSE,FALSE
+90,0,3,Celotti, Mr. Francesco,male,24,0,0,343275,8.05,N,S,TRUE,Celotti,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+91,0,3,Christmann, Mr. Emil,male,29,0,0,343276,8.05,N,S,TRUE,Christmann,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+92,0,3,Andreasson, Mr. Paul Edvin,male,20,0,0,347466,7.8542,N,S,TRUE,Andreasson,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+93,0,1,Chaffee, Mr. Herbert Fuller,male,46,1,0,W.E.P. 5734,61.175,E31,S,TRUE,Chaffee,2,Mr,E,W,adult,medium,Mr,FALSE,FALSE,FALSE
+94,0,3,Dean, Mr. Bertram Frank,male,26,1,2,C.A. 2315,20.575,N,S,TRUE,Dean,4,Mr,N,C,adult,large,Mr,FALSE,FALSE,FALSE
+95,0,3,Coxon, Mr. Daniel,male,59,0,0,364500,7.25,N,S,TRUE,Coxon,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+96,0,3,Shorney, Mr. Charles Joseph,male,NA,0,0,374910,8.05,N,S,TRUE,Shorney,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+97,0,1,Goldschmidt, Mr. George B,male,71,0,0,PC 17754,34.6542,A5,C,TRUE,Goldschmidt,1,Mr,A,P,senior,single,Mr,FALSE,FALSE,FALSE
+98,1,1,Greenfield, Mr. William Bertram,male,23,0,1,PC 17759,63.3583,D10 D12,C,TRUE,Greenfield,2,Mr,D,P,adult,medium,Mr,FALSE,FALSE,FALSE
+99,1,2,Doling, Mrs. John T (Ada Julia Bone),female,34,0,1,231919,23,N,S,TRUE,Doling,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+100,0,2,Kantor, Mr. Sinai,male,34,1,0,244367,26,N,S,TRUE,Kantor,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+101,0,3,Petranec, Miss. Matilda,female,28,0,0,349245,7.8958,N,S,TRUE,Petranec,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+102,0,3,Petroff, Mr. Pastcho ("Pentcho"),male,NA,0,0,349215,7.8958,N,S,TRUE,Petroff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+103,0,1,White, Mr. Richard Frasar,male,21,0,1,35281,77.2875,D26,S,TRUE,White,2,Mr,D,N,adult,medium,Mr,FALSE,FALSE,FALSE
+104,0,3,Johansson, Mr. Gustaf Joel,male,33,0,0,7540,8.6542,N,S,TRUE,Johansson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+105,0,3,Gustafsson, Mr. Anders Vilhelm,male,37,2,0,3101276,7.925,N,S,TRUE,Gustafsson,3,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+106,0,3,Mionoff, Mr. Stoytcho,male,28,0,0,349207,7.8958,N,S,TRUE,Mionoff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+107,1,3,Salkjelsvik, Miss. Anna Kristine,female,21,0,0,343120,7.65,N,S,TRUE,Salkjelsvik,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+108,1,3,Moss, Mr. Albert Johan,male,NA,0,0,312991,7.775,N,S,TRUE,Moss,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+109,0,3,Rekic, Mr. Tido,male,38,0,0,349249,7.8958,N,S,TRUE,Rekic,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+110,1,3,Moran, Miss. Bertha,female,NA,1,0,371110,24.15,N,Q,TRUE,Moran,2,Miss,N,N,young,medium,Miss,FALSE,FALSE,TRUE
+111,0,1,Porter, Mr. Walter Chamberlain,male,47,0,0,110465,52,C110,S,TRUE,Porter,1,Mr,C,N,adult,single,Mr,FALSE,FALSE,FALSE
+112,0,3,Zabour, Miss. Hileni,female,14.5,1,0,2665,14.4542,N,C,TRUE,Zabour,2,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+113,0,3,Barton, Mr. David John,male,22,0,0,324669,8.05,N,S,TRUE,Barton,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+114,0,3,Jussila, Miss. Katriina,female,20,1,0,4136,9.825,N,S,TRUE,Jussila,2,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+115,0,3,Attalah, Miss. Malake,female,17,0,0,2627,14.4583,N,C,TRUE,Attalah,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+116,0,3,Pekoniemi, Mr. Edvard,male,21,0,0,STON/O 2. 3101294,7.925,N,S,TRUE,Pekoniemi,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+117,0,3,Connors, Mr. Patrick,male,70.5,0,0,370369,7.75,N,Q,TRUE,Connors,1,Mr,N,N,senior,single,Mr,FALSE,FALSE,FALSE
+118,0,2,Turpin, Mr. William John Robert,male,29,1,0,11668,21,N,S,TRUE,Turpin,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+119,0,1,Baxter, Mr. Quigg Edmond,male,24,0,1,PC 17558,247.5208,B58 B60,C,TRUE,Baxter,2,Mr,B,P,adult,medium,Mr,FALSE,FALSE,FALSE
+120,0,3,Andersson, Miss. Ellis Anna Maria,female,2,4,2,347082,31.275,N,S,TRUE,Andersson,7,Miss,N,N,young,large,Miss,FALSE,FALSE,FALSE
+121,0,2,Hickman, Mr. Stanley George,male,21,2,0,S.O.C. 14879,73.5,N,S,TRUE,Hickman,3,Mr,N,S,adult,medium,Mr,FALSE,FALSE,FALSE
+122,0,3,Moore, Mr. Leonard Charles,male,NA,0,0,A4. 54510,8.05,N,S,TRUE,Moore,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,TRUE
+123,0,2,Nasser, Mr. Nicholas,male,32.5,1,0,237736,30.0708,N,C,TRUE,Nasser,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+124,1,2,Webber, Miss. Susan,female,32.5,0,0,27267,13,E101,S,TRUE,Webber,1,Miss,E,N,adult,single,Miss,FALSE,FALSE,FALSE
+125,0,1,White, Mr. Percival Wayland,male,54,0,1,35281,77.2875,D26,S,TRUE,White,2,Mr,D,N,adult,medium,Mr,FALSE,FALSE,FALSE
+126,1,3,Nicola-Yarred, Master. Elias,male,12,1,0,2651,11.2417,N,C,TRUE,Nicola-Yarred,2,Master,N,N,young,medium,Master,FALSE,FALSE,FALSE
+127,0,3,McMahon, Mr. Martin,male,NA,0,0,370372,7.75,N,Q,TRUE,McMahon,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+128,1,3,Madsen, Mr. Fridtjof Arne,male,24,0,0,C 17369,7.1417,N,S,TRUE,Madsen,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,FALSE
+129,1,3,Peter, Miss. Anna,female,NA,1,1,2668,22.3583,F E69,C,TRUE,Peter,3,Miss,F,N,young,medium,Miss,FALSE,FALSE,TRUE
+130,0,3,Ekstrom, Mr. Johan,male,45,0,0,347061,6.975,N,S,TRUE,Ekstrom,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+131,0,3,Drazenoic, Mr. Jozef,male,33,0,0,349241,7.8958,N,C,TRUE,Drazenoic,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+132,0,3,Coelho, Mr. Domingos Fernandeo,male,20,0,0,SOTON/O.Q. 3101307,7.05,N,S,TRUE,Coelho,1,Mr,N,S,young,single,Mr,FALSE,FALSE,FALSE
+133,0,3,Robins, Mrs. Alexander A (Grace Charity Laury),female,47,1,0,A/5. 3337,14.5,N,S,TRUE,Robins,2,Mrs,N,A,adult,medium,Mrs,FALSE,FALSE,FALSE
+134,1,2,Weisz, Mrs. Leopold (Mathilde Francoise Pede),female,29,1,0,228414,26,N,S,TRUE,Weisz,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+135,0,2,Sobey, Mr. Samuel James Hayden,male,25,0,0,C.A. 29178,13,N,S,TRUE,Sobey,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,FALSE
+136,0,2,Richard, Mr. Emile,male,23,0,0,SC/PARIS 2133,15.0458,N,C,TRUE,Richard,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+137,1,1,Newsom, Miss. Helen Monypeny,female,19,0,2,11752,26.2833,D47,S,TRUE,Newsom,3,Miss,D,N,young,medium,Miss,FALSE,FALSE,FALSE
+138,0,1,Futrelle, Mr. Jacques Heath,male,37,1,0,113803,53.1,C123,S,TRUE,Futrelle,2,Mr,C,N,adult,medium,Mr,FALSE,FALSE,FALSE
+139,0,3,Osen, Mr. Olaf Elon,male,16,0,0,7534,9.2167,N,S,TRUE,Osen,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+140,0,1,Giglio, Mr. Victor,male,24,0,0,PC 17593,79.2,B86,C,TRUE,Giglio,1,Mr,B,P,adult,single,Mr,FALSE,FALSE,FALSE
+141,0,3,Boulos, Mrs. Joseph (Sultana),female,NA,0,2,2678,15.2458,N,C,TRUE,Boulos,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,TRUE
+142,1,3,Nysten, Miss. Anna Sofia,female,22,0,0,347081,7.75,N,S,TRUE,Nysten,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+143,1,3,Hakkarainen, Mrs. Pekka Pietari (Elin Matilda Dolck),female,24,1,0,STON/O2. 3101279,15.85,N,S,TRUE,Hakkarainen,2,Mrs,N,S,adult,medium,Mrs,FALSE,FALSE,FALSE
+144,0,3,Burke, Mr. Jeremiah,male,19,0,0,365222,6.75,N,Q,TRUE,Burke,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+145,0,2,Andrew, Mr. Edgardo Samuel,male,18,0,0,231945,11.5,N,S,TRUE,Andrew,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+146,0,2,Nicholls, Mr. Joseph Charles,male,19,1,1,C.A. 33112,36.75,N,S,TRUE,Nicholls,3,Mr,N,C,young,medium,Mr,FALSE,FALSE,FALSE
+147,1,3,Andersson, Mr. August Edvard ("Wennerstrom"),male,27,0,0,350043,7.7958,N,S,TRUE,Andersson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+148,0,3,Ford, Miss. Robina Maggie "Ruby",female,9,2,2,W./C. 6608,34.375,N,S,TRUE,Ford,5,Miss,N,W,young,large,Miss,FALSE,FALSE,FALSE
+149,0,2,Navratil, Mr. Michel ("Louis M Hoffman"),male,36.5,0,2,230080,26,F2,S,TRUE,Navratil,3,Mr,F,N,adult,medium,Mr,FALSE,FALSE,FALSE
+150,0,2,Byles, Rev. Thomas Roussel Davids,male,42,0,0,244310,13,N,S,TRUE,Byles,1,Rev,N,N,adult,single,Other,FALSE,FALSE,FALSE
+151,0,2,Bateman, Rev. Robert James,male,51,0,0,S.O.P. 1166,12.525,N,S,TRUE,Bateman,1,Rev,N,S,adult,single,Other,FALSE,FALSE,FALSE
+152,1,1,Pears, Mrs. Thomas (Edith Wearne),female,22,1,0,113776,66.6,C2,S,TRUE,Pears,2,Mrs,C,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+153,0,3,Meo, Mr. Alfonzo,male,55.5,0,0,A.5. 11206,8.05,N,S,TRUE,Meo,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,FALSE
+154,0,3,van Billiard, Mr. Austin Blyler,male,40.5,0,2,A/5. 851,14.5,N,S,TRUE,van Billiard,3,Mr,N,A,adult,medium,Mr,FALSE,FALSE,FALSE
+155,0,3,Olsen, Mr. Ole Martin,male,NA,0,0,Fa 265302,7.3125,N,S,TRUE,Olsen,1,Mr,N,F,adult,single,Mr,FALSE,FALSE,TRUE
+156,0,1,Williams, Mr. Charles Duane,male,51,0,1,PC 17597,61.3792,N,C,TRUE,Williams,2,Mr,N,P,adult,medium,Mr,FALSE,FALSE,FALSE
+157,1,3,Gilnagh, Miss. Katherine "Katie",female,16,0,0,35851,7.7333,N,Q,TRUE,Gilnagh,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+158,0,3,Corn, Mr. Harry,male,30,0,0,SOTON/OQ 392090,8.05,N,S,TRUE,Corn,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+159,0,3,Smiljanic, Mr. Mile,male,NA,0,0,315037,8.6625,N,S,TRUE,Smiljanic,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+160,0,3,Sage, Master. Thomas Henry,male,NA,8,2,CA. 2343,69.55,N,S,TRUE,Sage,11,Master,N,C,young,large,Master,FALSE,FALSE,FALSE
+161,0,3,Cribb, Mr. John Hatfield,male,44,0,1,371362,16.1,N,S,TRUE,Cribb,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+162,1,2,Watt, Mrs. James (Elizabeth "Bessie" Inglis Milne),female,40,0,0,C.A. 33595,15.75,N,S,TRUE,Watt,1,Mrs,N,C,adult,single,Mrs,FALSE,FALSE,FALSE
+163,0,3,Bengtsson, Mr. John Viktor,male,26,0,0,347068,7.775,N,S,TRUE,Bengtsson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+164,0,3,Calic, Mr. Jovo,male,17,0,0,315093,8.6625,N,S,TRUE,Calic,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+165,0,3,Panula, Master. Eino Viljami,male,1,4,1,3101295,39.6875,N,S,TRUE,Panula,6,Master,N,N,young,large,Master,FALSE,FALSE,FALSE
+166,1,3,Goldsmith, Master. Frank John William "Frankie",male,9,0,2,363291,20.525,N,S,TRUE,Goldsmith,3,Master,N,N,young,medium,Master,FALSE,FALSE,FALSE
+167,1,1,Chibnall, Mrs. (Edith Martha Bowerman),female,NA,0,1,113505,55,E33,S,TRUE,Chibnall,2,Mrs,E,N,adult,medium,Mrs,FALSE,FALSE,TRUE
+168,0,3,Skoog, Mrs. William (Anna Bernhardina Karlsson),female,45,1,4,347088,27.9,N,S,TRUE,Skoog,6,Mrs,N,N,adult,large,Mrs,FALSE,FALSE,FALSE
+169,0,1,Baumann, Mr. John D,male,NA,0,0,PC 17318,25.925,N,S,TRUE,Baumann,1,Mr,N,P,adult,single,Mr,FALSE,FALSE,TRUE
+170,0,3,Ling, Mr. Lee,male,28,0,0,1601,56.4958,N,S,TRUE,Ling,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+171,0,1,Van der hoef, Mr. Wyckoff,male,61,0,0,111240,33.5,B19,S,TRUE,Van der hoef,1,Mr,B,N,senior,single,Mr,FALSE,FALSE,FALSE
+172,0,3,Rice, Master. Arthur,male,4,4,1,382652,29.125,N,Q,TRUE,Rice,6,Master,N,N,young,large,Master,FALSE,FALSE,FALSE
+173,1,3,Johnson, Miss. Eleanor Ileen,female,1,1,1,347742,11.1333,N,S,TRUE,Johnson,3,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+174,0,3,Sivola, Mr. Antti Wilhelm,male,21,0,0,STON/O 2. 3101280,7.925,N,S,TRUE,Sivola,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+175,0,1,Smith, Mr. James Clinch,male,56,0,0,17764,30.6958,A7,C,TRUE,Smith,1,Mr,A,N,adult,single,Mr,FALSE,FALSE,FALSE
+176,0,3,Klasen, Mr. Klas Albin,male,18,1,1,350404,7.8542,N,S,TRUE,Klasen,3,Mr,N,N,young,medium,Mr,FALSE,FALSE,FALSE
+177,0,3,Lefebre, Master. Henry Forbes,male,NA,3,1,4133,25.4667,N,S,TRUE,Lefebre,5,Master,N,N,young,large,Master,FALSE,FALSE,FALSE
+178,0,1,Isham, Miss. Ann Elizabeth,female,50,0,0,PC 17595,28.7125,C49,C,TRUE,Isham,1,Miss,C,P,adult,single,Miss,FALSE,FALSE,FALSE
+179,0,2,Hale, Mr. Reginald,male,30,0,0,250653,13,N,S,TRUE,Hale,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+180,0,3,Leonard, Mr. Lionel,male,36,0,0,LINE,8.0396,N,S,TRUE,Leonard,1,Mr,N,L,adult,single,Mr,FALSE,TRUE,FALSE
+181,0,3,Sage, Miss. Constance Gladys,female,NA,8,2,CA. 2343,69.55,N,S,TRUE,Sage,11,Miss,N,C,young,large,Miss,FALSE,FALSE,TRUE
+182,0,2,Pernot, Mr. Rene,male,NA,0,0,SC/PARIS 2131,15.05,N,C,TRUE,Pernot,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,TRUE
+183,0,3,Asplund, Master. Clarence Gustaf Hugo,male,9,4,2,347077,31.3875,N,S,TRUE,Asplund,7,Master,N,N,young,large,Master,FALSE,FALSE,FALSE
+184,1,2,Becker, Master. Richard F,male,1,2,1,230136,39,F4,S,TRUE,Becker,4,Master,F,N,young,large,Master,FALSE,FALSE,FALSE
+185,1,3,Kink-Heilmann, Miss. Luise Gretchen,female,4,0,2,315153,22.025,N,S,TRUE,Kink-Heilmann,3,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+186,0,1,Rood, Mr. Hugh Roscoe,male,NA,0,0,113767,50,A32,S,TRUE,Rood,1,Mr,A,N,adult,single,Mr,FALSE,FALSE,TRUE
+187,1,3,O'Brien, Mrs. Thomas (Johanna "Hannah" Godfrey),female,NA,1,0,370365,15.5,N,Q,TRUE,O'Brien,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,TRUE
+188,1,1,Romaine, Mr. Charles Hallace ("Mr C Rolmane"),male,45,0,0,111428,26.55,N,S,TRUE,Romaine,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+189,0,3,Bourke, Mr. John,male,40,1,1,364849,15.5,N,Q,TRUE,Bourke,3,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+190,0,3,Turcin, Mr. Stjepan,male,36,0,0,349247,7.8958,N,S,TRUE,Turcin,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+191,1,2,Pinsky, Mrs. (Rosa),female,32,0,0,234604,13,N,S,TRUE,Pinsky,1,Mrs,N,N,adult,single,Mrs,FALSE,FALSE,FALSE
+192,0,2,Carbines, Mr. William,male,19,0,0,28424,13,N,S,TRUE,Carbines,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+193,1,3,Andersen-Jensen, Miss. Carla Christine Nielsine,female,19,1,0,350046,7.8542,N,S,TRUE,Andersen-Jensen,2,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+194,1,2,Navratil, Master. Michel M,male,3,1,1,230080,26,F2,S,TRUE,Navratil,3,Master,F,N,young,medium,Master,FALSE,FALSE,FALSE
+195,1,1,Brown, Mrs. James Joseph (Margaret Tobin),female,44,0,0,PC 17610,27.7208,B4,C,TRUE,Brown,1,Mrs,B,P,adult,single,Mrs,FALSE,FALSE,FALSE
+196,1,1,Lurette, Miss. Elise,female,58,0,0,PC 17569,146.5208,B80,C,TRUE,Lurette,1,Miss,B,P,adult,single,Miss,FALSE,FALSE,FALSE
+197,0,3,Mernagh, Mr. Robert,male,NA,0,0,368703,7.75,N,Q,TRUE,Mernagh,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+198,0,3,Olsen, Mr. Karl Siegwart Andreas,male,42,0,1,4579,8.4042,N,S,TRUE,Olsen,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+199,1,3,Madigan, Miss. Margaret "Maggie",female,NA,0,0,370370,7.75,N,Q,TRUE,Madigan,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,TRUE
+200,0,2,Yrois, Miss. Henriette ("Mrs Harbeck"),female,24,0,0,248747,13,N,S,TRUE,Yrois,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+201,0,3,Vande Walle, Mr. Nestor Cyriel,male,28,0,0,345770,9.5,N,S,TRUE,Vande Walle,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+202,0,3,Sage, Mr. Frederick,male,NA,8,2,CA. 2343,69.55,N,S,TRUE,Sage,11,Mr,N,C,young,large,Mr,FALSE,FALSE,TRUE
+203,0,3,Johanson, Mr. Jakob Alfred,male,34,0,0,3101264,6.4958,N,S,TRUE,Johanson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+204,0,3,Youseff, Mr. Gerious,male,45.5,0,0,2628,7.225,N,C,TRUE,Youseff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+205,1,3,Cohen, Mr. Gurshon "Gus",male,18,0,0,A/5 3540,8.05,N,S,TRUE,Cohen,1,Mr,N,A,young,single,Mr,FALSE,FALSE,FALSE
+206,0,3,Strom, Miss. Telma Matilda,female,2,0,1,347054,10.4625,G6,S,TRUE,Strom,2,Miss,G,N,young,medium,Miss,FALSE,FALSE,FALSE
+207,0,3,Backstrom, Mr. Karl Alfred,male,32,1,0,3101278,15.85,N,S,TRUE,Backstrom,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+208,1,3,Albimona, Mr. Nassef Cassem,male,26,0,0,2699,18.7875,N,C,TRUE,Albimona,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+209,1,3,Carr, Miss. Helen "Ellen",female,16,0,0,367231,7.75,N,Q,TRUE,Carr,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+210,1,1,Blank, Mr. Henry,male,40,0,0,112277,31,A31,C,TRUE,Blank,1,Mr,A,N,adult,single,Mr,FALSE,FALSE,FALSE
+211,0,3,Ali, Mr. Ahmed,male,24,0,0,SOTON/O.Q. 3101311,7.05,N,S,TRUE,Ali,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+212,1,2,Cameron, Miss. Clear Annie,female,35,0,0,F.C.C. 13528,21,N,S,TRUE,Cameron,1,Miss,N,F,adult,single,Miss,FALSE,FALSE,FALSE
+213,0,3,Perkin, Mr. John Henry,male,22,0,0,A/5 21174,7.25,N,S,TRUE,Perkin,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,FALSE
+214,0,2,Givard, Mr. Hans Kristensen,male,30,0,0,250646,13,N,S,TRUE,Givard,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+215,0,3,Kiernan, Mr. Philip,male,NA,1,0,367229,7.75,N,Q,TRUE,Kiernan,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,TRUE
+216,1,1,Newell, Miss. Madeleine,female,31,1,0,35273,113.275,D36,C,TRUE,Newell,2,Miss,D,N,adult,medium,Miss,FALSE,FALSE,FALSE
+217,1,3,Honkanen, Miss. Eliina,female,27,0,0,STON/O2. 3101283,7.925,N,S,TRUE,Honkanen,1,Miss,N,S,adult,single,Miss,FALSE,FALSE,FALSE
+218,0,2,Jacobsohn, Mr. Sidney Samuel,male,42,1,0,243847,27,N,S,TRUE,Jacobsohn,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+219,1,1,Bazzani, Miss. Albina,female,32,0,0,11813,76.2917,D15,C,TRUE,Bazzani,1,Miss,D,N,adult,single,Miss,FALSE,FALSE,FALSE
+220,0,2,Harris, Mr. Walter,male,30,0,0,W/C 14208,10.5,N,S,TRUE,Harris,1,Mr,N,W,adult,single,Mr,FALSE,FALSE,FALSE
+221,1,3,Sunderland, Mr. Victor Francis,male,16,0,0,SOTON/OQ 392089,8.05,N,S,TRUE,Sunderland,1,Mr,N,S,young,single,Mr,FALSE,FALSE,FALSE
+222,0,2,Bracken, Mr. James H,male,27,0,0,220367,13,N,S,TRUE,Bracken,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+223,0,3,Green, Mr. George Henry,male,51,0,0,21440,8.05,N,S,TRUE,Green,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+224,0,3,Nenkoff, Mr. Christo,male,NA,0,0,349234,7.8958,N,S,TRUE,Nenkoff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+225,1,1,Hoyt, Mr. Frederick Maxfield,male,38,1,0,19943,90,C93,S,TRUE,Hoyt,2,Mr,C,N,adult,medium,Mr,FALSE,FALSE,FALSE
+226,0,3,Berglund, Mr. Karl Ivar Sven,male,22,0,0,PP 4348,9.35,N,S,TRUE,Berglund,1,Mr,N,P,adult,single,Mr,FALSE,FALSE,FALSE
+227,1,2,Mellors, Mr. William John,male,19,0,0,SW/PP 751,10.5,N,S,TRUE,Mellors,1,Mr,N,S,young,single,Mr,FALSE,FALSE,FALSE
+228,0,3,Lovell, Mr. John Hall ("Henry"),male,20.5,0,0,A/5 21173,7.25,N,S,TRUE,Lovell,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,FALSE
+229,0,2,Fahlstrom, Mr. Arne Jonas,male,18,0,0,236171,13,N,S,TRUE,Fahlstrom,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+230,0,3,Lefebre, Miss. Mathilde,female,NA,3,1,4133,25.4667,N,S,TRUE,Lefebre,5,Miss,N,N,young,large,Miss,FALSE,FALSE,TRUE
+231,1,1,Harris, Mrs. Henry Birkhardt (Irene Wallach),female,35,1,0,36973,83.475,C83,S,TRUE,Harris,2,Mrs,C,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+232,0,3,Larsson, Mr. Bengt Edvin,male,29,0,0,347067,7.775,N,S,TRUE,Larsson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+233,0,2,Sjostedt, Mr. Ernst Adolf,male,59,0,0,237442,13.5,N,S,TRUE,Sjostedt,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+234,1,3,Asplund, Miss. Lillian Gertrud,female,5,4,2,347077,31.3875,N,S,TRUE,Asplund,7,Miss,N,N,young,large,Miss,FALSE,FALSE,FALSE
+235,0,2,Leyson, Mr. Robert William Norman,male,24,0,0,C.A. 29566,10.5,N,S,TRUE,Leyson,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,FALSE
+236,0,3,Harknett, Miss. Alice Phoebe,female,NA,0,0,W./C. 6609,7.55,N,S,TRUE,Harknett,1,Miss,N,W,adult,single,Miss,FALSE,FALSE,TRUE
+237,0,2,Hold, Mr. Stephen,male,44,1,0,26707,26,N,S,TRUE,Hold,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+238,1,2,Collyer, Miss. Marjorie "Lottie",female,8,0,2,C.A. 31921,26.25,N,S,TRUE,Collyer,3,Miss,N,C,young,medium,Miss,FALSE,FALSE,FALSE
+239,0,2,Pengelly, Mr. Frederick William,male,19,0,0,28665,10.5,N,S,TRUE,Pengelly,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+240,0,2,Hunt, Mr. George Henry,male,33,0,0,SCO/W 1585,12.275,N,S,TRUE,Hunt,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+241,0,3,Zabour, Miss. Thamine,female,NA,1,0,2665,14.4542,N,C,TRUE,Zabour,2,Miss,N,N,young,medium,Miss,FALSE,FALSE,TRUE
+242,1,3,Murphy, Miss. Katherine "Kate",female,NA,1,0,367230,15.5,N,Q,TRUE,Murphy,2,Miss,N,N,young,medium,Miss,FALSE,FALSE,TRUE
+243,0,2,Coleridge, Mr. Reginald Charles,male,29,0,0,W./C. 14263,10.5,N,S,TRUE,Coleridge,1,Mr,N,W,adult,single,Mr,FALSE,FALSE,FALSE
+244,0,3,Maenpaa, Mr. Matti Alexanteri,male,22,0,0,STON/O 2. 3101275,7.125,N,S,TRUE,Maenpaa,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+245,0,3,Attalah, Mr. Sleiman,male,30,0,0,2694,7.225,N,C,TRUE,Attalah,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+246,0,1,Minahan, Dr. William Edward,male,44,2,0,19928,90,C78,Q,TRUE,Minahan,3,Dr,C,N,adult,medium,Other,FALSE,FALSE,FALSE
+247,0,3,Lindahl, Miss. Agda Thorilda Viktoria,female,25,0,0,347071,7.775,N,S,TRUE,Lindahl,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+248,1,2,Hamalainen, Mrs. William (Anna),female,24,0,2,250649,14.5,N,S,TRUE,Hamalainen,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+249,1,1,Beckwith, Mr. Richard Leonard,male,37,1,1,11751,52.5542,D35,S,TRUE,Beckwith,3,Mr,D,N,adult,medium,Mr,FALSE,FALSE,FALSE
+250,0,2,Carter, Rev. Ernest Courtenay,male,54,1,0,244252,26,N,S,TRUE,Carter,2,Rev,N,N,adult,medium,Other,FALSE,FALSE,FALSE
+251,0,3,Reed, Mr. James George,male,NA,0,0,362316,7.25,N,S,TRUE,Reed,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+252,0,3,Strom, Mrs. Wilhelm (Elna Matilda Persson),female,29,1,1,347054,10.4625,G6,S,TRUE,Strom,3,Mrs,G,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+253,0,1,Stead, Mr. William Thomas,male,62,0,0,113514,26.55,C87,S,TRUE,Stead,1,Mr,C,N,senior,single,Mr,FALSE,FALSE,FALSE
+254,0,3,Lobb, Mr. William Arthur,male,30,1,0,A/5. 3336,16.1,N,S,TRUE,Lobb,2,Mr,N,A,adult,medium,Mr,FALSE,FALSE,FALSE
+255,0,3,Rosblom, Mrs. Viktor (Helena Wilhelmina),female,41,0,2,370129,20.2125,N,S,TRUE,Rosblom,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+256,1,3,Touma, Mrs. Darwis (Hanne Youssef Razi),female,29,0,2,2650,15.2458,N,C,TRUE,Touma,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+257,1,1,Thorne, Mrs. Gertrude Maybelle,female,NA,0,0,PC 17585,79.2,N,C,TRUE,Thorne,1,Mrs,N,P,adult,single,Mrs,FALSE,FALSE,TRUE
+258,1,1,Cherry, Miss. Gladys,female,30,0,0,110152,86.5,B77,S,TRUE,Cherry,1,Miss,B,N,adult,single,Miss,FALSE,FALSE,FALSE
+259,1,1,Ward, Miss. Anna,female,35,0,0,PC 17755,512.3292,N,C,TRUE,Ward,1,Miss,N,P,adult,single,Miss,FALSE,FALSE,FALSE
+260,1,2,Parrish, Mrs. (Lutie Davis),female,50,0,1,230433,26,N,S,TRUE,Parrish,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+261,0,3,Smith, Mr. Thomas,male,NA,0,0,384461,7.75,N,Q,TRUE,Smith,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+262,1,3,Asplund, Master. Edvin Rojj Felix,male,3,4,2,347077,31.3875,N,S,TRUE,Asplund,7,Master,N,N,young,large,Master,FALSE,FALSE,FALSE
+263,0,1,Taussig, Mr. Emil,male,52,1,1,110413,79.65,E67,S,TRUE,Taussig,3,Mr,E,N,adult,medium,Mr,FALSE,FALSE,FALSE
+264,0,1,Harrison, Mr. William,male,40,0,0,112059,83.25,B94,S,TRUE,Harrison,1,Mr,B,N,adult,single,Mr,FALSE,TRUE,FALSE
+265,0,3,Henry, Miss. Delia,female,NA,0,0,382649,7.75,N,Q,TRUE,Henry,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+266,0,2,Reeves, Mr. David,male,36,0,0,C.A. 17248,10.5,N,S,TRUE,Reeves,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,FALSE
+267,0,3,Panula, Mr. Ernesti Arvid,male,16,4,1,3101295,39.6875,N,S,TRUE,Panula,6,Mr,N,N,young,large,Mr,FALSE,FALSE,FALSE
+268,1,3,Persson, Mr. Ernst Ulrik,male,25,1,0,347083,7.775,N,S,TRUE,Persson,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+269,1,1,Graham, Mrs. William Thompson (Edith Junkins),female,58,0,1,PC 17582,153.4625,C125,S,TRUE,Graham,2,Mrs,C,P,adult,medium,Mrs,FALSE,FALSE,FALSE
+270,1,1,Bissette, Miss. Amelia,female,35,0,0,PC 17760,135.6333,C99,S,TRUE,Bissette,1,Miss,C,P,adult,single,Miss,FALSE,FALSE,FALSE
+271,0,1,Cairns, Mr. Alexander,male,NA,0,0,113798,31,N,S,TRUE,Cairns,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+272,1,3,Tornquist, Mr. William Henry,male,25,0,0,LINE,8.0396,N,S,TRUE,Tornquist,1,Mr,N,L,adult,single,Mr,FALSE,TRUE,FALSE
+273,1,2,Mellinger, Mrs. (Elizabeth Anne Maidment),female,41,0,1,250644,19.5,N,S,TRUE,Mellinger,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+274,0,1,Natsch, Mr. Charles H,male,37,0,1,PC 17596,29.7,C118,C,TRUE,Natsch,2,Mr,C,P,adult,medium,Mr,FALSE,FALSE,FALSE
+275,1,3,Healy, Miss. Hanora "Nora",female,NA,0,0,370375,7.75,N,Q,TRUE,Healy,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+276,1,1,Andrews, Miss. Kornelia Theodosia,female,63,1,0,13502,77.9583,D7,S,TRUE,Andrews,2,Miss,D,N,senior,medium,Miss,FALSE,FALSE,FALSE
+277,0,3,Lindblom, Miss. Augusta Charlotta,female,45,0,0,347073,7.75,N,S,TRUE,Lindblom,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+278,0,2,Parkes, Mr. Francis "Frank",male,NA,0,0,239853,29.5,N,S,TRUE,Parkes,1,Mr,N,N,adult,single,Mr,FALSE,TRUE,TRUE
+279,0,3,Rice, Master. Eric,male,7,4,1,382652,29.125,N,Q,TRUE,Rice,6,Master,N,N,young,large,Master,FALSE,FALSE,FALSE
+280,1,3,Abbott, Mrs. Stanton (Rosa Hunt),female,35,1,1,C.A. 2673,20.25,N,S,TRUE,Abbott,3,Mrs,N,C,adult,medium,Mrs,FALSE,FALSE,FALSE
+281,0,3,Duane, Mr. Frank,male,65,0,0,336439,7.75,N,Q,TRUE,Duane,1,Mr,N,N,senior,single,Mr,FALSE,FALSE,FALSE
+282,0,3,Olsson, Mr. Nils Johan Goransson,male,28,0,0,347464,7.8542,N,S,TRUE,Olsson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+283,0,3,de Pelsmaeker, Mr. Alfons,male,16,0,0,345778,9.5,N,S,TRUE,de Pelsmaeker,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+284,1,3,Dorking, Mr. Edward Arthur,male,19,0,0,A/5. 10482,8.05,N,S,TRUE,Dorking,1,Mr,N,A,young,single,Mr,FALSE,FALSE,FALSE
+285,0,1,Smith, Mr. Richard William,male,NA,0,0,113056,26,A19,S,TRUE,Smith,1,Mr,A,N,adult,single,Mr,FALSE,FALSE,TRUE
+286,0,3,Stankovic, Mr. Ivan,male,33,0,0,349239,8.6625,N,C,TRUE,Stankovic,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+287,1,3,de Mulder, Mr. Theodore,male,30,0,0,345774,9.5,N,S,TRUE,de Mulder,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+288,0,3,Naidenoff, Mr. Penko,male,22,0,0,349206,7.8958,N,S,TRUE,Naidenoff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+289,1,2,Hosono, Mr. Masabumi,male,42,0,0,237798,13,N,S,TRUE,Hosono,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+290,1,3,Connolly, Miss. Kate,female,22,0,0,370373,7.75,N,Q,TRUE,Connolly,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+291,1,1,Barber, Miss. Ellen "Nellie",female,26,0,0,19877,78.85,N,S,TRUE,Barber,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+292,1,1,Bishop, Mrs. Dickinson H (Helen Walton),female,19,1,0,11967,91.0792,B49,C,TRUE,Bishop,2,Mrs,B,N,young,medium,Mrs,FALSE,FALSE,FALSE
+293,0,2,Levy, Mr. Rene Jacques,male,36,0,0,SC/Paris 2163,12.875,D,C,TRUE,Levy,1,Mr,D,S,adult,single,Mr,FALSE,FALSE,FALSE
+294,0,3,Haas, Miss. Aloisia,female,24,0,0,349236,8.85,N,S,TRUE,Haas,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+295,0,3,Mineff, Mr. Ivan,male,24,0,0,349233,7.8958,N,S,TRUE,Mineff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+296,0,1,Lewy, Mr. Ervin G,male,NA,0,0,PC 17612,27.7208,N,C,TRUE,Lewy,1,Mr,N,P,adult,single,Mr,FALSE,FALSE,TRUE
+297,0,3,Hanna, Mr. Mansour,male,23.5,0,0,2693,7.2292,N,C,TRUE,Hanna,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+298,0,1,Allison, Miss. Helen Loraine,female,2,1,2,113781,151.55,C22 C26,S,TRUE,Allison,4,Miss,C,N,young,large,Miss,FALSE,FALSE,FALSE
+299,1,1,Saalfeld, Mr. Adolphe,male,NA,0,0,19988,30.5,C106,S,TRUE,Saalfeld,1,Mr,C,N,adult,single,Mr,FALSE,FALSE,TRUE
+300,1,1,Baxter, Mrs. James (Helene DeLaudeniere Chaput),female,50,0,1,PC 17558,247.5208,B58 B60,C,TRUE,Baxter,2,Mrs,B,P,adult,medium,Mrs,FALSE,FALSE,FALSE
+301,1,3,Kelly, Miss. Anna Katherine "Annie Kate",female,NA,0,0,9234,7.75,N,Q,TRUE,Kelly,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+302,1,3,McCoy, Mr. Bernard,male,NA,2,0,367226,23.25,N,Q,TRUE,McCoy,3,Mr,N,N,adult,medium,Mr,FALSE,FALSE,TRUE
+303,0,3,Johnson, Mr. William Cahoone Jr,male,19,0,0,LINE,8.0396,N,S,TRUE,Johnson,1,Mr,N,L,young,single,Mr,FALSE,TRUE,FALSE
+304,1,2,Keane, Miss. Nora A,female,NA,0,0,226593,12.35,E101,Q,TRUE,Keane,1,Miss,E,N,adult,single,Miss,FALSE,FALSE,TRUE
+305,0,3,Williams, Mr. Howard Hugh "Harry",male,NA,0,0,A/5 2466,8.05,N,S,TRUE,Williams,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,TRUE
+306,1,1,Allison, Master. Hudson Trevor,male,0.92,1,2,113781,151.55,C22 C26,S,TRUE,Allison,4,Master,C,N,young,large,Master,FALSE,FALSE,FALSE
+307,1,1,Fleming, Miss. Margaret,female,NA,0,0,17421,110.8833,N,C,TRUE,Fleming,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,TRUE
+308,1,1,Penasco y Castellana, Mrs. Victor de Satode (Maria Josefa Perez de Soto y Vallejo),female,17,1,0,PC 17758,108.9,C65,C,TRUE,Penasco y Castellana,2,Mrs,C,P,young,medium,Mrs,FALSE,FALSE,FALSE
+309,0,2,Abelson, Mr. Samuel,male,30,1,0,P/PP 3381,24,N,C,TRUE,Abelson,2,Mr,N,P,adult,medium,Mr,FALSE,FALSE,FALSE
+310,1,1,Francatelli, Miss. Laura Mabel,female,30,0,0,PC 17485,56.9292,E36,C,TRUE,Francatelli,1,Miss,E,P,adult,single,Miss,FALSE,FALSE,FALSE
+311,1,1,Hays, Miss. Margaret Bechstein,female,24,0,0,11767,83.1583,C54,C,TRUE,Hays,1,Miss,C,N,adult,single,Miss,FALSE,FALSE,FALSE
+312,1,1,Ryerson, Miss. Emily Borie,female,18,2,2,PC 17608,262.375,B57 B59 B63 B66,C,TRUE,Ryerson,5,Miss,B,P,young,large,Miss,FALSE,FALSE,FALSE
+313,0,2,Lahtinen, Mrs. William (Anna Sylfven),female,26,1,1,250651,26,N,S,TRUE,Lahtinen,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+314,0,3,Hendekovic, Mr. Ignjac,male,28,0,0,349243,7.8958,N,S,TRUE,Hendekovic,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+315,0,2,Hart, Mr. Benjamin,male,43,1,1,F.C.C. 13529,26.25,N,S,TRUE,Hart,3,Mr,N,F,adult,medium,Mr,FALSE,FALSE,FALSE
+316,1,3,Nilsson, Miss. Helmina Josefina,female,26,0,0,347470,7.8542,N,S,TRUE,Nilsson,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+317,1,2,Kantor, Mrs. Sinai (Miriam Sternin),female,24,1,0,244367,26,N,S,TRUE,Kantor,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+318,0,2,Moraweck, Dr. Ernest,male,54,0,0,29011,14,N,S,TRUE,Moraweck,1,Dr,N,N,adult,single,Other,FALSE,FALSE,FALSE
+319,1,1,Wick, Miss. Mary Natalie,female,31,0,2,36928,164.8667,C7,S,TRUE,Wick,3,Miss,C,N,adult,medium,Miss,FALSE,FALSE,FALSE
+320,1,1,Spedden, Mrs. Frederic Oakley (Margaretta Corning Stone),female,40,1,1,16966,134.5,E34,C,TRUE,Spedden,3,Mrs,E,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+321,0,3,Dennis, Mr. Samuel,male,22,0,0,A/5 21172,7.25,N,S,TRUE,Dennis,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,FALSE
+322,0,3,Danoff, Mr. Yoto,male,27,0,0,349219,7.8958,N,S,TRUE,Danoff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+323,1,2,Slayter, Miss. Hilda Mary,female,30,0,0,234818,12.35,N,Q,TRUE,Slayter,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+324,1,2,Caldwell, Mrs. Albert Francis (Sylvia Mae Harbaugh),female,22,1,1,248738,29,N,S,TRUE,Caldwell,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+325,0,3,Sage, Mr. George John Jr,male,NA,8,2,CA. 2343,69.55,N,S,TRUE,Sage,11,Mr,N,C,young,large,Mr,FALSE,FALSE,TRUE
+326,1,1,Young, Miss. Marie Grice,female,36,0,0,PC 17760,135.6333,C32,C,TRUE,Young,1,Miss,C,P,adult,single,Miss,FALSE,FALSE,FALSE
+327,0,3,Nysveen, Mr. Johan Hansen,male,61,0,0,345364,6.2375,N,S,TRUE,Nysveen,1,Mr,N,N,senior,single,Mr,FALSE,FALSE,FALSE
+328,1,2,Ball, Mrs. (Ada E Hall),female,36,0,0,28551,13,D,S,TRUE,Ball,1,Mrs,D,N,adult,single,Mrs,FALSE,FALSE,FALSE
+329,1,3,Goldsmith, Mrs. Frank John (Emily Alice Brown),female,31,1,1,363291,20.525,N,S,TRUE,Goldsmith,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+330,1,1,Hippach, Miss. Jean Gertrude,female,16,0,1,111361,57.9792,B18,C,TRUE,Hippach,2,Miss,B,N,young,medium,Miss,FALSE,FALSE,FALSE
+331,1,3,McCoy, Miss. Agnes,female,NA,2,0,367226,23.25,N,Q,TRUE,McCoy,3,Miss,N,N,young,medium,Miss,FALSE,FALSE,TRUE
+332,0,1,Partner, Mr. Austen,male,45.5,0,0,113043,28.5,C124,S,TRUE,Partner,1,Mr,C,N,adult,single,Mr,FALSE,FALSE,FALSE
+333,0,1,Graham, Mr. George Edward,male,38,0,1,PC 17582,153.4625,C91,S,TRUE,Graham,2,Mr,C,P,adult,medium,Mr,FALSE,FALSE,FALSE
+334,0,3,Vander Planke, Mr. Leo Edmondus,male,16,2,0,345764,18,N,S,TRUE,Vander Planke,3,Mr,N,N,young,medium,Mr,FALSE,FALSE,FALSE
+335,1,1,Frauenthal, Mrs. Henry William (Clara Heinsheimer),female,NA,1,0,PC 17611,133.65,N,S,TRUE,Frauenthal,2,Mrs,N,P,adult,medium,Mrs,FALSE,FALSE,TRUE
+336,0,3,Denkoff, Mr. Mitto,male,NA,0,0,349225,7.8958,N,S,TRUE,Denkoff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+337,0,1,Pears, Mr. Thomas Clinton,male,29,1,0,113776,66.6,C2,S,TRUE,Pears,2,Mr,C,N,adult,medium,Mr,FALSE,FALSE,FALSE
+338,1,1,Burns, Miss. Elizabeth Margaret,female,41,0,0,16966,134.5,E40,C,TRUE,Burns,1,Miss,E,N,adult,single,Miss,FALSE,FALSE,FALSE
+339,1,3,Dahl, Mr. Karl Edwart,male,45,0,0,7598,8.05,N,S,TRUE,Dahl,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+340,0,1,Blackwell, Mr. Stephen Weart,male,45,0,0,113784,35.5,T,S,TRUE,Blackwell,1,Mr,T,N,adult,single,Mr,FALSE,FALSE,FALSE
+341,1,2,Navratil, Master. Edmond Roger,male,2,1,1,230080,26,F2,S,TRUE,Navratil,3,Master,F,N,young,medium,Master,FALSE,FALSE,FALSE
+342,1,1,Fortune, Miss. Alice Elizabeth,female,24,3,2,19950,263,C23 C25 C27,S,TRUE,Fortune,6,Miss,C,N,adult,large,Miss,FALSE,FALSE,FALSE
+343,0,2,Collander, Mr. Erik Gustaf,male,28,0,0,248740,13,N,S,TRUE,Collander,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+344,0,2,Sedgwick, Mr. Charles Frederick Waddington,male,25,0,0,244361,13,N,S,TRUE,Sedgwick,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+345,0,2,Fox, Mr. Stanley Hubert,male,36,0,0,229236,13,N,S,TRUE,Fox,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+346,1,2,Brown, Miss. Amelia "Mildred",female,24,0,0,248733,13,F33,S,TRUE,Brown,1,Miss,F,N,adult,single,Miss,FALSE,FALSE,FALSE
+347,1,2,Smith, Miss. Marion Elsie,female,40,0,0,31418,13,N,S,TRUE,Smith,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+348,1,3,Davison, Mrs. Thomas Henry (Mary E Finck),female,NA,1,0,386525,16.1,N,S,TRUE,Davison,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,TRUE
+349,1,3,Coutts, Master. William Loch "William",male,3,1,1,C.A. 37671,15.9,N,S,TRUE,Coutts,3,Master,N,C,young,medium,Master,FALSE,FALSE,FALSE
+350,0,3,Dimic, Mr. Jovan,male,42,0,0,315088,8.6625,N,S,TRUE,Dimic,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+351,0,3,Odahl, Mr. Nils Martin,male,23,0,0,7267,9.225,N,S,TRUE,Odahl,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+352,0,1,Williams-Lambert, Mr. Fletcher Fellows,male,NA,0,0,113510,35,C128,S,TRUE,Williams-Lambert,1,Mr,C,N,adult,single,Mr,FALSE,FALSE,TRUE
+353,0,3,Elias, Mr. Tannous,male,15,1,1,2695,7.2292,N,C,TRUE,Elias,3,Mr,N,N,young,medium,Mr,FALSE,FALSE,FALSE
+354,0,3,Arnold-Franchi, Mr. Josef,male,25,1,0,349237,17.8,N,S,TRUE,Arnold-Franchi,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+355,0,3,Yousif, Mr. Wazli,male,NA,0,0,2647,7.225,N,C,TRUE,Yousif,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+356,0,3,Vanden Steen, Mr. Leo Peter,male,28,0,0,345783,9.5,N,S,TRUE,Vanden Steen,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+357,1,1,Bowerman, Miss. Elsie Edith,female,22,0,1,113505,55,E33,S,TRUE,Bowerman,2,Miss,E,N,adult,medium,Miss,FALSE,FALSE,FALSE
+358,0,2,Funk, Miss. Annie Clemmer,female,38,0,0,237671,13,N,S,TRUE,Funk,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+359,1,3,McGovern, Miss. Mary,female,NA,0,0,330931,7.8792,N,Q,TRUE,McGovern,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+360,1,3,Mockler, Miss. Helen Mary "Ellie",female,NA,0,0,330980,7.8792,N,Q,TRUE,Mockler,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+361,0,3,Skoog, Mr. Wilhelm,male,40,1,4,347088,27.9,N,S,TRUE,Skoog,6,Mr,N,N,adult,large,Mr,FALSE,FALSE,FALSE
+362,0,2,del Carlo, Mr. Sebastiano,male,29,1,0,SC/PARIS 2167,27.7208,N,C,TRUE,del Carlo,2,Mr,N,S,adult,medium,Mr,FALSE,FALSE,FALSE
+363,0,3,Barbara, Mrs. (Catherine David),female,45,0,1,2691,14.4542,N,C,TRUE,Barbara,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+364,0,3,Asim, Mr. Adola,male,35,0,0,SOTON/O.Q. 3101310,7.05,N,S,TRUE,Asim,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+365,0,3,O'Brien, Mr. Thomas,male,NA,1,0,370365,15.5,N,Q,TRUE,O'Brien,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,TRUE
+366,0,3,Adahl, Mr. Mauritz Nils Martin,male,30,0,0,C 7076,7.25,N,S,TRUE,Adahl,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,FALSE
+367,1,1,Warren, Mrs. Frank Manley (Anna Sophia Atkinson),female,60,1,0,110813,75.25,D37,C,TRUE,Warren,2,Mrs,D,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+368,1,3,Moussa, Mrs. (Mantoura Boulos),female,NA,0,0,2626,7.2292,N,C,TRUE,Moussa,1,Mrs,N,N,adult,single,Mrs,FALSE,FALSE,TRUE
+369,1,3,Jermyn, Miss. Annie,female,NA,0,0,14313,7.75,N,Q,TRUE,Jermyn,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+370,1,1,Aubart, Mme. Leontine Pauline,female,24,0,0,PC 17477,69.3,B35,C,TRUE,Aubart,1,Mme,B,P,adult,single,Other,FALSE,FALSE,FALSE
+371,1,1,Harder, Mr. George Achilles,male,25,1,0,11765,55.4417,E50,C,TRUE,Harder,2,Mr,E,N,adult,medium,Mr,FALSE,FALSE,FALSE
+372,0,3,Wiklund, Mr. Jakob Alfred,male,18,1,0,3101267,6.4958,N,S,TRUE,Wiklund,2,Mr,N,N,young,medium,Mr,FALSE,FALSE,FALSE
+373,0,3,Beavan, Mr. William Thomas,male,19,0,0,323951,8.05,N,S,TRUE,Beavan,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+374,0,1,Ringhini, Mr. Sante,male,22,0,0,PC 17760,135.6333,N,C,TRUE,Ringhini,1,Mr,N,P,adult,single,Mr,FALSE,FALSE,FALSE
+375,0,3,Palsson, Miss. Stina Viola,female,3,3,1,349909,21.075,N,S,TRUE,Palsson,5,Miss,N,N,young,large,Miss,FALSE,FALSE,FALSE
+376,1,1,Meyer, Mrs. Edgar Joseph (Leila Saks),female,NA,1,0,PC 17604,82.1708,N,C,TRUE,Meyer,2,Mrs,N,P,adult,medium,Mrs,FALSE,FALSE,TRUE
+377,1,3,Landergren, Miss. Aurora Adelia,female,22,0,0,C 7077,7.25,N,S,TRUE,Landergren,1,Miss,N,C,adult,single,Miss,FALSE,FALSE,FALSE
+378,0,1,Widener, Mr. Harry Elkins,male,27,0,2,113503,211.5,C82,C,TRUE,Widener,3,Mr,C,N,adult,medium,Mr,FALSE,FALSE,FALSE
+379,0,3,Betros, Mr. Tannous,male,20,0,0,2648,4.0125,N,C,TRUE,Betros,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+380,0,3,Gustafsson, Mr. Karl Gideon,male,19,0,0,347069,7.775,N,S,TRUE,Gustafsson,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+381,1,1,Bidois, Miss. Rosalie,female,42,0,0,PC 17757,227.525,N,C,TRUE,Bidois,1,Miss,N,P,adult,single,Miss,FALSE,FALSE,FALSE
+382,1,3,Nakid, Miss. Maria ("Mary"),female,1,0,2,2653,15.7417,N,C,TRUE,Nakid,3,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+383,0,3,Tikkanen, Mr. Juho,male,32,0,0,STON/O 2. 3101293,7.925,N,S,TRUE,Tikkanen,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+384,1,1,Holverson, Mrs. Alexander Oskar (Mary Aline Towner),female,35,1,0,113789,52,N,S,TRUE,Holverson,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+385,0,3,Plotcharsky, Mr. Vasil,male,NA,0,0,349227,7.8958,N,S,TRUE,Plotcharsky,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+386,0,2,Davies, Mr. Charles Henry,male,18,0,0,S.O.C. 14879,73.5,N,S,TRUE,Davies,1,Mr,N,S,young,single,Mr,FALSE,FALSE,FALSE
+387,0,3,Goodwin, Master. Sidney Leonard,male,1,5,2,CA 2144,46.9,N,S,TRUE,Goodwin,8,Master,N,C,young,large,Master,FALSE,FALSE,FALSE
+388,1,2,Buss, Miss. Kate,female,36,0,0,27849,13,N,S,TRUE,Buss,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+389,0,3,Sadlier, Mr. Matthew,male,NA,0,0,367655,7.7292,N,Q,TRUE,Sadlier,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+390,1,2,Lehmann, Miss. Bertha,female,17,0,0,SC 1748,12,N,C,TRUE,Lehmann,1,Miss,N,S,young,single,Miss,FALSE,FALSE,FALSE
+391,1,1,Carter, Mr. William Ernest,male,36,1,2,113760,120,B96 B98,S,TRUE,Carter,4,Mr,B,N,adult,large,Mr,FALSE,FALSE,FALSE
+392,1,3,Jansson, Mr. Carl Olof,male,21,0,0,350034,7.7958,N,S,TRUE,Jansson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+393,0,3,Gustafsson, Mr. Johan Birger,male,28,2,0,3101277,7.925,N,S,TRUE,Gustafsson,3,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+394,1,1,Newell, Miss. Marjorie,female,23,1,0,35273,113.275,D36,C,TRUE,Newell,2,Miss,D,N,adult,medium,Miss,FALSE,FALSE,FALSE
+395,1,3,Sandstrom, Mrs. Hjalmar (Agnes Charlotta Bengtsson),female,24,0,2,PP 9549,16.7,G6,S,TRUE,Sandstrom,3,Mrs,G,P,adult,medium,Mrs,FALSE,FALSE,FALSE
+396,0,3,Johansson, Mr. Erik,male,22,0,0,350052,7.7958,N,S,TRUE,Johansson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+397,0,3,Olsson, Miss. Elina,female,31,0,0,350407,7.8542,N,S,TRUE,Olsson,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+398,0,2,McKane, Mr. Peter David,male,46,0,0,28403,26,N,S,TRUE,McKane,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+399,0,2,Pain, Dr. Alfred,male,23,0,0,244278,10.5,N,S,TRUE,Pain,1,Dr,N,N,adult,single,Other,FALSE,FALSE,FALSE
+400,1,2,Trout, Mrs. William H (Jessie L),female,28,0,0,240929,12.65,N,S,TRUE,Trout,1,Mrs,N,N,adult,single,Mrs,FALSE,FALSE,FALSE
+401,1,3,Niskanen, Mr. Juha,male,39,0,0,STON/O 2. 3101289,7.925,N,S,TRUE,Niskanen,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+402,0,3,Adams, Mr. John,male,26,0,0,341826,8.05,N,S,TRUE,Adams,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+403,0,3,Jussila, Miss. Mari Aina,female,21,1,0,4137,9.825,N,S,TRUE,Jussila,2,Miss,N,N,adult,medium,Miss,FALSE,FALSE,FALSE
+404,0,3,Hakkarainen, Mr. Pekka Pietari,male,28,1,0,STON/O2. 3101279,15.85,N,S,TRUE,Hakkarainen,2,Mr,N,S,adult,medium,Mr,FALSE,FALSE,FALSE
+405,0,3,Oreskovic, Miss. Marija,female,20,0,0,315096,8.6625,N,S,TRUE,Oreskovic,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+406,0,2,Gale, Mr. Shadrach,male,34,1,0,28664,21,N,S,TRUE,Gale,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+407,0,3,Widegren, Mr. Carl/Charles Peter,male,51,0,0,347064,7.75,N,S,TRUE,Widegren,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+408,1,2,Richards, Master. William Rowe,male,3,1,1,29106,18.75,N,S,TRUE,Richards,3,Master,N,N,young,medium,Master,FALSE,FALSE,FALSE
+409,0,3,Birkeland, Mr. Hans Martin Monsen,male,21,0,0,312992,7.775,N,S,TRUE,Birkeland,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+410,0,3,Lefebre, Miss. Ida,female,NA,3,1,4133,25.4667,N,S,TRUE,Lefebre,5,Miss,N,N,young,large,Miss,FALSE,FALSE,TRUE
+411,0,3,Sdycoff, Mr. Todor,male,NA,0,0,349222,7.8958,N,S,TRUE,Sdycoff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+412,0,3,Hart, Mr. Henry,male,NA,0,0,394140,6.8583,N,Q,TRUE,Hart,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+413,1,1,Minahan, Miss. Daisy E,female,33,1,0,19928,90,C78,Q,TRUE,Minahan,2,Miss,C,N,adult,medium,Miss,FALSE,FALSE,FALSE
+414,0,2,Cunningham, Mr. Alfred Fleming,male,NA,0,0,239853,29.5,N,S,TRUE,Cunningham,1,Mr,N,N,adult,single,Mr,FALSE,TRUE,TRUE
+415,1,3,Sundman, Mr. Johan Julian,male,44,0,0,STON/O 2. 3101269,7.925,N,S,TRUE,Sundman,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+416,0,3,Meek, Mrs. Thomas (Annie Louise Rowley),female,NA,0,0,343095,8.05,N,S,TRUE,Meek,1,Mrs,N,N,adult,single,Mrs,FALSE,FALSE,TRUE
+417,1,2,Drew, Mrs. James Vivian (Lulu Thorne Christian),female,34,1,1,28220,32.5,N,S,TRUE,Drew,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+418,1,2,Silven, Miss. Lyyli Karoliina,female,18,0,2,250652,13,N,S,TRUE,Silven,3,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+419,0,2,Matthews, Mr. William John,male,30,0,0,28228,13,N,S,TRUE,Matthews,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+420,0,3,Van Impe, Miss. Catharina,female,10,0,2,345773,24.15,N,S,TRUE,Van Impe,3,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+421,0,3,Gheorgheff, Mr. Stanio,male,NA,0,0,349254,7.8958,N,C,TRUE,Gheorgheff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+422,0,3,Charters, Mr. David,male,21,0,0,A/5. 13032,7.7333,N,Q,TRUE,Charters,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,FALSE
+423,0,3,Zimmerman, Mr. Leo,male,29,0,0,315082,7.875,N,S,TRUE,Zimmerman,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+424,0,3,Danbom, Mrs. Ernst Gilbert (Anna Sigrid Maria Brogren),female,28,1,1,347080,14.4,N,S,TRUE,Danbom,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+425,0,3,Rosblom, Mr. Viktor Richard,male,18,1,1,370129,20.2125,N,S,TRUE,Rosblom,3,Mr,N,N,young,medium,Mr,FALSE,FALSE,FALSE
+426,0,3,Wiseman, Mr. Phillippe,male,NA,0,0,A/4. 34244,7.25,N,S,TRUE,Wiseman,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,TRUE
+427,1,2,Clarke, Mrs. Charles V (Ada Maria Winfield),female,28,1,0,2003,26,N,S,TRUE,Clarke,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+428,1,2,Phillips, Miss. Kate Florence ("Mrs Kate Louise Phillips Marshall"),female,19,0,0,250655,26,N,S,TRUE,Phillips,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+429,0,3,Flynn, Mr. James,male,NA,0,0,364851,7.75,N,Q,TRUE,Flynn,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+430,1,3,Pickard, Mr. Berk (Berk Trembisky),male,32,0,0,SOTON/O.Q. 392078,8.05,E10,S,TRUE,Pickard,1,Mr,E,S,adult,single,Mr,FALSE,FALSE,FALSE
+431,1,1,Bjornstrom-Steffansson, Mr. Mauritz Hakan,male,28,0,0,110564,26.55,C52,S,TRUE,Bjornstrom-Steffansson,1,Mr,C,N,adult,single,Mr,FALSE,FALSE,FALSE
+432,1,3,Thorneycroft, Mrs. Percival (Florence Kate White),female,NA,1,0,376564,16.1,N,S,TRUE,Thorneycroft,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,TRUE
+433,1,2,Louch, Mrs. Charles Alexander (Alice Adelaide Slow),female,42,1,0,SC/AH 3085,26,N,S,TRUE,Louch,2,Mrs,N,S,adult,medium,Mrs,FALSE,FALSE,FALSE
+434,0,3,Kallio, Mr. Nikolai Erland,male,17,0,0,STON/O 2. 3101274,7.125,N,S,TRUE,Kallio,1,Mr,N,S,young,single,Mr,FALSE,FALSE,FALSE
+435,0,1,Silvey, Mr. William Baird,male,50,1,0,13507,55.9,E44,S,TRUE,Silvey,2,Mr,E,N,adult,medium,Mr,FALSE,FALSE,FALSE
+436,1,1,Carter, Miss. Lucile Polk,female,14,1,2,113760,120,B96 B98,S,TRUE,Carter,4,Miss,B,N,young,large,Miss,FALSE,FALSE,FALSE
+437,0,3,Ford, Miss. Doolina Margaret "Daisy",female,21,2,2,W./C. 6608,34.375,N,S,TRUE,Ford,5,Miss,N,W,adult,large,Miss,FALSE,FALSE,FALSE
+438,1,2,Richards, Mrs. Sidney (Emily Hocking),female,24,2,3,29106,18.75,N,S,TRUE,Richards,6,Mrs,N,N,adult,large,Mrs,FALSE,FALSE,FALSE
+439,0,1,Fortune, Mr. Mark,male,64,1,4,19950,263,C23 C25 C27,S,TRUE,Fortune,6,Mr,C,N,senior,large,Mr,FALSE,FALSE,FALSE
+440,0,2,Kvillner, Mr. Johan Henrik Johannesson,male,31,0,0,C.A. 18723,10.5,N,S,TRUE,Kvillner,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,FALSE
+441,1,2,Hart, Mrs. Benjamin (Esther Ada Bloomfield),female,45,1,1,F.C.C. 13529,26.25,N,S,TRUE,Hart,3,Mrs,N,F,adult,medium,Mrs,FALSE,FALSE,FALSE
+442,0,3,Hampe, Mr. Leon,male,20,0,0,345769,9.5,N,S,TRUE,Hampe,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+443,0,3,Petterson, Mr. Johan Emil,male,25,1,0,347076,7.775,N,S,TRUE,Petterson,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+444,1,2,Reynaldo, Ms. Encarnacion,female,28,0,0,230434,13,N,S,TRUE,Reynaldo,1,Ms,N,N,adult,single,Other,FALSE,FALSE,FALSE
+445,1,3,Johannesen-Bratthammer, Mr. Bernt,male,NA,0,0,65306,8.1125,N,S,TRUE,Johannesen-Bratthammer,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+446,1,1,Dodge, Master. Washington,male,4,0,2,33638,81.8583,A34,S,TRUE,Dodge,3,Master,A,N,young,medium,Master,FALSE,FALSE,FALSE
+447,1,2,Mellinger, Miss. Madeleine Violet,female,13,0,1,250644,19.5,N,S,TRUE,Mellinger,2,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+448,1,1,Seward, Mr. Frederic Kimber,male,34,0,0,113794,26.55,N,S,TRUE,Seward,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+449,1,3,Baclini, Miss. Marie Catherine,female,5,2,1,2666,19.2583,N,C,TRUE,Baclini,4,Miss,N,N,young,large,Miss,FALSE,FALSE,FALSE
+450,1,1,Peuchen, Major. Arthur Godfrey,male,52,0,0,113786,30.5,C104,S,TRUE,Peuchen,1,Major,C,N,adult,single,Other,FALSE,FALSE,FALSE
+451,0,2,West, Mr. Edwy Arthur,male,36,1,2,C.A. 34651,27.75,N,S,TRUE,West,4,Mr,N,C,adult,large,Mr,FALSE,FALSE,FALSE
+452,0,3,Hagland, Mr. Ingvald Olai Olsen,male,NA,1,0,65303,19.9667,N,S,TRUE,Hagland,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,TRUE
+453,0,1,Foreman, Mr. Benjamin Laventall,male,30,0,0,113051,27.75,C111,C,TRUE,Foreman,1,Mr,C,N,adult,single,Mr,FALSE,FALSE,FALSE
+454,1,1,Goldenberg, Mr. Samuel L,male,49,1,0,17453,89.1042,C92,C,TRUE,Goldenberg,2,Mr,C,N,adult,medium,Mr,FALSE,FALSE,FALSE
+455,0,3,Peduzzi, Mr. Joseph,male,NA,0,0,A/5 2817,8.05,N,S,TRUE,Peduzzi,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,TRUE
+456,1,3,Jalsevac, Mr. Ivan,male,29,0,0,349240,7.8958,N,C,TRUE,Jalsevac,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+457,0,1,Millet, Mr. Francis Davis,male,65,0,0,13509,26.55,E38,S,TRUE,Millet,1,Mr,E,N,senior,single,Mr,FALSE,FALSE,FALSE
+458,1,1,Kenyon, Mrs. Frederick R (Marion),female,NA,1,0,17464,51.8625,D21,S,TRUE,Kenyon,2,Mrs,D,N,adult,medium,Mrs,FALSE,FALSE,TRUE
+459,1,2,Toomey, Miss. Ellen,female,50,0,0,F.C.C. 13531,10.5,N,S,TRUE,Toomey,1,Miss,N,F,adult,single,Miss,FALSE,FALSE,FALSE
+460,0,3,O'Connor, Mr. Maurice,male,NA,0,0,371060,7.75,N,Q,TRUE,O'Connor,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+461,1,1,Anderson, Mr. Harry,male,48,0,0,19952,26.55,E12,S,TRUE,Anderson,1,Mr,E,N,adult,single,Mr,FALSE,FALSE,FALSE
+462,0,3,Morley, Mr. William,male,34,0,0,364506,8.05,N,S,TRUE,Morley,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+463,0,1,Gee, Mr. Arthur H,male,47,0,0,111320,38.5,E63,S,TRUE,Gee,1,Mr,E,N,adult,single,Mr,FALSE,FALSE,FALSE
+464,0,2,Milling, Mr. Jacob Christian,male,48,0,0,234360,13,N,S,TRUE,Milling,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+465,0,3,Maisner, Mr. Simon,male,NA,0,0,A/S 2816,8.05,N,S,TRUE,Maisner,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,TRUE
+466,0,3,Goncalves, Mr. Manuel Estanslas,male,38,0,0,SOTON/O.Q. 3101306,7.05,N,S,TRUE,Goncalves,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+467,0,2,Campbell, Mr. William,male,NA,0,0,239853,29.5,N,S,TRUE,Campbell,1,Mr,N,N,adult,single,Mr,FALSE,TRUE,TRUE
+468,0,1,Smart, Mr. John Montgomery,male,56,0,0,113792,26.55,N,S,TRUE,Smart,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+469,0,3,Scanlan, Mr. James,male,NA,0,0,36209,7.725,N,Q,TRUE,Scanlan,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+470,1,3,Baclini, Miss. Helene Barbara,female,0.75,2,1,2666,19.2583,N,C,TRUE,Baclini,4,Miss,N,N,young,large,Miss,FALSE,FALSE,FALSE
+471,0,3,Keefe, Mr. Arthur,male,NA,0,0,323592,7.25,N,S,TRUE,Keefe,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+472,0,3,Cacic, Mr. Luka,male,38,0,0,315089,8.6625,N,S,TRUE,Cacic,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+473,1,2,West, Mrs. Edwy Arthur (Ada Mary Worth),female,33,1,2,C.A. 34651,27.75,N,S,TRUE,West,4,Mrs,N,C,adult,large,Mrs,FALSE,FALSE,FALSE
+474,1,2,Jerwan, Mrs. Amin S (Marie Marthe Thuillard),female,23,0,0,SC/AH Basle 541,13.7917,D,C,TRUE,Jerwan,1,Mrs,D,S,adult,single,Mrs,FALSE,FALSE,FALSE
+475,0,3,Strandberg, Miss. Ida Sofia,female,22,0,0,7553,9.8375,N,S,TRUE,Strandberg,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+476,0,1,Clifford, Mr. George Quincy,male,NA,0,0,110465,52,A14,S,TRUE,Clifford,1,Mr,A,N,adult,single,Mr,FALSE,FALSE,TRUE
+477,0,2,Renouf, Mr. Peter Henry,male,34,1,0,31027,21,N,S,TRUE,Renouf,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+478,0,3,Braund, Mr. Lewis Richard,male,29,1,0,3460,7.0458,N,S,TRUE,Braund,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+479,0,3,Karlsson, Mr. Nils August,male,22,0,0,350060,7.5208,N,S,TRUE,Karlsson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+480,1,3,Hirvonen, Miss. Hildur E,female,2,0,1,3101298,12.2875,N,S,TRUE,Hirvonen,2,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+481,0,3,Goodwin, Master. Harold Victor,male,9,5,2,CA 2144,46.9,N,S,TRUE,Goodwin,8,Master,N,C,young,large,Master,FALSE,FALSE,FALSE
+482,0,2,Frost, Mr. Anthony Wood "Archie",male,NA,0,0,239854,29.5,N,S,TRUE,Frost,1,Mr,N,N,adult,single,Mr,FALSE,TRUE,TRUE
+483,0,3,Rouse, Mr. Richard Henry,male,50,0,0,A/5 3594,8.05,N,S,TRUE,Rouse,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,FALSE
+484,1,3,Turkula, Mrs. (Hedwig),female,63,0,0,4134,9.5875,N,S,TRUE,Turkula,1,Mrs,N,N,senior,single,Mrs,FALSE,FALSE,FALSE
+485,1,1,Bishop, Mr. Dickinson H,male,25,1,0,11967,91.0792,B49,C,TRUE,Bishop,2,Mr,B,N,adult,medium,Mr,FALSE,FALSE,FALSE
+486,0,3,Lefebre, Miss. Jeannie,female,NA,3,1,4133,25.4667,N,S,TRUE,Lefebre,5,Miss,N,N,young,large,Miss,FALSE,FALSE,TRUE
+487,1,1,Hoyt, Mrs. Frederick Maxfield (Jane Anne Forby),female,35,1,0,19943,90,C93,S,TRUE,Hoyt,2,Mrs,C,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+488,0,1,Kent, Mr. Edward Austin,male,58,0,0,11771,29.7,B37,C,TRUE,Kent,1,Mr,B,N,adult,single,Mr,FALSE,FALSE,FALSE
+489,0,3,Somerton, Mr. Francis William,male,30,0,0,A.5. 18509,8.05,N,S,TRUE,Somerton,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,FALSE
+490,1,3,Coutts, Master. Eden Leslie "Neville",male,9,1,1,C.A. 37671,15.9,N,S,TRUE,Coutts,3,Master,N,C,young,medium,Master,FALSE,FALSE,FALSE
+491,0,3,Hagland, Mr. Konrad Mathias Reiersen,male,NA,1,0,65304,19.9667,N,S,TRUE,Hagland,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,TRUE
+492,0,3,Windelov, Mr. Einar,male,21,0,0,SOTON/OQ 3101317,7.25,N,S,TRUE,Windelov,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+493,0,1,Molson, Mr. Harry Markland,male,55,0,0,113787,30.5,C30,S,TRUE,Molson,1,Mr,C,N,adult,single,Mr,FALSE,FALSE,FALSE
+494,0,1,Artagaveytia, Mr. Ramon,male,71,0,0,PC 17609,49.5042,N,C,TRUE,Artagaveytia,1,Mr,N,P,senior,single,Mr,FALSE,FALSE,FALSE
+495,0,3,Stanley, Mr. Edward Roland,male,21,0,0,A/4 45380,8.05,N,S,TRUE,Stanley,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,FALSE
+496,0,3,Yousseff, Mr. Gerious,male,NA,0,0,2627,14.4583,N,C,TRUE,Yousseff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+497,1,1,Eustis, Miss. Elizabeth Mussey,female,54,1,0,36947,78.2667,D20,C,TRUE,Eustis,2,Miss,D,N,adult,medium,Miss,FALSE,FALSE,FALSE
+498,0,3,Shellard, Mr. Frederick William,male,NA,0,0,C.A. 6212,15.1,N,S,TRUE,Shellard,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,TRUE
+499,0,1,Allison, Mrs. Hudson J C (Bessie Waldo Daniels),female,25,1,2,113781,151.55,C22 C26,S,TRUE,Allison,4,Mrs,C,N,adult,large,Mrs,FALSE,FALSE,FALSE
+500,0,3,Svensson, Mr. Olof,male,24,0,0,350035,7.7958,N,S,TRUE,Svensson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+501,0,3,Calic, Mr. Petar,male,17,0,0,315086,8.6625,N,S,TRUE,Calic,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+502,0,3,Canavan, Miss. Mary,female,21,0,0,364846,7.75,N,Q,TRUE,Canavan,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+503,0,3,O'Sullivan, Miss. Bridget Mary,female,NA,0,0,330909,7.6292,N,Q,TRUE,O'Sullivan,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+504,0,3,Laitinen, Miss. Kristina Sofia,female,37,0,0,4135,9.5875,N,S,TRUE,Laitinen,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+505,1,1,Maioni, Miss. Roberta,female,16,0,0,110152,86.5,B79,S,TRUE,Maioni,1,Miss,B,N,young,single,Miss,FALSE,FALSE,FALSE
+506,0,1,Penasco y Castellana, Mr. Victor de Satode,male,18,1,0,PC 17758,108.9,C65,C,TRUE,Penasco y Castellana,2,Mr,C,P,young,medium,Mr,FALSE,FALSE,FALSE
+507,1,2,Quick, Mrs. Frederick Charles (Jane Richards),female,33,0,2,26360,26,N,S,TRUE,Quick,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+508,1,1,Bradley, Mr. George ("George Arthur Brayton"),male,NA,0,0,111427,26.55,N,S,TRUE,Bradley,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+509,0,3,Olsen, Mr. Henry Margido,male,28,0,0,C 4001,22.525,N,S,TRUE,Olsen,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,FALSE
+510,1,3,Lang, Mr. Fang,male,26,0,0,1601,56.4958,N,S,TRUE,Lang,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+511,1,3,Daly, Mr. Eugene Patrick,male,29,0,0,382651,7.75,N,Q,TRUE,Daly,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+512,0,3,Webber, Mr. James,male,NA,0,0,SOTON/OQ 3101316,8.05,N,S,TRUE,Webber,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,TRUE
+513,1,1,McGough, Mr. James Robert,male,36,0,0,PC 17473,26.2875,E25,S,TRUE,McGough,1,Mr,E,P,adult,single,Mr,FALSE,FALSE,FALSE
+514,1,1,Rothschild, Mrs. Martin (Elizabeth L. Barrett),female,54,1,0,PC 17603,59.4,N,C,TRUE,Rothschild,2,Mrs,N,P,adult,medium,Mrs,FALSE,FALSE,FALSE
+515,0,3,Coleff, Mr. Satio,male,24,0,0,349209,7.4958,N,S,TRUE,Coleff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+516,0,1,Walker, Mr. William Anderson,male,47,0,0,36967,34.0208,D46,S,TRUE,Walker,1,Mr,D,N,adult,single,Mr,FALSE,FALSE,FALSE
+517,1,2,Lemore, Mrs. (Amelia Milley),female,34,0,0,C.A. 34260,10.5,F33,S,TRUE,Lemore,1,Mrs,F,C,adult,single,Mrs,FALSE,FALSE,FALSE
+518,0,3,Ryan, Mr. Patrick,male,NA,0,0,371110,24.15,N,Q,TRUE,Ryan,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+519,1,2,Angle, Mrs. William A (Florence "Mary" Agnes Hughes),female,36,1,0,226875,26,N,S,TRUE,Angle,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+520,0,3,Pavlovic, Mr. Stefo,male,32,0,0,349242,7.8958,N,S,TRUE,Pavlovic,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+521,1,1,Perreault, Miss. Anne,female,30,0,0,12749,93.5,B73,S,TRUE,Perreault,1,Miss,B,N,adult,single,Miss,FALSE,FALSE,FALSE
+522,0,3,Vovk, Mr. Janko,male,22,0,0,349252,7.8958,N,S,TRUE,Vovk,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+523,0,3,Lahoud, Mr. Sarkis,male,NA,0,0,2624,7.225,N,C,TRUE,Lahoud,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+524,1,1,Hippach, Mrs. Louis Albert (Ida Sophia Fischer),female,44,0,1,111361,57.9792,B18,C,TRUE,Hippach,2,Mrs,B,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+525,0,3,Kassem, Mr. Fared,male,NA,0,0,2700,7.2292,N,C,TRUE,Kassem,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+526,0,3,Farrell, Mr. James,male,40.5,0,0,367232,7.75,N,Q,TRUE,Farrell,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+527,1,2,Ridsdale, Miss. Lucy,female,50,0,0,W./C. 14258,10.5,N,S,TRUE,Ridsdale,1,Miss,N,W,adult,single,Miss,FALSE,FALSE,FALSE
+528,0,1,Farthing, Mr. John,male,NA,0,0,PC 17483,221.7792,C95,S,TRUE,Farthing,1,Mr,C,P,adult,single,Mr,FALSE,FALSE,TRUE
+529,0,3,Salonen, Mr. Johan Werner,male,39,0,0,3101296,7.925,N,S,TRUE,Salonen,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+530,0,2,Hocking, Mr. Richard George,male,23,2,1,29104,11.5,N,S,TRUE,Hocking,4,Mr,N,N,adult,large,Mr,FALSE,FALSE,FALSE
+531,1,2,Quick, Miss. Phyllis May,female,2,1,1,26360,26,N,S,TRUE,Quick,3,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+532,0,3,Toufik, Mr. Nakli,male,NA,0,0,2641,7.2292,N,C,TRUE,Toufik,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+533,0,3,Elias, Mr. Joseph Jr,male,17,1,1,2690,7.2292,N,C,TRUE,Elias,3,Mr,N,N,young,medium,Mr,FALSE,FALSE,FALSE
+534,1,3,Peter, Mrs. Catherine (Catherine Rizk),female,NA,0,2,2668,22.3583,N,C,TRUE,Peter,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,TRUE
+535,0,3,Cacic, Miss. Marija,female,30,0,0,315084,8.6625,N,S,TRUE,Cacic,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+536,1,2,Hart, Miss. Eva Miriam,female,7,0,2,F.C.C. 13529,26.25,N,S,TRUE,Hart,3,Miss,N,F,young,medium,Miss,FALSE,FALSE,FALSE
+537,0,1,Butt, Major. Archibald Willingham,male,45,0,0,113050,26.55,B38,S,TRUE,Butt,1,Major,B,N,adult,single,Other,FALSE,FALSE,FALSE
+538,1,1,LeRoy, Miss. Bertha,female,30,0,0,PC 17761,106.425,N,C,TRUE,LeRoy,1,Miss,N,P,adult,single,Miss,FALSE,FALSE,FALSE
+539,0,3,Risien, Mr. Samuel Beard,male,NA,0,0,364498,14.5,N,S,TRUE,Risien,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+540,1,1,Frolicher, Miss. Hedwig Margaritha,female,22,0,2,13568,49.5,B39,C,TRUE,Frolicher,3,Miss,B,N,adult,medium,Miss,FALSE,FALSE,FALSE
+541,1,1,Crosby, Miss. Harriet R,female,36,0,2,WE/P 5735,71,B22,S,TRUE,Crosby,3,Miss,B,W,adult,medium,Miss,FALSE,FALSE,FALSE
+542,0,3,Andersson, Miss. Ingeborg Constanzia,female,9,4,2,347082,31.275,N,S,TRUE,Andersson,7,Miss,N,N,young,large,Miss,FALSE,FALSE,FALSE
+543,0,3,Andersson, Miss. Sigrid Elisabeth,female,11,4,2,347082,31.275,N,S,TRUE,Andersson,7,Miss,N,N,young,large,Miss,FALSE,FALSE,FALSE
+544,1,2,Beane, Mr. Edward,male,32,1,0,2908,26,N,S,TRUE,Beane,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+545,0,1,Douglas, Mr. Walter Donald,male,50,1,0,PC 17761,106.425,C86,C,TRUE,Douglas,2,Mr,C,P,adult,medium,Mr,FALSE,FALSE,FALSE
+546,0,1,Nicholson, Mr. Arthur Ernest,male,64,0,0,693,26,N,S,TRUE,Nicholson,1,Mr,N,N,senior,single,Mr,FALSE,FALSE,FALSE
+547,1,2,Beane, Mrs. Edward (Ethel Clarke),female,19,1,0,2908,26,N,S,TRUE,Beane,2,Mrs,N,N,young,medium,Mrs,FALSE,FALSE,FALSE
+548,1,2,Padro y Manent, Mr. Julian,male,NA,0,0,SC/PARIS 2146,13.8625,N,C,TRUE,Padro y Manent,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,TRUE
+549,0,3,Goldsmith, Mr. Frank John,male,33,1,1,363291,20.525,N,S,TRUE,Goldsmith,3,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+550,1,2,Davies, Master. John Morgan Jr,male,8,1,1,C.A. 33112,36.75,N,S,TRUE,Davies,3,Master,N,C,young,medium,Master,FALSE,FALSE,FALSE
+551,1,1,Thayer, Mr. John Borland Jr,male,17,0,2,17421,110.8833,C70,C,TRUE,Thayer,3,Mr,C,N,young,medium,Mr,FALSE,FALSE,FALSE
+552,0,2,Sharp, Mr. Percival James R,male,27,0,0,244358,26,N,S,TRUE,Sharp,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+553,0,3,O'Brien, Mr. Timothy,male,NA,0,0,330979,7.8292,N,Q,TRUE,O'Brien,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+554,1,3,Leeni, Mr. Fahim ("Philip Zenni"),male,22,0,0,2620,7.225,N,C,TRUE,Leeni,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+555,1,3,Ohman, Miss. Velin,female,22,0,0,347085,7.775,N,S,TRUE,Ohman,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+556,0,1,Wright, Mr. George,male,62,0,0,113807,26.55,N,S,TRUE,Wright,1,Mr,N,N,senior,single,Mr,FALSE,FALSE,FALSE
+557,1,1,Duff Gordon, Lady. (Lucille Christiana Sutherland) ("Mrs Morgan"),female,48,1,0,11755,39.6,A16,C,TRUE,Duff Gordon,2,Lady,A,N,adult,medium,Other,FALSE,FALSE,FALSE
+558,0,1,Robbins, Mr. Victor,male,NA,0,0,PC 17757,227.525,N,C,TRUE,Robbins,1,Mr,N,P,adult,single,Mr,FALSE,FALSE,TRUE
+559,1,1,Taussig, Mrs. Emil (Tillie Mandelbaum),female,39,1,1,110413,79.65,E67,S,TRUE,Taussig,3,Mrs,E,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+560,1,3,de Messemaeker, Mrs. Guillaume Joseph (Emma),female,36,1,0,345572,17.4,N,S,TRUE,de Messemaeker,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+561,0,3,Morrow, Mr. Thomas Rowan,male,NA,0,0,372622,7.75,N,Q,TRUE,Morrow,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+562,0,3,Sivic, Mr. Husein,male,40,0,0,349251,7.8958,N,S,TRUE,Sivic,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+563,0,2,Norman, Mr. Robert Douglas,male,28,0,0,218629,13.5,N,S,TRUE,Norman,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+564,0,3,Simmons, Mr. John,male,NA,0,0,SOTON/OQ 392082,8.05,N,S,TRUE,Simmons,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,TRUE
+565,0,3,Meanwell, Miss. (Marion Ogden),female,NA,0,0,SOTON/O.Q. 392087,8.05,N,S,TRUE,Meanwell,1,Miss,N,S,young,single,Miss,FALSE,FALSE,TRUE
+566,0,3,Davies, Mr. Alfred J,male,24,2,0,A/4 48871,24.15,N,S,TRUE,Davies,3,Mr,N,A,adult,medium,Mr,FALSE,FALSE,FALSE
+567,0,3,Stoytcheff, Mr. Ilia,male,19,0,0,349205,7.8958,N,S,TRUE,Stoytcheff,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+568,0,3,Palsson, Mrs. Nils (Alma Cornelia Berglund),female,29,0,4,349909,21.075,N,S,TRUE,Palsson,5,Mrs,N,N,adult,large,Mrs,FALSE,FALSE,FALSE
+569,0,3,Doharr, Mr. Tannous,male,NA,0,0,2686,7.2292,N,C,TRUE,Doharr,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+570,1,3,Jonsson, Mr. Carl,male,32,0,0,350417,7.8542,N,S,TRUE,Jonsson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+571,1,2,Harris, Mr. George,male,62,0,0,S.W./PP 752,10.5,N,S,TRUE,Harris,1,Mr,N,S,senior,single,Mr,FALSE,FALSE,FALSE
+572,1,1,Appleton, Mrs. Edward Dale (Charlotte Lamson),female,53,2,0,11769,51.4792,C101,S,TRUE,Appleton,3,Mrs,C,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+573,1,1,Flynn, Mr. John Irwin ("Irving"),male,36,0,0,PC 17474,26.3875,E25,S,TRUE,Flynn,1,Mr,E,P,adult,single,Mr,FALSE,FALSE,FALSE
+574,1,3,Kelly, Miss. Mary,female,NA,0,0,14312,7.75,N,Q,TRUE,Kelly,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+575,0,3,Rush, Mr. Alfred George John,male,16,0,0,A/4. 20589,8.05,N,S,TRUE,Rush,1,Mr,N,A,young,single,Mr,FALSE,FALSE,FALSE
+576,0,3,Patchett, Mr. George,male,19,0,0,358585,14.5,N,S,TRUE,Patchett,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+577,1,2,Garside, Miss. Ethel,female,34,0,0,243880,13,N,S,TRUE,Garside,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+578,1,1,Silvey, Mrs. William Baird (Alice Munger),female,39,1,0,13507,55.9,E44,S,TRUE,Silvey,2,Mrs,E,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+579,0,3,Caram, Mrs. Joseph (Maria Elias),female,NA,1,0,2689,14.4583,N,C,TRUE,Caram,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,TRUE
+580,1,3,Jussila, Mr. Eiriik,male,32,0,0,STON/O 2. 3101286,7.925,N,S,TRUE,Jussila,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+581,1,2,Christy, Miss. Julie Rachel,female,25,1,1,237789,30,N,S,TRUE,Christy,3,Miss,N,N,adult,medium,Miss,FALSE,FALSE,FALSE
+582,1,1,Thayer, Mrs. John Borland (Marian Longstreth Morris),female,39,1,1,17421,110.8833,C68,C,TRUE,Thayer,3,Mrs,C,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+583,0,2,Downton, Mr. William James,male,54,0,0,28403,26,N,S,TRUE,Downton,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+584,0,1,Ross, Mr. John Hugo,male,36,0,0,13049,40.125,A10,C,TRUE,Ross,1,Mr,A,N,adult,single,Mr,FALSE,FALSE,FALSE
+585,0,3,Paulner, Mr. Uscher,male,NA,0,0,3411,8.7125,N,C,TRUE,Paulner,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+586,1,1,Taussig, Miss. Ruth,female,18,0,2,110413,79.65,E68,S,TRUE,Taussig,3,Miss,E,N,young,medium,Miss,FALSE,FALSE,FALSE
+587,0,2,Jarvis, Mr. John Denzil,male,47,0,0,237565,15,N,S,TRUE,Jarvis,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+588,1,1,Frolicher-Stehli, Mr. Maxmillian,male,60,1,1,13567,79.2,B41,C,TRUE,Frolicher-Stehli,3,Mr,B,N,adult,medium,Mr,FALSE,FALSE,FALSE
+589,0,3,Gilinski, Mr. Eliezer,male,22,0,0,14973,8.05,N,S,TRUE,Gilinski,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+590,0,3,Murdlin, Mr. Joseph,male,NA,0,0,A./5. 3235,8.05,N,S,TRUE,Murdlin,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,TRUE
+591,0,3,Rintamaki, Mr. Matti,male,35,0,0,STON/O 2. 3101273,7.125,N,S,TRUE,Rintamaki,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+592,1,1,Stephenson, Mrs. Walter Bertram (Martha Eustis),female,52,1,0,36947,78.2667,D20,C,TRUE,Stephenson,2,Mrs,D,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+593,0,3,Elsbury, Mr. William James,male,47,0,0,A/5 3902,7.25,N,S,TRUE,Elsbury,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,FALSE
+594,0,3,Bourke, Miss. Mary,female,NA,0,2,364848,7.75,N,Q,TRUE,Bourke,3,Miss,N,N,young,medium,Miss,FALSE,FALSE,TRUE
+595,0,2,Chapman, Mr. John Henry,male,37,1,0,SC/AH 29037,26,N,S,TRUE,Chapman,2,Mr,N,S,adult,medium,Mr,FALSE,FALSE,FALSE
+596,0,3,Van Impe, Mr. Jean Baptiste,male,36,1,1,345773,24.15,N,S,TRUE,Van Impe,3,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+597,1,2,Leitch, Miss. Jessie Wills,female,NA,0,0,248727,33,N,S,TRUE,Leitch,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,TRUE
+598,0,3,Johnson, Mr. Alfred,male,49,0,0,LINE,8.0396,N,S,TRUE,Johnson,1,Mr,N,L,adult,single,Mr,FALSE,TRUE,FALSE
+599,0,3,Boulos, Mr. Hanna,male,NA,0,0,2664,7.225,N,C,TRUE,Boulos,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+600,1,1,Duff Gordon, Sir. Cosmo Edmund ("Mr Morgan"),male,49,1,0,PC 17485,56.9292,A20,C,TRUE,Duff Gordon,2,Sir,A,P,adult,medium,Other,FALSE,FALSE,FALSE
+601,1,2,Jacobsohn, Mrs. Sidney Samuel (Amy Frances Christy),female,24,2,1,243847,27,N,S,TRUE,Jacobsohn,4,Mrs,N,N,adult,large,Mrs,FALSE,FALSE,FALSE
+602,0,3,Slabenoff, Mr. Petco,male,NA,0,0,349214,7.8958,N,S,TRUE,Slabenoff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+603,0,1,Harrington, Mr. Charles H,male,NA,0,0,113796,42.4,N,S,TRUE,Harrington,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+604,0,3,Torber, Mr. Ernst William,male,44,0,0,364511,8.05,N,S,TRUE,Torber,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+605,1,1,Homer, Mr. Harry ("Mr E Haven"),male,35,0,0,111426,26.55,N,C,TRUE,Homer,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+606,0,3,Lindell, Mr. Edvard Bengtsson,male,36,1,0,349910,15.55,N,S,TRUE,Lindell,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+607,0,3,Karaic, Mr. Milan,male,30,0,0,349246,7.8958,N,S,TRUE,Karaic,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+608,1,1,Daniel, Mr. Robert Williams,male,27,0,0,113804,30.5,N,S,TRUE,Daniel,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+609,1,2,Laroche, Mrs. Joseph (Juliette Marie Louise Lafargue),female,22,1,2,SC/Paris 2123,41.5792,N,C,TRUE,Laroche,4,Mrs,N,S,adult,large,Mrs,FALSE,FALSE,FALSE
+610,1,1,Shutes, Miss. Elizabeth W,female,40,0,0,PC 17582,153.4625,C125,S,TRUE,Shutes,1,Miss,C,P,adult,single,Miss,FALSE,FALSE,FALSE
+611,0,3,Andersson, Mrs. Anders Johan (Alfrida Konstantia Brogren),female,39,1,5,347082,31.275,N,S,TRUE,Andersson,7,Mrs,N,N,adult,large,Mrs,FALSE,FALSE,FALSE
+612,0,3,Jardin, Mr. Jose Neto,male,NA,0,0,SOTON/O.Q. 3101305,7.05,N,S,TRUE,Jardin,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,TRUE
+613,1,3,Murphy, Miss. Margaret Jane,female,NA,1,0,367230,15.5,N,Q,TRUE,Murphy,2,Miss,N,N,young,medium,Miss,FALSE,FALSE,TRUE
+614,0,3,Horgan, Mr. John,male,NA,0,0,370377,7.75,N,Q,TRUE,Horgan,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+615,0,3,Brocklebank, Mr. William Alfred,male,35,0,0,364512,8.05,N,S,TRUE,Brocklebank,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+616,1,2,Herman, Miss. Alice,female,24,1,2,220845,65,N,S,TRUE,Herman,4,Miss,N,N,adult,large,Miss,FALSE,FALSE,FALSE
+617,0,3,Danbom, Mr. Ernst Gilbert,male,34,1,1,347080,14.4,N,S,TRUE,Danbom,3,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+618,0,3,Lobb, Mrs. William Arthur (Cordelia K Stanlick),female,26,1,0,A/5. 3336,16.1,N,S,TRUE,Lobb,2,Mrs,N,A,adult,medium,Mrs,FALSE,FALSE,FALSE
+619,1,2,Becker, Miss. Marion Louise,female,4,2,1,230136,39,F4,S,TRUE,Becker,4,Miss,F,N,young,large,Miss,FALSE,FALSE,FALSE
+620,0,2,Gavey, Mr. Lawrence,male,26,0,0,31028,10.5,N,S,TRUE,Gavey,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+621,0,3,Yasbeck, Mr. Antoni,male,27,1,0,2659,14.4542,N,C,TRUE,Yasbeck,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+622,1,1,Kimball, Mr. Edwin Nelson Jr,male,42,1,0,11753,52.5542,D19,S,TRUE,Kimball,2,Mr,D,N,adult,medium,Mr,FALSE,FALSE,FALSE
+623,1,3,Nakid, Mr. Sahid,male,20,1,1,2653,15.7417,N,C,TRUE,Nakid,3,Mr,N,N,young,medium,Mr,FALSE,FALSE,FALSE
+624,0,3,Hansen, Mr. Henry Damsgaard,male,21,0,0,350029,7.8542,N,S,TRUE,Hansen,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+625,0,3,Bowen, Mr. David John "Dai",male,21,0,0,54636,16.1,N,S,TRUE,Bowen,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+626,0,1,Sutton, Mr. Frederick,male,61,0,0,36963,32.3208,D50,S,TRUE,Sutton,1,Mr,D,N,senior,single,Mr,FALSE,FALSE,FALSE
+627,0,2,Kirkland, Rev. Charles Leonard,male,57,0,0,219533,12.35,N,Q,TRUE,Kirkland,1,Rev,N,N,adult,single,Other,FALSE,FALSE,FALSE
+628,1,1,Longley, Miss. Gretchen Fiske,female,21,0,0,13502,77.9583,D9,S,TRUE,Longley,1,Miss,D,N,adult,single,Miss,FALSE,FALSE,FALSE
+629,0,3,Bostandyeff, Mr. Guentcho,male,26,0,0,349224,7.8958,N,S,TRUE,Bostandyeff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+630,0,3,O'Connell, Mr. Patrick D,male,NA,0,0,334912,7.7333,N,Q,TRUE,O'Connell,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+631,1,1,Barkworth, Mr. Algernon Henry Wilson,male,80,0,0,27042,30,A23,S,TRUE,Barkworth,1,Mr,A,N,senior,single,Mr,FALSE,FALSE,FALSE
+632,0,3,Lundahl, Mr. Johan Svensson,male,51,0,0,347743,7.0542,N,S,TRUE,Lundahl,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+633,1,1,Stahelin-Maeglin, Dr. Max,male,32,0,0,13214,30.5,B50,C,TRUE,Stahelin-Maeglin,1,Dr,B,N,adult,single,Other,FALSE,FALSE,FALSE
+634,0,1,Parr, Mr. William Henry Marsh,male,NA,0,0,112052,29.5,N,S,TRUE,Parr,1,Mr,N,N,adult,single,Mr,FALSE,TRUE,TRUE
+635,0,3,Skoog, Miss. Mabel,female,9,3,2,347088,27.9,N,S,TRUE,Skoog,6,Miss,N,N,young,large,Miss,FALSE,FALSE,FALSE
+636,1,2,Davis, Miss. Mary,female,28,0,0,237668,13,N,S,TRUE,Davis,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+637,0,3,Leinonen, Mr. Antti Gustaf,male,32,0,0,STON/O 2. 3101292,7.925,N,S,TRUE,Leinonen,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+638,0,2,Collyer, Mr. Harvey,male,31,1,1,C.A. 31921,26.25,N,S,TRUE,Collyer,3,Mr,N,C,adult,medium,Mr,FALSE,FALSE,FALSE
+639,0,3,Panula, Mrs. Juha (Maria Emilia Ojala),female,41,0,5,3101295,39.6875,N,S,TRUE,Panula,6,Mrs,N,N,adult,large,Mrs,FALSE,FALSE,FALSE
+640,0,3,Thorneycroft, Mr. Percival,male,NA,1,0,376564,16.1,N,S,TRUE,Thorneycroft,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,TRUE
+641,0,3,Jensen, Mr. Hans Peder,male,20,0,0,350050,7.8542,N,S,TRUE,Jensen,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+642,1,1,Sagesser, Mlle. Emma,female,24,0,0,PC 17477,69.3,B35,C,TRUE,Sagesser,1,Mlle,B,P,adult,single,Other,FALSE,FALSE,FALSE
+643,0,3,Skoog, Miss. Margit Elizabeth,female,2,3,2,347088,27.9,N,S,TRUE,Skoog,6,Miss,N,N,young,large,Miss,FALSE,FALSE,FALSE
+644,1,3,Foo, Mr. Choong,male,NA,0,0,1601,56.4958,N,S,TRUE,Foo,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+645,1,3,Baclini, Miss. Eugenie,female,0.75,2,1,2666,19.2583,N,C,TRUE,Baclini,4,Miss,N,N,young,large,Miss,FALSE,FALSE,FALSE
+646,1,1,Harper, Mr. Henry Sleeper,male,48,1,0,PC 17572,76.7292,D33,C,TRUE,Harper,2,Mr,D,P,adult,medium,Mr,FALSE,FALSE,FALSE
+647,0,3,Cor, Mr. Liudevit,male,19,0,0,349231,7.8958,N,S,TRUE,Cor,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+648,1,1,Simonius-Blumer, Col. Oberst Alfons,male,56,0,0,13213,35.5,A26,C,TRUE,Simonius-Blumer,1,Col,A,N,adult,single,Other,FALSE,FALSE,FALSE
+649,0,3,Willey, Mr. Edward,male,NA,0,0,S.O./P.P. 751,7.55,N,S,TRUE,Willey,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,TRUE
+650,1,3,Stanley, Miss. Amy Zillah Elsie,female,23,0,0,CA. 2314,7.55,N,S,TRUE,Stanley,1,Miss,N,C,adult,single,Miss,FALSE,FALSE,FALSE
+651,0,3,Mitkoff, Mr. Mito,male,NA,0,0,349221,7.8958,N,S,TRUE,Mitkoff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+652,1,2,Doling, Miss. Elsie,female,18,0,1,231919,23,N,S,TRUE,Doling,2,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+653,0,3,Kalvik, Mr. Johannes Halvorsen,male,21,0,0,8475,8.4333,N,S,TRUE,Kalvik,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+654,1,3,O'Leary, Miss. Hanora "Norah",female,NA,0,0,330919,7.8292,N,Q,TRUE,O'Leary,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+655,0,3,Hegarty, Miss. Hanora "Nora",female,18,0,0,365226,6.75,N,Q,TRUE,Hegarty,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+656,0,2,Hickman, Mr. Leonard Mark,male,24,2,0,S.O.C. 14879,73.5,N,S,TRUE,Hickman,3,Mr,N,S,adult,medium,Mr,FALSE,FALSE,FALSE
+657,0,3,Radeff, Mr. Alexander,male,NA,0,0,349223,7.8958,N,S,TRUE,Radeff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+658,0,3,Bourke, Mrs. John (Catherine),female,32,1,1,364849,15.5,N,Q,TRUE,Bourke,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+659,0,2,Eitemiller, Mr. George Floyd,male,23,0,0,29751,13,N,S,TRUE,Eitemiller,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+660,0,1,Newell, Mr. Arthur Webster,male,58,0,2,35273,113.275,D48,C,TRUE,Newell,3,Mr,D,N,adult,medium,Mr,FALSE,FALSE,FALSE
+661,1,1,Frauenthal, Dr. Henry William,male,50,2,0,PC 17611,133.65,N,S,TRUE,Frauenthal,3,Dr,N,P,adult,medium,Other,FALSE,FALSE,FALSE
+662,0,3,Badt, Mr. Mohamed,male,40,0,0,2623,7.225,N,C,TRUE,Badt,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+663,0,1,Colley, Mr. Edward Pomeroy,male,47,0,0,5727,25.5875,E58,S,TRUE,Colley,1,Mr,E,N,adult,single,Mr,FALSE,FALSE,FALSE
+664,0,3,Coleff, Mr. Peju,male,36,0,0,349210,7.4958,N,S,TRUE,Coleff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+665,1,3,Lindqvist, Mr. Eino William,male,20,1,0,STON/O 2. 3101285,7.925,N,S,TRUE,Lindqvist,2,Mr,N,S,young,medium,Mr,FALSE,FALSE,FALSE
+666,0,2,Hickman, Mr. Lewis,male,32,2,0,S.O.C. 14879,73.5,N,S,TRUE,Hickman,3,Mr,N,S,adult,medium,Mr,FALSE,FALSE,FALSE
+667,0,2,Butler, Mr. Reginald Fenton,male,25,0,0,234686,13,N,S,TRUE,Butler,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+668,0,3,Rommetvedt, Mr. Knud Paust,male,NA,0,0,312993,7.775,N,S,TRUE,Rommetvedt,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+669,0,3,Cook, Mr. Jacob,male,43,0,0,A/5 3536,8.05,N,S,TRUE,Cook,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,FALSE
+670,1,1,Taylor, Mrs. Elmer Zebley (Juliet Cummins Wright),female,NA,1,0,19996,52,C126,S,TRUE,Taylor,2,Mrs,C,N,adult,medium,Mrs,FALSE,FALSE,TRUE
+671,1,2,Brown, Mrs. Thomas William Solomon (Elizabeth Catherine Ford),female,40,1,1,29750,39,N,S,TRUE,Brown,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+672,0,1,Davidson, Mr. Thornton,male,31,1,0,F.C. 12750,52,B71,S,TRUE,Davidson,2,Mr,B,F,adult,medium,Mr,FALSE,FALSE,FALSE
+673,0,2,Mitchell, Mr. Henry Michael,male,70,0,0,C.A. 24580,10.5,N,S,TRUE,Mitchell,1,Mr,N,C,senior,single,Mr,FALSE,FALSE,FALSE
+674,1,2,Wilhelms, Mr. Charles,male,31,0,0,244270,13,N,S,TRUE,Wilhelms,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+675,0,2,Watson, Mr. Ennis Hastings,male,NA,0,0,239856,29.5,N,S,TRUE,Watson,1,Mr,N,N,adult,single,Mr,FALSE,TRUE,TRUE
+676,0,3,Edvardsson, Mr. Gustaf Hjalmar,male,18,0,0,349912,7.775,N,S,TRUE,Edvardsson,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+677,0,3,Sawyer, Mr. Frederick Charles,male,24.5,0,0,342826,8.05,N,S,TRUE,Sawyer,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+678,1,3,Turja, Miss. Anna Sofia,female,18,0,0,4138,9.8417,N,S,TRUE,Turja,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+679,0,3,Goodwin, Mrs. Frederick (Augusta Tyler),female,43,1,6,CA 2144,46.9,N,S,TRUE,Goodwin,8,Mrs,N,C,adult,large,Mrs,FALSE,FALSE,FALSE
+680,1,1,Cardeza, Mr. Thomas Drake Martinez,male,36,0,1,PC 17755,512.3292,B51 B53 B55,C,TRUE,Cardeza,2,Mr,B,P,adult,medium,Mr,FALSE,FALSE,FALSE
+681,0,3,Peters, Miss. Katie,female,NA,0,0,330935,8.1375,N,Q,TRUE,Peters,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+682,1,1,Hassab, Mr. Hammad,male,27,0,0,PC 17572,76.7292,D49,C,TRUE,Hassab,1,Mr,D,P,adult,single,Mr,FALSE,FALSE,FALSE
+683,0,3,Olsvigen, Mr. Thor Anderson,male,20,0,0,6563,9.225,N,S,TRUE,Olsvigen,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+684,0,3,Goodwin, Mr. Charles Edward,male,14,5,2,CA 2144,46.9,N,S,TRUE,Goodwin,8,Mr,N,C,young,large,Mr,FALSE,FALSE,FALSE
+685,0,2,Brown, Mr. Thomas William Solomon,male,60,1,1,29750,39,N,S,TRUE,Brown,3,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+686,0,2,Laroche, Mr. Joseph Philippe Lemercier,male,25,1,2,SC/Paris 2123,41.5792,N,C,TRUE,Laroche,4,Mr,N,S,adult,large,Mr,FALSE,FALSE,FALSE
+687,0,3,Panula, Mr. Jaako Arnold,male,14,4,1,3101295,39.6875,N,S,TRUE,Panula,6,Mr,N,N,young,large,Mr,FALSE,FALSE,FALSE
+688,0,3,Dakic, Mr. Branko,male,19,0,0,349228,10.1708,N,S,TRUE,Dakic,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+689,0,3,Fischer, Mr. Eberhard Thelander,male,18,0,0,350036,7.7958,N,S,TRUE,Fischer,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+690,1,1,Madill, Miss. Georgette Alexandra,female,15,0,1,24160,211.3375,B5,S,TRUE,Madill,2,Miss,B,N,young,medium,Miss,FALSE,FALSE,FALSE
+691,1,1,Dick, Mr. Albert Adrian,male,31,1,0,17474,57,B20,S,TRUE,Dick,2,Mr,B,N,adult,medium,Mr,FALSE,FALSE,FALSE
+692,1,3,Karun, Miss. Manca,female,4,0,1,349256,13.4167,N,C,TRUE,Karun,2,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+693,1,3,Lam, Mr. Ali,male,NA,0,0,1601,56.4958,N,S,TRUE,Lam,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+694,0,3,Saad, Mr. Khalil,male,25,0,0,2672,7.225,N,C,TRUE,Saad,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+695,0,1,Weir, Col. John,male,60,0,0,113800,26.55,N,S,TRUE,Weir,1,Col,N,N,adult,single,Other,FALSE,FALSE,FALSE
+696,0,2,Chapman, Mr. Charles Henry,male,52,0,0,248731,13.5,N,S,TRUE,Chapman,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+697,0,3,Kelly, Mr. James,male,44,0,0,363592,8.05,N,S,TRUE,Kelly,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+698,1,3,Mullens, Miss. Katherine "Katie",female,NA,0,0,35852,7.7333,N,Q,TRUE,Mullens,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+699,0,1,Thayer, Mr. John Borland,male,49,1,1,17421,110.8833,C68,C,TRUE,Thayer,3,Mr,C,N,adult,medium,Mr,FALSE,FALSE,FALSE
+700,0,3,Humblen, Mr. Adolf Mathias Nicolai Olsen,male,42,0,0,348121,7.65,F G63,S,TRUE,Humblen,1,Mr,F,N,adult,single,Mr,FALSE,FALSE,FALSE
+701,1,1,Astor, Mrs. John Jacob (Madeleine Talmadge Force),female,18,1,0,PC 17757,227.525,C62 C64,C,TRUE,Astor,2,Mrs,C,P,young,medium,Mrs,FALSE,FALSE,FALSE
+702,1,1,Silverthorne, Mr. Spencer Victor,male,35,0,0,PC 17475,26.2875,E24,S,TRUE,Silverthorne,1,Mr,E,P,adult,single,Mr,FALSE,FALSE,FALSE
+703,0,3,Barbara, Miss. Saiide,female,18,0,1,2691,14.4542,N,C,TRUE,Barbara,2,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+704,0,3,Gallagher, Mr. Martin,male,25,0,0,36864,7.7417,N,Q,TRUE,Gallagher,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+705,0,3,Hansen, Mr. Henrik Juul,male,26,1,0,350025,7.8542,N,S,TRUE,Hansen,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+706,0,2,Morley, Mr. Henry Samuel ("Mr Henry Marshall"),male,39,0,0,250655,26,N,S,TRUE,Morley,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+707,1,2,Kelly, Mrs. Florence "Fannie",female,45,0,0,223596,13.5,N,S,TRUE,Kelly,1,Mrs,N,N,adult,single,Mrs,FALSE,FALSE,FALSE
+708,1,1,Calderhead, Mr. Edward Pennington,male,42,0,0,PC 17476,26.2875,E24,S,TRUE,Calderhead,1,Mr,E,P,adult,single,Mr,FALSE,FALSE,FALSE
+709,1,1,Cleaver, Miss. Alice,female,22,0,0,113781,151.55,N,S,TRUE,Cleaver,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+710,1,3,Moubarek, Master. Halim Gonios ("William George"),male,NA,1,1,2661,15.2458,N,C,TRUE,Moubarek,3,Master,N,N,young,medium,Master,FALSE,FALSE,FALSE
+711,1,1,Mayne, Mlle. Berthe Antonine ("Mrs de Villiers"),female,24,0,0,PC 17482,49.5042,C90,C,TRUE,Mayne,1,Mlle,C,P,adult,single,Other,FALSE,FALSE,FALSE
+712,0,1,Klaber, Mr. Herman,male,NA,0,0,113028,26.55,C124,S,TRUE,Klaber,1,Mr,C,N,adult,single,Mr,FALSE,FALSE,TRUE
+713,1,1,Taylor, Mr. Elmer Zebley,male,48,1,0,19996,52,C126,S,TRUE,Taylor,2,Mr,C,N,adult,medium,Mr,FALSE,FALSE,FALSE
+714,0,3,Larsson, Mr. August Viktor,male,29,0,0,7545,9.4833,N,S,TRUE,Larsson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+715,0,2,Greenberg, Mr. Samuel,male,52,0,0,250647,13,N,S,TRUE,Greenberg,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+716,0,3,Soholt, Mr. Peter Andreas Lauritz Andersen,male,19,0,0,348124,7.65,F G73,S,TRUE,Soholt,1,Mr,F,N,young,single,Mr,FALSE,FALSE,FALSE
+717,1,1,Endres, Miss. Caroline Louise,female,38,0,0,PC 17757,227.525,C45,C,TRUE,Endres,1,Miss,C,P,adult,single,Miss,FALSE,FALSE,FALSE
+718,1,2,Troutt, Miss. Edwina Celia "Winnie",female,27,0,0,34218,10.5,E101,S,TRUE,Troutt,1,Miss,E,N,adult,single,Miss,FALSE,FALSE,FALSE
+719,0,3,McEvoy, Mr. Michael,male,NA,0,0,36568,15.5,N,Q,TRUE,McEvoy,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+720,0,3,Johnson, Mr. Malkolm Joackim,male,33,0,0,347062,7.775,N,S,TRUE,Johnson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+721,1,2,Harper, Miss. Annie Jessie "Nina",female,6,0,1,248727,33,N,S,TRUE,Harper,2,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+722,0,3,Jensen, Mr. Svend Lauritz,male,17,1,0,350048,7.0542,N,S,TRUE,Jensen,2,Mr,N,N,young,medium,Mr,FALSE,FALSE,FALSE
+723,0,2,Gillespie, Mr. William Henry,male,34,0,0,12233,13,N,S,TRUE,Gillespie,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+724,0,2,Hodges, Mr. Henry Price,male,50,0,0,250643,13,N,S,TRUE,Hodges,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+725,1,1,Chambers, Mr. Norman Campbell,male,27,1,0,113806,53.1,E8,S,TRUE,Chambers,2,Mr,E,N,adult,medium,Mr,FALSE,FALSE,FALSE
+726,0,3,Oreskovic, Mr. Luka,male,20,0,0,315094,8.6625,N,S,TRUE,Oreskovic,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+727,1,2,Renouf, Mrs. Peter Henry (Lillian Jefferys),female,30,3,0,31027,21,N,S,TRUE,Renouf,4,Mrs,N,N,adult,large,Mrs,FALSE,FALSE,FALSE
+728,1,3,Mannion, Miss. Margareth,female,NA,0,0,36866,7.7375,N,Q,TRUE,Mannion,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+729,0,2,Bryhl, Mr. Kurt Arnold Gottfrid,male,25,1,0,236853,26,N,S,TRUE,Bryhl,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+730,0,3,Ilmakangas, Miss. Pieta Sofia,female,25,1,0,STON/O2. 3101271,7.925,N,S,TRUE,Ilmakangas,2,Miss,N,S,adult,medium,Miss,FALSE,FALSE,FALSE
+731,1,1,Allen, Miss. Elisabeth Walton,female,29,0,0,24160,211.3375,B5,S,TRUE,Allen,1,Miss,B,N,adult,single,Miss,FALSE,FALSE,FALSE
+732,0,3,Hassan, Mr. Houssein G N,male,11,0,0,2699,18.7875,N,C,TRUE,Hassan,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+733,0,2,Knight, Mr. Robert J,male,NA,0,0,239855,32,N,S,TRUE,Knight,1,Mr,N,N,adult,single,Mr,FALSE,TRUE,TRUE
+734,0,2,Berriman, Mr. William John,male,23,0,0,28425,13,N,S,TRUE,Berriman,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+735,0,2,Troupiansky, Mr. Moses Aaron,male,23,0,0,233639,13,N,S,TRUE,Troupiansky,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+736,0,3,Williams, Mr. Leslie,male,28.5,0,0,54636,16.1,N,S,TRUE,Williams,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+737,0,3,Ford, Mrs. Edward (Margaret Ann Watson),female,48,1,3,W./C. 6608,34.375,N,S,TRUE,Ford,5,Mrs,N,W,adult,large,Mrs,FALSE,FALSE,FALSE
+738,1,1,Lesurer, Mr. Gustave J,male,35,0,0,PC 17755,512.3292,B101,C,TRUE,Lesurer,1,Mr,B,P,adult,single,Mr,FALSE,FALSE,FALSE
+739,0,3,Ivanoff, Mr. Kanio,male,NA,0,0,349201,7.8958,N,S,TRUE,Ivanoff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+740,0,3,Nankoff, Mr. Minko,male,NA,0,0,349218,7.8958,N,S,TRUE,Nankoff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+741,1,1,Hawksford, Mr. Walter James,male,NA,0,0,16988,30,D45,S,TRUE,Hawksford,1,Mr,D,N,adult,single,Mr,FALSE,FALSE,TRUE
+742,0,1,Cavendish, Mr. Tyrell William,male,36,1,0,19877,78.85,C46,S,TRUE,Cavendish,2,Mr,C,N,adult,medium,Mr,FALSE,FALSE,FALSE
+743,1,1,Ryerson, Miss. Susan Parker "Suzette",female,21,2,2,PC 17608,262.375,B57 B59 B63 B66,C,TRUE,Ryerson,5,Miss,B,P,adult,large,Miss,FALSE,FALSE,FALSE
+744,0,3,McNamee, Mr. Neal,male,24,1,0,376566,16.1,N,S,TRUE,McNamee,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+745,1,3,Stranden, Mr. Juho,male,31,0,0,STON/O 2. 3101288,7.925,N,S,TRUE,Stranden,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+746,0,1,Crosby, Capt. Edward Gifford,male,70,1,1,WE/P 5735,71,B22,S,TRUE,Crosby,3,Capt,B,W,senior,medium,Other,FALSE,FALSE,FALSE
+747,0,3,Abbott, Mr. Rossmore Edward,male,16,1,1,C.A. 2673,20.25,N,S,TRUE,Abbott,3,Mr,N,C,young,medium,Mr,FALSE,FALSE,FALSE
+748,1,2,Sinkkonen, Miss. Anna,female,30,0,0,250648,13,N,S,TRUE,Sinkkonen,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+749,0,1,Marvin, Mr. Daniel Warner,male,19,1,0,113773,53.1,D30,S,TRUE,Marvin,2,Mr,D,N,young,medium,Mr,FALSE,FALSE,FALSE
+750,0,3,Connaghton, Mr. Michael,male,31,0,0,335097,7.75,N,Q,TRUE,Connaghton,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+751,1,2,Wells, Miss. Joan,female,4,1,1,29103,23,N,S,TRUE,Wells,3,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+752,1,3,Moor, Master. Meier,male,6,0,1,392096,12.475,E121,S,TRUE,Moor,2,Master,E,N,young,medium,Master,FALSE,FALSE,FALSE
+753,0,3,Vande Velde, Mr. Johannes Joseph,male,33,0,0,345780,9.5,N,S,TRUE,Vande Velde,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+754,0,3,Jonkoff, Mr. Lalio,male,23,0,0,349204,7.8958,N,S,TRUE,Jonkoff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+755,1,2,Herman, Mrs. Samuel (Jane Laver),female,48,1,2,220845,65,N,S,TRUE,Herman,4,Mrs,N,N,adult,large,Mrs,FALSE,FALSE,FALSE
+756,1,2,Hamalainen, Master. Viljo,male,0.67,1,1,250649,14.5,N,S,TRUE,Hamalainen,3,Master,N,N,young,medium,Master,FALSE,FALSE,FALSE
+757,0,3,Carlsson, Mr. August Sigfrid,male,28,0,0,350042,7.7958,N,S,TRUE,Carlsson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+758,0,2,Bailey, Mr. Percy Andrew,male,18,0,0,29108,11.5,N,S,TRUE,Bailey,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+759,0,3,Theobald, Mr. Thomas Leonard,male,34,0,0,363294,8.05,N,S,TRUE,Theobald,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+760,1,1,Rothes, the Countess. of (Lucy Noel Martha Dyer-Edwards),female,33,0,0,110152,86.5,B77,S,TRUE,Rothes,1,the Countess,B,N,adult,single,Other,FALSE,FALSE,FALSE
+761,0,3,Garfirth, Mr. John,male,NA,0,0,358585,14.5,N,S,TRUE,Garfirth,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+762,0,3,Nirva, Mr. Iisakki Antino Aijo,male,41,0,0,SOTON/O2 3101272,7.125,N,S,TRUE,Nirva,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+763,1,3,Barah, Mr. Hanna Assi,male,20,0,0,2663,7.2292,N,C,TRUE,Barah,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+764,1,1,Carter, Mrs. William Ernest (Lucile Polk),female,36,1,2,113760,120,B96 B98,S,TRUE,Carter,4,Mrs,B,N,adult,large,Mrs,FALSE,FALSE,FALSE
+765,0,3,Eklund, Mr. Hans Linus,male,16,0,0,347074,7.775,N,S,TRUE,Eklund,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+766,1,1,Hogeboom, Mrs. John C (Anna Andrews),female,51,1,0,13502,77.9583,D11,S,TRUE,Hogeboom,2,Mrs,D,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+767,0,1,Brewe, Dr. Arthur Jackson,male,NA,0,0,112379,39.6,N,C,TRUE,Brewe,1,Dr,N,N,adult,single,Other,FALSE,FALSE,TRUE
+768,0,3,Mangan, Miss. Mary,female,30.5,0,0,364850,7.75,N,Q,TRUE,Mangan,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+769,0,3,Moran, Mr. Daniel J,male,NA,1,0,371110,24.15,N,Q,TRUE,Moran,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,TRUE
+770,0,3,Gronnestad, Mr. Daniel Danielsen,male,32,0,0,8471,8.3625,N,S,TRUE,Gronnestad,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+771,0,3,Lievens, Mr. Rene Aime,male,24,0,0,345781,9.5,N,S,TRUE,Lievens,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+772,0,3,Jensen, Mr. Niels Peder,male,48,0,0,350047,7.8542,N,S,TRUE,Jensen,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+773,0,2,Mack, Mrs. (Mary),female,57,0,0,S.O./P.P. 3,10.5,E77,S,TRUE,Mack,1,Mrs,E,S,adult,single,Mrs,FALSE,FALSE,FALSE
+774,0,3,Elias, Mr. Dibo,male,NA,0,0,2674,7.225,N,C,TRUE,Elias,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+775,1,2,Hocking, Mrs. Elizabeth (Eliza Needs),female,54,1,3,29105,23,N,S,TRUE,Hocking,5,Mrs,N,N,adult,large,Mrs,FALSE,FALSE,FALSE
+776,0,3,Myhrman, Mr. Pehr Fabian Oliver Malkolm,male,18,0,0,347078,7.75,N,S,TRUE,Myhrman,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+777,0,3,Tobin, Mr. Roger,male,NA,0,0,383121,7.75,F38,Q,TRUE,Tobin,1,Mr,F,N,adult,single,Mr,FALSE,FALSE,TRUE
+778,1,3,Emanuel, Miss. Virginia Ethel,female,5,0,0,364516,12.475,N,S,TRUE,Emanuel,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+779,0,3,Kilgannon, Mr. Thomas J,male,NA,0,0,36865,7.7375,N,Q,TRUE,Kilgannon,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+780,1,1,Robert, Mrs. Edward Scott (Elisabeth Walton McMillan),female,43,0,1,24160,211.3375,B3,S,TRUE,Robert,2,Mrs,B,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+781,1,3,Ayoub, Miss. Banoura,female,13,0,0,2687,7.2292,N,C,TRUE,Ayoub,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+782,1,1,Dick, Mrs. Albert Adrian (Vera Gillespie),female,17,1,0,17474,57,B20,S,TRUE,Dick,2,Mrs,B,N,young,medium,Mrs,FALSE,FALSE,FALSE
+783,0,1,Long, Mr. Milton Clyde,male,29,0,0,113501,30,D6,S,TRUE,Long,1,Mr,D,N,adult,single,Mr,FALSE,FALSE,FALSE
+784,0,3,Johnston, Mr. Andrew G,male,NA,1,2,W./C. 6607,23.45,N,S,TRUE,Johnston,4,Mr,N,W,adult,large,Mr,FALSE,FALSE,TRUE
+785,0,3,Ali, Mr. William,male,25,0,0,SOTON/O.Q. 3101312,7.05,N,S,TRUE,Ali,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+786,0,3,Harmer, Mr. Abraham (David Lishin),male,25,0,0,374887,7.25,N,S,TRUE,Harmer,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+787,1,3,Sjoblom, Miss. Anna Sofia,female,18,0,0,3101265,7.4958,N,S,TRUE,Sjoblom,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+788,0,3,Rice, Master. George Hugh,male,8,4,1,382652,29.125,N,Q,TRUE,Rice,6,Master,N,N,young,large,Master,FALSE,FALSE,FALSE
+789,1,3,Dean, Master. Bertram Vere,male,1,1,2,C.A. 2315,20.575,N,S,TRUE,Dean,4,Master,N,C,young,large,Master,FALSE,FALSE,FALSE
+790,0,1,Guggenheim, Mr. Benjamin,male,46,0,0,PC 17593,79.2,B82 B84,C,TRUE,Guggenheim,1,Mr,B,P,adult,single,Mr,FALSE,FALSE,FALSE
+791,0,3,Keane, Mr. Andrew "Andy",male,NA,0,0,12460,7.75,N,Q,TRUE,Keane,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+792,0,2,Gaskell, Mr. Alfred,male,16,0,0,239865,26,N,S,TRUE,Gaskell,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+793,0,3,Sage, Miss. Stella Anna,female,NA,8,2,CA. 2343,69.55,N,S,TRUE,Sage,11,Miss,N,C,young,large,Miss,FALSE,FALSE,TRUE
+794,0,1,Hoyt, Mr. William Fisher,male,NA,0,0,PC 17600,30.6958,N,C,TRUE,Hoyt,1,Mr,N,P,adult,single,Mr,FALSE,FALSE,TRUE
+795,0,3,Dantcheff, Mr. Ristiu,male,25,0,0,349203,7.8958,N,S,TRUE,Dantcheff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+796,0,2,Otter, Mr. Richard,male,39,0,0,28213,13,N,S,TRUE,Otter,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+797,1,1,Leader, Dr. Alice (Farnham),female,49,0,0,17465,25.9292,D17,S,TRUE,Leader,1,Dr,D,N,adult,single,Other,FALSE,FALSE,FALSE
+798,1,3,Osman, Mrs. Mara,female,31,0,0,349244,8.6833,N,S,TRUE,Osman,1,Mrs,N,N,adult,single,Mrs,FALSE,FALSE,FALSE
+799,0,3,Ibrahim Shawah, Mr. Yousseff,male,30,0,0,2685,7.2292,N,C,TRUE,Ibrahim Shawah,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+800,0,3,Van Impe, Mrs. Jean Baptiste (Rosalie Paula Govaert),female,30,1,1,345773,24.15,N,S,TRUE,Van Impe,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+801,0,2,Ponesell, Mr. Martin,male,34,0,0,250647,13,N,S,TRUE,Ponesell,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+802,1,2,Collyer, Mrs. Harvey (Charlotte Annie Tate),female,31,1,1,C.A. 31921,26.25,N,S,TRUE,Collyer,3,Mrs,N,C,adult,medium,Mrs,FALSE,FALSE,FALSE
+803,1,1,Carter, Master. William Thornton II,male,11,1,2,113760,120,B96 B98,S,TRUE,Carter,4,Master,B,N,young,large,Master,FALSE,FALSE,FALSE
+804,1,3,Thomas, Master. Assad Alexander,male,0.42,0,1,2625,8.5167,N,C,TRUE,Thomas,2,Master,N,N,young,medium,Master,FALSE,FALSE,FALSE
+805,1,3,Hedman, Mr. Oskar Arvid,male,27,0,0,347089,6.975,N,S,TRUE,Hedman,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+806,0,3,Johansson, Mr. Karl Johan,male,31,0,0,347063,7.775,N,S,TRUE,Johansson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+807,0,1,Andrews, Mr. Thomas Jr,male,39,0,0,112050,37.8125,A36,S,TRUE,Andrews,1,Mr,A,N,adult,single,Mr,FALSE,TRUE,FALSE
+808,0,3,Pettersson, Miss. Ellen Natalia,female,18,0,0,347087,7.775,N,S,TRUE,Pettersson,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+809,0,2,Meyer, Mr. August,male,39,0,0,248723,13,N,S,TRUE,Meyer,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+810,1,1,Chambers, Mrs. Norman Campbell (Bertha Griggs),female,33,1,0,113806,53.1,E8,S,TRUE,Chambers,2,Mrs,E,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+811,0,3,Alexander, Mr. William,male,26,0,0,3474,7.8875,N,S,TRUE,Alexander,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+812,0,3,Lester, Mr. James,male,39,0,0,A/4 48871,24.15,N,S,TRUE,Lester,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,FALSE
+813,0,2,Slemen, Mr. Richard James,male,35,0,0,28206,10.5,N,S,TRUE,Slemen,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+814,0,3,Andersson, Miss. Ebba Iris Alfrida,female,6,4,2,347082,31.275,N,S,TRUE,Andersson,7,Miss,N,N,young,large,Miss,FALSE,FALSE,FALSE
+815,0,3,Tomlin, Mr. Ernest Portage,male,30.5,0,0,364499,8.05,N,S,TRUE,Tomlin,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+816,0,1,Fry, Mr. Richard,male,NA,0,0,112058,83.25,B102,S,TRUE,Fry,1,Mr,B,N,adult,single,Mr,FALSE,TRUE,TRUE
+817,0,3,Heininen, Miss. Wendla Maria,female,23,0,0,STON/O2. 3101290,7.925,N,S,TRUE,Heininen,1,Miss,N,S,adult,single,Miss,FALSE,FALSE,FALSE
+818,0,2,Mallet, Mr. Albert,male,31,1,1,S.C./PARIS 2079,37.0042,N,C,TRUE,Mallet,3,Mr,N,S,adult,medium,Mr,FALSE,FALSE,FALSE
+819,0,3,Holm, Mr. John Fredrik Alexander,male,43,0,0,C 7075,6.45,N,S,TRUE,Holm,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,FALSE
+820,0,3,Skoog, Master. Karl Thorsten,male,10,3,2,347088,27.9,N,S,TRUE,Skoog,6,Master,N,N,young,large,Master,FALSE,FALSE,FALSE
+821,1,1,Hays, Mrs. Charles Melville (Clara Jennings Gregg),female,52,1,1,12749,93.5,B69,S,TRUE,Hays,3,Mrs,B,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+822,1,3,Lulic, Mr. Nikola,male,27,0,0,315098,8.6625,N,S,TRUE,Lulic,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+823,0,1,Reuchlin, Jonkheer. John George,male,38,0,0,19972,40.0021,N,S,TRUE,Reuchlin,1,Jonkheer,N,N,adult,single,Other,FALSE,TRUE,FALSE
+824,1,3,Moor, Mrs. (Beila),female,27,0,1,392096,12.475,E121,S,TRUE,Moor,2,Mrs,E,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+825,0,3,Panula, Master. Urho Abraham,male,2,4,1,3101295,39.6875,N,S,TRUE,Panula,6,Master,N,N,young,large,Master,FALSE,FALSE,FALSE
+826,0,3,Flynn, Mr. John,male,NA,0,0,368323,6.95,N,Q,TRUE,Flynn,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+827,0,3,Lam, Mr. Len,male,NA,0,0,1601,56.4958,N,S,TRUE,Lam,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+828,1,2,Mallet, Master. Andre,male,1,0,2,S.C./PARIS 2079,37.0042,N,C,TRUE,Mallet,3,Master,N,S,young,medium,Master,FALSE,FALSE,FALSE
+829,1,3,McCormack, Mr. Thomas Joseph,male,NA,0,0,367228,7.75,N,Q,TRUE,McCormack,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+830,1,1,Stone, Mrs. George Nelson (Martha Evelyn),female,62,0,0,113572,80,B28,S,TRUE,Stone,1,Mrs,B,N,senior,single,Mrs,TRUE,FALSE,FALSE
+831,1,3,Yasbeck, Mrs. Antoni (Selini Alexander),female,15,1,0,2659,14.4542,N,C,TRUE,Yasbeck,2,Mrs,N,N,young,medium,Mrs,FALSE,FALSE,FALSE
+832,1,2,Richards, Master. George Sibley,male,0.83,1,1,29106,18.75,N,S,TRUE,Richards,3,Master,N,N,young,medium,Master,FALSE,FALSE,FALSE
+833,0,3,Saad, Mr. Amin,male,NA,0,0,2671,7.2292,N,C,TRUE,Saad,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+834,0,3,Augustsson, Mr. Albert,male,23,0,0,347468,7.8542,N,S,TRUE,Augustsson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+835,0,3,Allum, Mr. Owen George,male,18,0,0,2223,8.3,N,S,TRUE,Allum,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+836,1,1,Compton, Miss. Sara Rebecca,female,39,1,1,PC 17756,83.1583,E49,C,TRUE,Compton,3,Miss,E,P,adult,medium,Miss,FALSE,FALSE,FALSE
+837,0,3,Pasic, Mr. Jakob,male,21,0,0,315097,8.6625,N,S,TRUE,Pasic,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+838,0,3,Sirota, Mr. Maurice,male,NA,0,0,392092,8.05,N,S,TRUE,Sirota,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+839,1,3,Chip, Mr. Chang,male,32,0,0,1601,56.4958,N,S,TRUE,Chip,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+840,1,1,Marechal, Mr. Pierre,male,NA,0,0,11774,29.7,C47,C,TRUE,Marechal,1,Mr,C,N,adult,single,Mr,FALSE,FALSE,TRUE
+841,0,3,Alhomaki, Mr. Ilmari Rudolf,male,20,0,0,SOTON/O2 3101287,7.925,N,S,TRUE,Alhomaki,1,Mr,N,S,young,single,Mr,FALSE,FALSE,FALSE
+842,0,2,Mudd, Mr. Thomas Charles,male,16,0,0,S.O./P.P. 3,10.5,N,S,TRUE,Mudd,1,Mr,N,S,young,single,Mr,FALSE,FALSE,FALSE
+843,1,1,Serepeca, Miss. Augusta,female,30,0,0,113798,31,N,C,TRUE,Serepeca,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+844,0,3,Lemberopolous, Mr. Peter L,male,34.5,0,0,2683,6.4375,N,C,TRUE,Lemberopolous,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+845,0,3,Culumovic, Mr. Jeso,male,17,0,0,315090,8.6625,N,S,TRUE,Culumovic,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+846,0,3,Abbing, Mr. Anthony,male,42,0,0,C.A. 5547,7.55,N,S,TRUE,Abbing,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,FALSE
+847,0,3,Sage, Mr. Douglas Bullen,male,NA,8,2,CA. 2343,69.55,N,S,TRUE,Sage,11,Mr,N,C,young,large,Mr,FALSE,FALSE,TRUE
+848,0,3,Markoff, Mr. Marin,male,35,0,0,349213,7.8958,N,C,TRUE,Markoff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+849,0,2,Harper, Rev. John,male,28,0,1,248727,33,N,S,TRUE,Harper,2,Rev,N,N,adult,medium,Other,FALSE,FALSE,FALSE
+850,1,1,Goldenberg, Mrs. Samuel L (Edwiga Grabowska),female,NA,1,0,17453,89.1042,C92,C,TRUE,Goldenberg,2,Mrs,C,N,adult,medium,Mrs,FALSE,FALSE,TRUE
+851,0,3,Andersson, Master. Sigvard Harald Elias,male,4,4,2,347082,31.275,N,S,TRUE,Andersson,7,Master,N,N,young,large,Master,FALSE,FALSE,FALSE
+852,0,3,Svensson, Mr. Johan,male,74,0,0,347060,7.775,N,S,TRUE,Svensson,1,Mr,N,N,senior,single,Mr,FALSE,FALSE,FALSE
+853,0,3,Boulos, Miss. Nourelain,female,9,1,1,2678,15.2458,N,C,TRUE,Boulos,3,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+854,1,1,Lines, Miss. Mary Conover,female,16,0,1,PC 17592,39.4,D28,S,TRUE,Lines,2,Miss,D,P,young,medium,Miss,FALSE,FALSE,FALSE
+855,0,2,Carter, Mrs. Ernest Courtenay (Lilian Hughes),female,44,1,0,244252,26,N,S,TRUE,Carter,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+856,1,3,Aks, Mrs. Sam (Leah Rosen),female,18,0,1,392091,9.35,N,S,TRUE,Aks,2,Mrs,N,N,young,medium,Mrs,FALSE,FALSE,FALSE
+857,1,1,Wick, Mrs. George Dennick (Mary Hitchcock),female,45,1,1,36928,164.8667,N,S,TRUE,Wick,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+858,1,1,Daly, Mr. Peter Denis ,male,51,0,0,113055,26.55,E17,S,TRUE,Daly,1,Mr,E,N,adult,single,Mr,FALSE,FALSE,FALSE
+859,1,3,Baclini, Mrs. Solomon (Latifa Qurban),female,24,0,3,2666,19.2583,N,C,TRUE,Baclini,4,Mrs,N,N,adult,large,Mrs,FALSE,FALSE,FALSE
+860,0,3,Razi, Mr. Raihed,male,NA,0,0,2629,7.2292,N,C,TRUE,Razi,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+861,0,3,Hansen, Mr. Claus Peter,male,41,2,0,350026,14.1083,N,S,TRUE,Hansen,3,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+862,0,2,Giles, Mr. Frederick Edward,male,21,1,0,28134,11.5,N,S,TRUE,Giles,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+863,1,1,Swift, Mrs. Frederick Joel (Margaret Welles Barron),female,48,0,0,17466,25.9292,D17,S,TRUE,Swift,1,Mrs,D,N,adult,single,Mrs,FALSE,FALSE,FALSE
+864,0,3,Sage, Miss. Dorothy Edith "Dolly",female,NA,8,2,CA. 2343,69.55,N,S,TRUE,Sage,11,Miss,N,C,young,large,Miss,FALSE,FALSE,TRUE
+865,0,2,Gill, Mr. John William,male,24,0,0,233866,13,N,S,TRUE,Gill,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+866,1,2,Bystrom, Mrs. (Karolina),female,42,0,0,236852,13,N,S,TRUE,Bystrom,1,Mrs,N,N,adult,single,Mrs,FALSE,FALSE,FALSE
+867,1,2,Duran y More, Miss. Asuncion,female,27,1,0,SC/PARIS 2149,13.8583,N,C,TRUE,Duran y More,2,Miss,N,S,adult,medium,Miss,FALSE,FALSE,FALSE
+868,0,1,Roebling, Mr. Washington Augustus II,male,31,0,0,PC 17590,50.4958,A24,S,TRUE,Roebling,1,Mr,A,P,adult,single,Mr,FALSE,FALSE,FALSE
+869,0,3,van Melkebeke, Mr. Philemon,male,NA,0,0,345777,9.5,N,S,TRUE,van Melkebeke,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+870,1,3,Johnson, Master. Harold Theodor,male,4,1,1,347742,11.1333,N,S,TRUE,Johnson,3,Master,N,N,young,medium,Master,FALSE,FALSE,FALSE
+871,0,3,Balkic, Mr. Cerin,male,26,0,0,349248,7.8958,N,S,TRUE,Balkic,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+872,1,1,Beckwith, Mrs. Richard Leonard (Sallie Monypeny),female,47,1,1,11751,52.5542,D35,S,TRUE,Beckwith,3,Mrs,D,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+873,0,1,Carlsson, Mr. Frans Olof,male,33,0,0,695,5,B51 B53 B55,S,TRUE,Carlsson,1,Mr,B,N,adult,single,Mr,FALSE,FALSE,FALSE
+874,0,3,Vander Cruyssen, Mr. Victor,male,47,0,0,345765,9,N,S,TRUE,Vander Cruyssen,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+875,1,2,Abelson, Mrs. Samuel (Hannah Wizosky),female,28,1,0,P/PP 3381,24,N,C,TRUE,Abelson,2,Mrs,N,P,adult,medium,Mrs,FALSE,FALSE,FALSE
+876,1,3,Najib, Miss. Adele Kiamie "Jane",female,15,0,0,2667,7.225,N,C,TRUE,Najib,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+877,0,3,Gustafsson, Mr. Alfred Ossian,male,20,0,0,7534,9.8458,N,S,TRUE,Gustafsson,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+878,0,3,Petroff, Mr. Nedelio,male,19,0,0,349212,7.8958,N,S,TRUE,Petroff,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+879,0,3,Laleff, Mr. Kristo,male,NA,0,0,349217,7.8958,N,S,TRUE,Laleff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+880,1,1,Potter, Mrs. Thomas Jr (Lily Alexenia Wilson),female,56,0,1,11767,83.1583,C50,C,TRUE,Potter,2,Mrs,C,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+881,1,2,Shelley, Mrs. William (Imanita Parrish Hall),female,25,0,1,230433,26,N,S,TRUE,Shelley,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+882,0,3,Markun, Mr. Johann,male,33,0,0,349257,7.8958,N,S,TRUE,Markun,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+883,0,3,Dahlberg, Miss. Gerda Ulrika,female,22,0,0,7552,10.5167,N,S,TRUE,Dahlberg,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+884,0,2,Banfield, Mr. Frederick James,male,28,0,0,C.A./SOTON 34068,10.5,N,S,TRUE,Banfield,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,FALSE
+885,0,3,Sutehall, Mr. Henry Jr,male,25,0,0,SOTON/OQ 392076,7.05,N,S,TRUE,Sutehall,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+886,0,3,Rice, Mrs. William (Margaret Norton),female,39,0,5,382652,29.125,N,Q,TRUE,Rice,6,Mrs,N,N,adult,large,Mrs,FALSE,FALSE,FALSE
+887,0,2,Montvila, Rev. Juozas,male,27,0,0,211536,13,N,S,TRUE,Montvila,1,Rev,N,N,adult,single,Other,FALSE,FALSE,FALSE
+888,1,1,Graham, Miss. Margaret Edith,female,19,0,0,112053,30,B42,S,TRUE,Graham,1,Miss,B,N,young,single,Miss,FALSE,FALSE,FALSE
+889,0,3,Johnston, Miss. Catherine Helen "Carrie",female,NA,1,2,W./C. 6607,23.45,N,S,TRUE,Johnston,4,Miss,N,W,young,large,Miss,FALSE,FALSE,TRUE
+890,1,1,Behr, Mr. Karl Howell,male,26,0,0,111369,30,C148,C,TRUE,Behr,1,Mr,C,N,adult,single,Mr,FALSE,FALSE,FALSE
+891,0,3,Dooley, Mr. Patrick,male,32,0,0,370376,7.75,N,Q,TRUE,Dooley,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+892,NA,3,Kelly, Mr. James,male,34.5,0,0,330911,7.8292,N,Q,FALSE,Kelly,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+893,NA,3,Wilkes, Mrs. James (Ellen Needs),female,47,1,0,363272,7,N,S,FALSE,Wilkes,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+894,NA,2,Myles, Mr. Thomas Francis,male,62,0,0,240276,9.6875,N,Q,FALSE,Myles,1,Mr,N,N,senior,single,Mr,FALSE,FALSE,FALSE
+895,NA,3,Wirz, Mr. Albert,male,27,0,0,315154,8.6625,N,S,FALSE,Wirz,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+896,NA,3,Hirvonen, Mrs. Alexander (Helga E Lindqvist),female,22,1,1,3101298,12.2875,N,S,FALSE,Hirvonen,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+897,NA,3,Svensson, Mr. Johan Cervin,male,14,0,0,7538,9.225,N,S,FALSE,Svensson,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+898,NA,3,Connolly, Miss. Kate,female,30,0,0,330972,7.6292,N,Q,FALSE,Connolly,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+899,NA,2,Caldwell, Mr. Albert Francis,male,26,1,1,248738,29,N,S,FALSE,Caldwell,3,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+900,NA,3,Abrahim, Mrs. Joseph (Sophie Halaut Easu),female,18,0,0,2657,7.2292,N,C,FALSE,Abrahim,1,Mrs,N,N,young,single,Mrs,FALSE,FALSE,FALSE
+901,NA,3,Davies, Mr. John Samuel,male,21,2,0,A/4 48871,24.15,N,S,FALSE,Davies,3,Mr,N,A,adult,medium,Mr,FALSE,FALSE,FALSE
+902,NA,3,Ilieff, Mr. Ylio,male,NA,0,0,349220,7.8958,N,S,FALSE,Ilieff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+903,NA,1,Jones, Mr. Charles Cresson,male,46,0,0,694,26,N,S,FALSE,Jones,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+904,NA,1,Snyder, Mrs. John Pillsbury (Nelle Stevenson),female,23,1,0,21228,82.2667,B45,S,FALSE,Snyder,2,Mrs,B,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+905,NA,2,Howard, Mr. Benjamin,male,63,1,0,24065,26,N,S,FALSE,Howard,2,Mr,N,N,senior,medium,Mr,FALSE,FALSE,FALSE
+906,NA,1,Chaffee, Mrs. Herbert Fuller (Carrie Constance Toogood),female,47,1,0,W.E.P. 5734,61.175,E31,S,FALSE,Chaffee,2,Mrs,E,W,adult,medium,Mrs,FALSE,FALSE,FALSE
+907,NA,2,del Carlo, Mrs. Sebastiano (Argenia Genovesi),female,24,1,0,SC/PARIS 2167,27.7208,N,C,FALSE,del Carlo,2,Mrs,N,S,adult,medium,Mrs,FALSE,FALSE,FALSE
+908,NA,2,Keane, Mr. Daniel,male,35,0,0,233734,12.35,N,Q,FALSE,Keane,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+909,NA,3,Assaf, Mr. Gerios,male,21,0,0,2692,7.225,N,C,FALSE,Assaf,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+910,NA,3,Ilmakangas, Miss. Ida Livija,female,27,1,0,STON/O2. 3101270,7.925,N,S,FALSE,Ilmakangas,2,Miss,N,S,adult,medium,Miss,FALSE,FALSE,FALSE
+911,NA,3,Assaf Khalil, Mrs. Mariana (Miriam")",female,45,0,0,2696,7.225,N,C,FALSE,Assaf Khalil,1,Mrs,N,N,adult,single,Mrs,FALSE,FALSE,FALSE
+912,NA,1,Rothschild, Mr. Martin,male,55,1,0,PC 17603,59.4,N,C,FALSE,Rothschild,2,Mr,N,P,adult,medium,Mr,FALSE,FALSE,FALSE
+913,NA,3,Olsen, Master. Artur Karl,male,9,0,1,C 17368,3.1708,N,S,FALSE,Olsen,2,Master,N,C,young,medium,Master,FALSE,FALSE,FALSE
+914,NA,1,Flegenheim, Mrs. Alfred (Antoinette),female,NA,0,0,PC 17598,31.6833,N,S,FALSE,Flegenheim,1,Mrs,N,P,adult,single,Mrs,FALSE,FALSE,TRUE
+915,NA,1,Williams, Mr. Richard Norris II,male,21,0,1,PC 17597,61.3792,N,C,FALSE,Williams,2,Mr,N,P,adult,medium,Mr,FALSE,FALSE,FALSE
+916,NA,1,Ryerson, Mrs. Arthur Larned (Emily Maria Borie),female,48,1,3,PC 17608,262.375,B57 B59 B63 B66,C,FALSE,Ryerson,5,Mrs,B,P,adult,large,Mrs,FALSE,FALSE,FALSE
+917,NA,3,Robins, Mr. Alexander A,male,50,1,0,A/5. 3337,14.5,N,S,FALSE,Robins,2,Mr,N,A,adult,medium,Mr,FALSE,FALSE,FALSE
+918,NA,1,Ostby, Miss. Helene Ragnhild,female,22,0,1,113509,61.9792,B36,C,FALSE,Ostby,2,Miss,B,N,adult,medium,Miss,FALSE,FALSE,FALSE
+919,NA,3,Daher, Mr. Shedid,male,22.5,0,0,2698,7.225,N,C,FALSE,Daher,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+920,NA,1,Brady, Mr. John Bertram,male,41,0,0,113054,30.5,A21,S,FALSE,Brady,1,Mr,A,N,adult,single,Mr,FALSE,FALSE,FALSE
+921,NA,3,Samaan, Mr. Elias,male,NA,2,0,2662,21.6792,N,C,FALSE,Samaan,3,Mr,N,N,adult,medium,Mr,FALSE,FALSE,TRUE
+922,NA,2,Louch, Mr. Charles Alexander,male,50,1,0,SC/AH 3085,26,N,S,FALSE,Louch,2,Mr,N,S,adult,medium,Mr,FALSE,FALSE,FALSE
+923,NA,2,Jefferys, Mr. Clifford Thomas,male,24,2,0,C.A. 31029,31.5,N,S,FALSE,Jefferys,3,Mr,N,C,adult,medium,Mr,FALSE,FALSE,FALSE
+924,NA,3,Dean, Mrs. Bertram (Eva Georgetta Light),female,33,1,2,C.A. 2315,20.575,N,S,FALSE,Dean,4,Mrs,N,C,adult,large,Mrs,FALSE,FALSE,FALSE
+925,NA,3,Johnston, Mrs. Andrew G (Elizabeth Lily" Watson)",female,NA,1,2,W./C. 6607,23.45,N,S,FALSE,Johnston,4,Mrs,N,W,adult,large,Mrs,FALSE,FALSE,TRUE
+926,NA,1,Mock, Mr. Philipp Edmund,male,30,1,0,13236,57.75,C78,C,FALSE,Mock,2,Mr,C,N,adult,medium,Mr,FALSE,FALSE,FALSE
+927,NA,3,Katavelas, Mr. Vassilios (Catavelas Vassilios")",male,18.5,0,0,2682,7.2292,N,C,FALSE,Katavelas,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+928,NA,3,Roth, Miss. Sarah A,female,NA,0,0,342712,8.05,N,S,FALSE,Roth,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+929,NA,3,Cacic, Miss. Manda,female,21,0,0,315087,8.6625,N,S,FALSE,Cacic,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+930,NA,3,Sap, Mr. Julius,male,25,0,0,345768,9.5,N,S,FALSE,Sap,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+931,NA,3,Hee, Mr. Ling,male,NA,0,0,1601,56.4958,N,S,FALSE,Hee,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+932,NA,3,Karun, Mr. Franz,male,39,0,1,349256,13.4167,N,C,FALSE,Karun,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+933,NA,1,Franklin, Mr. Thomas Parham,male,NA,0,0,113778,26.55,D34,S,FALSE,Franklin,1,Mr,D,N,adult,single,Mr,FALSE,FALSE,TRUE
+934,NA,3,Goldsmith, Mr. Nathan,male,41,0,0,SOTON/O.Q. 3101263,7.85,N,S,FALSE,Goldsmith,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+935,NA,2,Corbett, Mrs. Walter H (Irene Colvin),female,30,0,0,237249,13,N,S,FALSE,Corbett,1,Mrs,N,N,adult,single,Mrs,FALSE,FALSE,FALSE
+936,NA,1,Kimball, Mrs. Edwin Nelson Jr (Gertrude Parsons),female,45,1,0,11753,52.5542,D19,S,FALSE,Kimball,2,Mrs,D,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+937,NA,3,Peltomaki, Mr. Nikolai Johannes,male,25,0,0,STON/O 2. 3101291,7.925,N,S,FALSE,Peltomaki,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+938,NA,1,Chevre, Mr. Paul Romaine,male,45,0,0,PC 17594,29.7,A9,C,FALSE,Chevre,1,Mr,A,P,adult,single,Mr,FALSE,FALSE,FALSE
+939,NA,3,Shaughnessy, Mr. Patrick,male,NA,0,0,370374,7.75,N,Q,FALSE,Shaughnessy,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+940,NA,1,Bucknell, Mrs. William Robert (Emma Eliza Ward),female,60,0,0,11813,76.2917,D15,C,FALSE,Bucknell,1,Mrs,D,N,adult,single,Mrs,FALSE,FALSE,FALSE
+941,NA,3,Coutts, Mrs. William (Winnie Minnie" Treanor)",female,36,0,2,C.A. 37671,15.9,N,S,FALSE,Coutts,3,Mrs,N,C,adult,medium,Mrs,FALSE,FALSE,FALSE
+942,NA,1,Smith, Mr. Lucien Philip,male,24,1,0,13695,60,C31,S,FALSE,Smith,2,Mr,C,N,adult,medium,Mr,FALSE,FALSE,FALSE
+943,NA,2,Pulbaum, Mr. Franz,male,27,0,0,SC/PARIS 2168,15.0333,N,C,FALSE,Pulbaum,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+944,NA,2,Hocking, Miss. Ellen Nellie"",female,20,2,1,29105,23,N,S,FALSE,Hocking,4,Miss,N,N,young,large,Miss,FALSE,FALSE,FALSE
+945,NA,1,Fortune, Miss. Ethel Flora,female,28,3,2,19950,263,C23 C25 C27,S,FALSE,Fortune,6,Miss,C,N,adult,large,Miss,FALSE,FALSE,FALSE
+946,NA,2,Mangiavacchi, Mr. Serafino Emilio,male,NA,0,0,SC/A.3 2861,15.5792,N,C,FALSE,Mangiavacchi,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,TRUE
+947,NA,3,Rice, Master. Albert,male,10,4,1,382652,29.125,N,Q,FALSE,Rice,6,Master,N,N,young,large,Master,FALSE,FALSE,FALSE
+948,NA,3,Cor, Mr. Bartol,male,35,0,0,349230,7.8958,N,S,FALSE,Cor,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+949,NA,3,Abelseth, Mr. Olaus Jorgensen,male,25,0,0,348122,7.65,F G63,S,FALSE,Abelseth,1,Mr,F,N,adult,single,Mr,FALSE,FALSE,FALSE
+950,NA,3,Davison, Mr. Thomas Henry,male,NA,1,0,386525,16.1,N,S,FALSE,Davison,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,TRUE
+951,NA,1,Chaudanson, Miss. Victorine,female,36,0,0,PC 17608,262.375,B61,C,FALSE,Chaudanson,1,Miss,B,P,adult,single,Miss,FALSE,FALSE,FALSE
+952,NA,3,Dika, Mr. Mirko,male,17,0,0,349232,7.8958,N,S,FALSE,Dika,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+953,NA,2,McCrae, Mr. Arthur Gordon,male,32,0,0,237216,13.5,N,S,FALSE,McCrae,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+954,NA,3,Bjorklund, Mr. Ernst Herbert,male,18,0,0,347090,7.75,N,S,FALSE,Bjorklund,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+955,NA,3,Bradley, Miss. Bridget Delia,female,22,0,0,334914,7.725,N,Q,FALSE,Bradley,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+956,NA,1,Ryerson, Master. John Borie,male,13,2,2,PC 17608,262.375,B57 B59 B63 B66,C,FALSE,Ryerson,5,Master,B,P,young,large,Master,FALSE,FALSE,FALSE
+957,NA,2,Corey, Mrs. Percy C (Mary Phyllis Elizabeth Miller),female,NA,0,0,F.C.C. 13534,21,N,S,FALSE,Corey,1,Mrs,N,F,adult,single,Mrs,FALSE,FALSE,TRUE
+958,NA,3,Burns, Miss. Mary Delia,female,18,0,0,330963,7.8792,N,Q,FALSE,Burns,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+959,NA,1,Moore, Mr. Clarence Bloomfield,male,47,0,0,113796,42.4,N,S,FALSE,Moore,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+960,NA,1,Tucker, Mr. Gilbert Milligan Jr,male,31,0,0,2543,28.5375,C53,C,FALSE,Tucker,1,Mr,C,N,adult,single,Mr,FALSE,FALSE,FALSE
+961,NA,1,Fortune, Mrs. Mark (Mary McDougald),female,60,1,4,19950,263,C23 C25 C27,S,FALSE,Fortune,6,Mrs,C,N,adult,large,Mrs,FALSE,FALSE,FALSE
+962,NA,3,Mulvihill, Miss. Bertha E,female,24,0,0,382653,7.75,N,Q,FALSE,Mulvihill,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+963,NA,3,Minkoff, Mr. Lazar,male,21,0,0,349211,7.8958,N,S,FALSE,Minkoff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+964,NA,3,Nieminen, Miss. Manta Josefina,female,29,0,0,3101297,7.925,N,S,FALSE,Nieminen,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+965,NA,1,Ovies y Rodriguez, Mr. Servando,male,28.5,0,0,PC 17562,27.7208,D43,C,FALSE,Ovies y Rodriguez,1,Mr,D,P,adult,single,Mr,FALSE,FALSE,FALSE
+966,NA,1,Geiger, Miss. Amalie,female,35,0,0,113503,211.5,C130,C,FALSE,Geiger,1,Miss,C,N,adult,single,Miss,FALSE,FALSE,FALSE
+967,NA,1,Keeping, Mr. Edwin,male,32.5,0,0,113503,211.5,C132,C,FALSE,Keeping,1,Mr,C,N,adult,single,Mr,FALSE,FALSE,FALSE
+968,NA,3,Miles, Mr. Frank,male,NA,0,0,359306,8.05,N,S,FALSE,Miles,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+969,NA,1,Cornell, Mrs. Robert Clifford (Malvina Helen Lamson),female,55,2,0,11770,25.7,C101,S,FALSE,Cornell,3,Mrs,C,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+970,NA,2,Aldworth, Mr. Charles Augustus,male,30,0,0,248744,13,N,S,FALSE,Aldworth,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+971,NA,3,Doyle, Miss. Elizabeth,female,24,0,0,368702,7.75,N,Q,FALSE,Doyle,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+972,NA,3,Boulos, Master. Akar,male,6,1,1,2678,15.2458,N,C,FALSE,Boulos,3,Master,N,N,young,medium,Master,FALSE,FALSE,FALSE
+973,NA,1,Straus, Mr. Isidor,male,67,1,0,PC 17483,221.7792,C55 C57,S,FALSE,Straus,2,Mr,C,P,senior,medium,Mr,FALSE,FALSE,FALSE
+974,NA,1,Case, Mr. Howard Brown,male,49,0,0,19924,26,N,S,FALSE,Case,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+975,NA,3,Demetri, Mr. Marinko,male,NA,0,0,349238,7.8958,N,S,FALSE,Demetri,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+976,NA,2,Lamb, Mr. John Joseph,male,NA,0,0,240261,10.7083,N,Q,FALSE,Lamb,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+977,NA,3,Khalil, Mr. Betros,male,NA,1,0,2660,14.4542,N,C,FALSE,Khalil,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,TRUE
+978,NA,3,Barry, Miss. Julia,female,27,0,0,330844,7.8792,N,Q,FALSE,Barry,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+979,NA,3,Badman, Miss. Emily Louisa,female,18,0,0,A/4 31416,8.05,N,S,FALSE,Badman,1,Miss,N,A,young,single,Miss,FALSE,FALSE,FALSE
+980,NA,3,O'Donoghue, Ms. Bridget,female,NA,0,0,364856,7.75,N,Q,FALSE,O'Donoghue,1,Ms,N,N,adult,single,Other,FALSE,FALSE,TRUE
+981,NA,2,Wells, Master. Ralph Lester,male,2,1,1,29103,23,N,S,FALSE,Wells,3,Master,N,N,young,medium,Master,FALSE,FALSE,FALSE
+982,NA,3,Dyker, Mrs. Adolf Fredrik (Anna Elisabeth Judith Andersson),female,22,1,0,347072,13.9,N,S,FALSE,Dyker,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+983,NA,3,Pedersen, Mr. Olaf,male,NA,0,0,345498,7.775,N,S,FALSE,Pedersen,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+984,NA,1,Davidson, Mrs. Thornton (Orian Hays),female,27,1,2,F.C. 12750,52,B71,S,FALSE,Davidson,4,Mrs,B,F,adult,large,Mrs,FALSE,FALSE,FALSE
+985,NA,3,Guest, Mr. Robert,male,NA,0,0,376563,8.05,N,S,FALSE,Guest,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+986,NA,1,Birnbaum, Mr. Jakob,male,25,0,0,13905,26,N,C,FALSE,Birnbaum,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+987,NA,3,Tenglin, Mr. Gunnar Isidor,male,25,0,0,350033,7.7958,N,S,FALSE,Tenglin,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+988,NA,1,Cavendish, Mrs. Tyrell William (Julia Florence Siegel),female,76,1,0,19877,78.85,C46,S,FALSE,Cavendish,2,Mrs,C,N,senior,medium,Mrs,FALSE,FALSE,FALSE
+989,NA,3,Makinen, Mr. Kalle Edvard,male,29,0,0,STON/O 2. 3101268,7.925,N,S,FALSE,Makinen,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+990,NA,3,Braf, Miss. Elin Ester Maria,female,20,0,0,347471,7.8542,N,S,FALSE,Braf,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+991,NA,3,Nancarrow, Mr. William Henry,male,33,0,0,A./5. 3338,8.05,N,S,FALSE,Nancarrow,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,FALSE
+992,NA,1,Stengel, Mrs. Charles Emil Henry (Annie May Morris),female,43,1,0,11778,55.4417,C116,C,FALSE,Stengel,2,Mrs,C,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+993,NA,2,Weisz, Mr. Leopold,male,27,1,0,228414,26,N,S,FALSE,Weisz,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+994,NA,3,Foley, Mr. William,male,NA,0,0,365235,7.75,N,Q,FALSE,Foley,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+995,NA,3,Johansson Palmquist, Mr. Oskar Leander,male,26,0,0,347070,7.775,N,S,FALSE,Johansson Palmquist,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+996,NA,3,Thomas, Mrs. Alexander (Thamine Thelma")",female,16,1,1,2625,8.5167,N,C,FALSE,Thomas,3,Mrs,N,N,young,medium,Mrs,FALSE,FALSE,FALSE
+997,NA,3,Holthen, Mr. Johan Martin,male,28,0,0,C 4001,22.525,N,S,FALSE,Holthen,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,FALSE
+998,NA,3,Buckley, Mr. Daniel,male,21,0,0,330920,7.8208,N,Q,FALSE,Buckley,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+999,NA,3,Ryan, Mr. Edward,male,NA,0,0,383162,7.75,N,Q,FALSE,Ryan,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1000,NA,3,Willer, Mr. Aaron (Abi Weller")",male,NA,0,0,3410,8.7125,N,S,FALSE,Willer,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1001,NA,2,Swane, Mr. George,male,18.5,0,0,248734,13,F,S,FALSE,Swane,1,Mr,F,N,young,single,Mr,FALSE,FALSE,FALSE
+1002,NA,2,Stanton, Mr. Samuel Ward,male,41,0,0,237734,15.0458,N,C,FALSE,Stanton,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1003,NA,3,Shine, Miss. Ellen Natalia,female,NA,0,0,330968,7.7792,N,Q,FALSE,Shine,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+1004,NA,1,Evans, Miss. Edith Corse,female,36,0,0,PC 17531,31.6792,A29,C,FALSE,Evans,1,Miss,A,P,adult,single,Miss,FALSE,FALSE,FALSE
+1005,NA,3,Buckley, Miss. Katherine,female,18.5,0,0,329944,7.2833,N,Q,FALSE,Buckley,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+1006,NA,1,Straus, Mrs. Isidor (Rosalie Ida Blun),female,63,1,0,PC 17483,221.7792,C55 C57,S,FALSE,Straus,2,Mrs,C,P,senior,medium,Mrs,FALSE,FALSE,FALSE
+1007,NA,3,Chronopoulos, Mr. Demetrios,male,18,1,0,2680,14.4542,N,C,FALSE,Chronopoulos,2,Mr,N,N,young,medium,Mr,FALSE,FALSE,FALSE
+1008,NA,3,Thomas, Mr. John,male,NA,0,0,2681,6.4375,N,C,FALSE,Thomas,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1009,NA,3,Sandstrom, Miss. Beatrice Irene,female,1,1,1,PP 9549,16.7,G6,S,FALSE,Sandstrom,3,Miss,G,P,young,medium,Miss,FALSE,FALSE,FALSE
+1010,NA,1,Beattie, Mr. Thomson,male,36,0,0,13050,75.2417,C6,C,FALSE,Beattie,1,Mr,C,N,adult,single,Mr,FALSE,FALSE,FALSE
+1011,NA,2,Chapman, Mrs. John Henry (Sara Elizabeth Lawry),female,29,1,0,SC/AH 29037,26,N,S,FALSE,Chapman,2,Mrs,N,S,adult,medium,Mrs,FALSE,FALSE,FALSE
+1012,NA,2,Watt, Miss. Bertha J,female,12,0,0,C.A. 33595,15.75,N,S,FALSE,Watt,1,Miss,N,C,young,single,Miss,FALSE,FALSE,FALSE
+1013,NA,3,Kiernan, Mr. John,male,NA,1,0,367227,7.75,N,Q,FALSE,Kiernan,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,TRUE
+1014,NA,1,Schabert, Mrs. Paul (Emma Mock),female,35,1,0,13236,57.75,C28,C,FALSE,Schabert,2,Mrs,C,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+1015,NA,3,Carver, Mr. Alfred John,male,28,0,0,392095,7.25,N,S,FALSE,Carver,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1016,NA,3,Kennedy, Mr. John,male,NA,0,0,368783,7.75,N,Q,FALSE,Kennedy,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1017,NA,3,Cribb, Miss. Laura Alice,female,17,0,1,371362,16.1,N,S,FALSE,Cribb,2,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+1018,NA,3,Brobeck, Mr. Karl Rudolf,male,22,0,0,350045,7.7958,N,S,FALSE,Brobeck,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1019,NA,3,McCoy, Miss. Alicia,female,NA,2,0,367226,23.25,N,Q,FALSE,McCoy,3,Miss,N,N,young,medium,Miss,FALSE,FALSE,TRUE
+1020,NA,2,Bowenur, Mr. Solomon,male,42,0,0,211535,13,N,S,FALSE,Bowenur,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1021,NA,3,Petersen, Mr. Marius,male,24,0,0,342441,8.05,N,S,FALSE,Petersen,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1022,NA,3,Spinner, Mr. Henry John,male,32,0,0,STON/OQ. 369943,8.05,N,S,FALSE,Spinner,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+1023,NA,1,Gracie, Col. Archibald IV,male,53,0,0,113780,28.5,C51,C,FALSE,Gracie,1,Col,C,N,adult,single,Other,FALSE,FALSE,FALSE
+1024,NA,3,Lefebre, Mrs. Frank (Frances),female,NA,0,4,4133,25.4667,N,S,FALSE,Lefebre,5,Mrs,N,N,adult,large,Mrs,FALSE,FALSE,TRUE
+1025,NA,3,Thomas, Mr. Charles P,male,NA,1,0,2621,6.4375,N,C,FALSE,Thomas,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,TRUE
+1026,NA,3,Dintcheff, Mr. Valtcho,male,43,0,0,349226,7.8958,N,S,FALSE,Dintcheff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1027,NA,3,Carlsson, Mr. Carl Robert,male,24,0,0,350409,7.8542,N,S,FALSE,Carlsson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1028,NA,3,Zakarian, Mr. Mapriededer,male,26.5,0,0,2656,7.225,N,C,FALSE,Zakarian,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1029,NA,2,Schmidt, Mr. August,male,26,0,0,248659,13,N,S,FALSE,Schmidt,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1030,NA,3,Drapkin, Miss. Jennie,female,23,0,0,SOTON/OQ 392083,8.05,N,S,FALSE,Drapkin,1,Miss,N,S,adult,single,Miss,FALSE,FALSE,FALSE
+1031,NA,3,Goodwin, Mr. Charles Frederick,male,40,1,6,CA 2144,46.9,N,S,FALSE,Goodwin,8,Mr,N,C,adult,large,Mr,FALSE,FALSE,FALSE
+1032,NA,3,Goodwin, Miss. Jessie Allis,female,10,5,2,CA 2144,46.9,N,S,FALSE,Goodwin,8,Miss,N,C,young,large,Miss,FALSE,FALSE,FALSE
+1033,NA,1,Daniels, Miss. Sarah,female,33,0,0,113781,151.55,N,S,FALSE,Daniels,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+1034,NA,1,Ryerson, Mr. Arthur Larned,male,61,1,3,PC 17608,262.375,B57 B59 B63 B66,C,FALSE,Ryerson,5,Mr,B,P,senior,large,Mr,FALSE,FALSE,FALSE
+1035,NA,2,Beauchamp, Mr. Henry James,male,28,0,0,244358,26,N,S,FALSE,Beauchamp,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1036,NA,1,Lindeberg-Lind, Mr. Erik Gustaf (Mr Edward Lingrey")",male,42,0,0,17475,26.55,N,S,FALSE,Lindeberg-Lind,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1037,NA,3,Vander Planke, Mr. Julius,male,31,3,0,345763,18,N,S,FALSE,Vander Planke,4,Mr,N,N,adult,large,Mr,FALSE,FALSE,FALSE
+1038,NA,1,Hilliard, Mr. Herbert Henry,male,NA,0,0,17463,51.8625,E46,S,FALSE,Hilliard,1,Mr,E,N,adult,single,Mr,FALSE,FALSE,TRUE
+1039,NA,3,Davies, Mr. Evan,male,22,0,0,SC/A4 23568,8.05,N,S,FALSE,Davies,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+1040,NA,1,Crafton, Mr. John Bertram,male,NA,0,0,113791,26.55,N,S,FALSE,Crafton,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1041,NA,2,Lahtinen, Rev. William,male,30,1,1,250651,26,N,S,FALSE,Lahtinen,3,Rev,N,N,adult,medium,Other,FALSE,FALSE,FALSE
+1042,NA,1,Earnshaw, Mrs. Boulton (Olive Potter),female,23,0,1,11767,83.1583,C54,C,FALSE,Earnshaw,2,Mrs,C,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+1043,NA,3,Matinoff, Mr. Nicola,male,NA,0,0,349255,7.8958,N,C,FALSE,Matinoff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1044,NA,3,Storey, Mr. Thomas,male,60.5,0,0,3701,7.8875,N,S,FALSE,Storey,1,Mr,N,N,senior,single,Mr,FALSE,TRUE,FALSE
+1045,NA,3,Klasen, Mrs. (Hulda Kristina Eugenia Lofqvist),female,36,0,2,350405,12.1833,N,S,FALSE,Klasen,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+1046,NA,3,Asplund, Master. Filip Oscar,male,13,4,2,347077,31.3875,N,S,FALSE,Asplund,7,Master,N,N,young,large,Master,FALSE,FALSE,FALSE
+1047,NA,3,Duquemin, Mr. Joseph,male,24,0,0,S.O./P.P. 752,7.55,N,S,FALSE,Duquemin,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+1048,NA,1,Bird, Miss. Ellen,female,29,0,0,PC 17483,221.7792,C97,S,FALSE,Bird,1,Miss,C,P,adult,single,Miss,FALSE,FALSE,FALSE
+1049,NA,3,Lundin, Miss. Olga Elida,female,23,0,0,347469,7.8542,N,S,FALSE,Lundin,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+1050,NA,1,Borebank, Mr. John James,male,42,0,0,110489,26.55,D22,S,FALSE,Borebank,1,Mr,D,N,adult,single,Mr,FALSE,FALSE,FALSE
+1051,NA,3,Peacock, Mrs. Benjamin (Edith Nile),female,26,0,2,SOTON/O.Q. 3101315,13.775,N,S,FALSE,Peacock,3,Mrs,N,S,adult,medium,Mrs,FALSE,FALSE,FALSE
+1052,NA,3,Smyth, Miss. Julia,female,NA,0,0,335432,7.7333,N,Q,FALSE,Smyth,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+1053,NA,3,Touma, Master. Georges Youssef,male,7,1,1,2650,15.2458,N,C,FALSE,Touma,3,Master,N,N,young,medium,Master,FALSE,FALSE,FALSE
+1054,NA,2,Wright, Miss. Marion,female,26,0,0,220844,13.5,N,S,FALSE,Wright,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+1055,NA,3,Pearce, Mr. Ernest,male,NA,0,0,343271,7,N,S,FALSE,Pearce,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1056,NA,2,Peruschitz, Rev. Joseph Maria,male,41,0,0,237393,13,N,S,FALSE,Peruschitz,1,Rev,N,N,adult,single,Other,FALSE,FALSE,FALSE
+1057,NA,3,Kink-Heilmann, Mrs. Anton (Luise Heilmann),female,26,1,1,315153,22.025,N,S,FALSE,Kink-Heilmann,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+1058,NA,1,Brandeis, Mr. Emil,male,48,0,0,PC 17591,50.4958,B10,C,FALSE,Brandeis,1,Mr,B,P,adult,single,Mr,FALSE,FALSE,FALSE
+1059,NA,3,Ford, Mr. Edward Watson,male,18,2,2,W./C. 6608,34.375,N,S,FALSE,Ford,5,Mr,N,W,young,large,Mr,FALSE,FALSE,FALSE
+1060,NA,1,Cassebeer, Mrs. Henry Arthur Jr (Eleanor Genevieve Fosdick),female,NA,0,0,17770,27.7208,N,C,FALSE,Cassebeer,1,Mrs,N,N,adult,single,Mrs,FALSE,FALSE,TRUE
+1061,NA,3,Hellstrom, Miss. Hilda Maria,female,22,0,0,7548,8.9625,N,S,FALSE,Hellstrom,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+1062,NA,3,Lithman, Mr. Simon,male,NA,0,0,S.O./P.P. 251,7.55,N,S,FALSE,Lithman,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,TRUE
+1063,NA,3,Zakarian, Mr. Ortin,male,27,0,0,2670,7.225,N,C,FALSE,Zakarian,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1064,NA,3,Dyker, Mr. Adolf Fredrik,male,23,1,0,347072,13.9,N,S,FALSE,Dyker,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+1065,NA,3,Torfa, Mr. Assad,male,NA,0,0,2673,7.2292,N,C,FALSE,Torfa,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1066,NA,3,Asplund, Mr. Carl Oscar Vilhelm Gustafsson,male,40,1,5,347077,31.3875,N,S,FALSE,Asplund,7,Mr,N,N,adult,large,Mr,FALSE,FALSE,FALSE
+1067,NA,2,Brown, Miss. Edith Eileen,female,15,0,2,29750,39,N,S,FALSE,Brown,3,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+1068,NA,2,Sincock, Miss. Maude,female,20,0,0,C.A. 33112,36.75,N,S,FALSE,Sincock,1,Miss,N,C,young,single,Miss,FALSE,FALSE,FALSE
+1069,NA,1,Stengel, Mr. Charles Emil Henry,male,54,1,0,11778,55.4417,C116,C,FALSE,Stengel,2,Mr,C,N,adult,medium,Mr,FALSE,FALSE,FALSE
+1070,NA,2,Becker, Mrs. Allen Oliver (Nellie E Baumgardner),female,36,0,3,230136,39,F4,S,FALSE,Becker,4,Mrs,F,N,adult,large,Mrs,FALSE,FALSE,FALSE
+1071,NA,1,Compton, Mrs. Alexander Taylor (Mary Eliza Ingersoll),female,64,0,2,PC 17756,83.1583,E45,C,FALSE,Compton,3,Mrs,E,P,senior,medium,Mrs,FALSE,FALSE,FALSE
+1072,NA,2,McCrie, Mr. James Matthew,male,30,0,0,233478,13,N,S,FALSE,McCrie,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1073,NA,1,Compton, Mr. Alexander Taylor Jr,male,37,1,1,PC 17756,83.1583,E52,C,FALSE,Compton,3,Mr,E,P,adult,medium,Mr,FALSE,FALSE,FALSE
+1074,NA,1,Marvin, Mrs. Daniel Warner (Mary Graham Carmichael Farquarson),female,18,1,0,113773,53.1,D30,S,FALSE,Marvin,2,Mrs,D,N,young,medium,Mrs,FALSE,FALSE,FALSE
+1075,NA,3,Lane, Mr. Patrick,male,NA,0,0,7935,7.75,N,Q,FALSE,Lane,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1076,NA,1,Douglas, Mrs. Frederick Charles (Mary Helene Baxter),female,27,1,1,PC 17558,247.5208,B58 B60,C,FALSE,Douglas,3,Mrs,B,P,adult,medium,Mrs,FALSE,FALSE,FALSE
+1077,NA,2,Maybery, Mr. Frank Hubert,male,40,0,0,239059,16,N,S,FALSE,Maybery,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1078,NA,2,Phillips, Miss. Alice Frances Louisa,female,21,0,1,S.O./P.P. 2,21,N,S,FALSE,Phillips,2,Miss,N,S,adult,medium,Miss,FALSE,FALSE,FALSE
+1079,NA,3,Davies, Mr. Joseph,male,17,2,0,A/4 48873,8.05,N,S,FALSE,Davies,3,Mr,N,A,young,medium,Mr,FALSE,FALSE,FALSE
+1080,NA,3,Sage, Miss. Ada,female,NA,8,2,CA. 2343,69.55,N,S,FALSE,Sage,11,Miss,N,C,young,large,Miss,FALSE,FALSE,TRUE
+1081,NA,2,Veal, Mr. James,male,40,0,0,28221,13,N,S,FALSE,Veal,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1082,NA,2,Angle, Mr. William A,male,34,1,0,226875,26,N,S,FALSE,Angle,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+1083,NA,1,Salomon, Mr. Abraham L,male,NA,0,0,111163,26,N,S,FALSE,Salomon,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1084,NA,3,van Billiard, Master. Walter John,male,11.5,1,1,A/5. 851,14.5,N,S,FALSE,van Billiard,3,Master,N,A,young,medium,Master,FALSE,FALSE,FALSE
+1085,NA,2,Lingane, Mr. John,male,61,0,0,235509,12.35,N,Q,FALSE,Lingane,1,Mr,N,N,senior,single,Mr,FALSE,FALSE,FALSE
+1086,NA,2,Drew, Master. Marshall Brines,male,8,0,2,28220,32.5,N,S,FALSE,Drew,3,Master,N,N,young,medium,Master,FALSE,FALSE,FALSE
+1087,NA,3,Karlsson, Mr. Julius Konrad Eugen,male,33,0,0,347465,7.8542,N,S,FALSE,Karlsson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1088,NA,1,Spedden, Master. Robert Douglas,male,6,0,2,16966,134.5,E34,C,FALSE,Spedden,3,Master,E,N,young,medium,Master,FALSE,FALSE,FALSE
+1089,NA,3,Nilsson, Miss. Berta Olivia,female,18,0,0,347066,7.775,N,S,FALSE,Nilsson,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+1090,NA,2,Baimbrigge, Mr. Charles Robert,male,23,0,0,C.A. 31030,10.5,N,S,FALSE,Baimbrigge,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,FALSE
+1091,NA,3,Rasmussen, Mrs. (Lena Jacobsen Solvang),female,NA,0,0,65305,8.1125,N,S,FALSE,Rasmussen,1,Mrs,N,N,adult,single,Mrs,FALSE,FALSE,TRUE
+1092,NA,3,Murphy, Miss. Nora,female,NA,0,0,36568,15.5,N,Q,FALSE,Murphy,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+1093,NA,3,Danbom, Master. Gilbert Sigvard Emanuel,male,0.33,0,2,347080,14.4,N,S,FALSE,Danbom,3,Master,N,N,young,medium,Master,FALSE,FALSE,FALSE
+1094,NA,1,Astor, Col. John Jacob,male,47,1,0,PC 17757,227.525,C62 C64,C,FALSE,Astor,2,Col,C,P,adult,medium,Other,FALSE,FALSE,FALSE
+1095,NA,2,Quick, Miss. Winifred Vera,female,8,1,1,26360,26,N,S,FALSE,Quick,3,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+1096,NA,2,Andrew, Mr. Frank Thomas,male,25,0,0,C.A. 34050,10.5,N,S,FALSE,Andrew,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,FALSE
+1097,NA,1,Omont, Mr. Alfred Fernand,male,NA,0,0,F.C. 12998,25.7417,N,C,FALSE,Omont,1,Mr,N,F,adult,single,Mr,FALSE,FALSE,TRUE
+1098,NA,3,McGowan, Miss. Katherine,female,35,0,0,9232,7.75,N,Q,FALSE,McGowan,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+1099,NA,2,Collett, Mr. Sidney C Stuart,male,24,0,0,28034,10.5,N,S,FALSE,Collett,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1100,NA,1,Rosenbaum, Miss. Edith Louise,female,33,0,0,PC 17613,27.7208,A11,C,FALSE,Rosenbaum,1,Miss,A,P,adult,single,Miss,FALSE,FALSE,FALSE
+1101,NA,3,Delalic, Mr. Redjo,male,25,0,0,349250,7.8958,N,S,FALSE,Delalic,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1102,NA,3,Andersen, Mr. Albert Karvin,male,32,0,0,C 4001,22.525,N,S,FALSE,Andersen,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,FALSE
+1103,NA,3,Finoli, Mr. Luigi,male,NA,0,0,SOTON/O.Q. 3101308,7.05,N,S,FALSE,Finoli,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,TRUE
+1104,NA,2,Deacon, Mr. Percy William,male,17,0,0,S.O.C. 14879,73.5,N,S,FALSE,Deacon,1,Mr,N,S,young,single,Mr,FALSE,FALSE,FALSE
+1105,NA,2,Howard, Mrs. Benjamin (Ellen Truelove Arman),female,60,1,0,24065,26,N,S,FALSE,Howard,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+1106,NA,3,Andersson, Miss. Ida Augusta Margareta,female,38,4,2,347091,7.775,N,S,FALSE,Andersson,7,Miss,N,N,adult,large,Miss,FALSE,FALSE,FALSE
+1107,NA,1,Head, Mr. Christopher,male,42,0,0,113038,42.5,B11,S,FALSE,Head,1,Mr,B,N,adult,single,Mr,FALSE,FALSE,FALSE
+1108,NA,3,Mahon, Miss. Bridget Delia,female,NA,0,0,330924,7.8792,N,Q,FALSE,Mahon,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+1109,NA,1,Wick, Mr. George Dennick,male,57,1,1,36928,164.8667,N,S,FALSE,Wick,3,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+1110,NA,1,Widener, Mrs. George Dunton (Eleanor Elkins),female,50,1,1,113503,211.5,C80,C,FALSE,Widener,3,Mrs,C,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+1111,NA,3,Thomson, Mr. Alexander Morrison,male,NA,0,0,32302,8.05,N,S,FALSE,Thomson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1112,NA,2,Duran y More, Miss. Florentina,female,30,1,0,SC/PARIS 2148,13.8583,N,C,FALSE,Duran y More,2,Miss,N,S,adult,medium,Miss,FALSE,FALSE,FALSE
+1113,NA,3,Reynolds, Mr. Harold J,male,21,0,0,342684,8.05,N,S,FALSE,Reynolds,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1114,NA,2,Cook, Mrs. (Selena Rogers),female,22,0,0,W./C. 14266,10.5,F33,S,FALSE,Cook,1,Mrs,F,W,adult,single,Mrs,FALSE,FALSE,FALSE
+1115,NA,3,Karlsson, Mr. Einar Gervasius,male,21,0,0,350053,7.7958,N,S,FALSE,Karlsson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1116,NA,1,Candee, Mrs. Edward (Helen Churchill Hungerford),female,53,0,0,PC 17606,27.4458,N,C,FALSE,Candee,1,Mrs,N,P,adult,single,Mrs,FALSE,FALSE,FALSE
+1117,NA,3,Moubarek, Mrs. George (Omine Amenia" Alexander)",female,NA,0,2,2661,15.2458,N,C,FALSE,Moubarek,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,TRUE
+1118,NA,3,Asplund, Mr. Johan Charles,male,23,0,0,350054,7.7958,N,S,FALSE,Asplund,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1119,NA,3,McNeill, Miss. Bridget,female,NA,0,0,370368,7.75,N,Q,FALSE,McNeill,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+1120,NA,3,Everett, Mr. Thomas James,male,40.5,0,0,C.A. 6212,15.1,N,S,FALSE,Everett,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,FALSE
+1121,NA,2,Hocking, Mr. Samuel James Metcalfe,male,36,0,0,242963,13,N,S,FALSE,Hocking,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1122,NA,2,Sweet, Mr. George Frederick,male,14,0,0,220845,65,N,S,FALSE,Sweet,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+1123,NA,1,Willard, Miss. Constance,female,21,0,0,113795,26.55,N,S,FALSE,Willard,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+1124,NA,3,Wiklund, Mr. Karl Johan,male,21,1,0,3101266,6.4958,N,S,FALSE,Wiklund,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+1125,NA,3,Linehan, Mr. Michael,male,NA,0,0,330971,7.8792,N,Q,FALSE,Linehan,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1126,NA,1,Cumings, Mr. John Bradley,male,39,1,0,PC 17599,71.2833,C85,C,FALSE,Cumings,2,Mr,C,P,adult,medium,Mr,FALSE,FALSE,FALSE
+1127,NA,3,Vendel, Mr. Olof Edvin,male,20,0,0,350416,7.8542,N,S,FALSE,Vendel,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+1128,NA,1,Warren, Mr. Frank Manley,male,64,1,0,110813,75.25,D37,C,FALSE,Warren,2,Mr,D,N,senior,medium,Mr,FALSE,FALSE,FALSE
+1129,NA,3,Baccos, Mr. Raffull,male,20,0,0,2679,7.225,N,C,FALSE,Baccos,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+1130,NA,2,Hiltunen, Miss. Marta,female,18,1,1,250650,13,N,S,FALSE,Hiltunen,3,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+1131,NA,1,Douglas, Mrs. Walter Donald (Mahala Dutton),female,48,1,0,PC 17761,106.425,C86,C,FALSE,Douglas,2,Mrs,C,P,adult,medium,Mrs,FALSE,FALSE,FALSE
+1132,NA,1,Lindstrom, Mrs. Carl Johan (Sigrid Posse),female,55,0,0,112377,27.7208,N,C,FALSE,Lindstrom,1,Mrs,N,N,adult,single,Mrs,FALSE,FALSE,FALSE
+1133,NA,2,Christy, Mrs. (Alice Frances),female,45,0,2,237789,30,N,S,FALSE,Christy,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+1134,NA,1,Spedden, Mr. Frederic Oakley,male,45,1,1,16966,134.5,E34,C,FALSE,Spedden,3,Mr,E,N,adult,medium,Mr,FALSE,FALSE,FALSE
+1135,NA,3,Hyman, Mr. Abraham,male,NA,0,0,3470,7.8875,N,S,FALSE,Hyman,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1136,NA,3,Johnston, Master. William Arthur Willie"",male,NA,1,2,W./C. 6607,23.45,N,S,FALSE,Johnston,4,Master,N,W,young,large,Master,FALSE,FALSE,FALSE
+1137,NA,1,Kenyon, Mr. Frederick R,male,41,1,0,17464,51.8625,D21,S,FALSE,Kenyon,2,Mr,D,N,adult,medium,Mr,FALSE,FALSE,FALSE
+1138,NA,2,Karnes, Mrs. J Frank (Claire Bennett),female,22,0,0,F.C.C. 13534,21,N,S,FALSE,Karnes,1,Mrs,N,F,adult,single,Mrs,FALSE,FALSE,FALSE
+1139,NA,2,Drew, Mr. James Vivian,male,42,1,1,28220,32.5,N,S,FALSE,Drew,3,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+1140,NA,2,Hold, Mrs. Stephen (Annie Margaret Hill),female,29,1,0,26707,26,N,S,FALSE,Hold,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+1141,NA,3,Khalil, Mrs. Betros (Zahie Maria" Elias)",female,NA,1,0,2660,14.4542,N,C,FALSE,Khalil,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,TRUE
+1142,NA,2,West, Miss. Barbara J,female,0.92,1,2,C.A. 34651,27.75,N,S,FALSE,West,4,Miss,N,C,young,large,Miss,FALSE,FALSE,FALSE
+1143,NA,3,Abrahamsson, Mr. Abraham August Johannes,male,20,0,0,SOTON/O2 3101284,7.925,N,S,FALSE,Abrahamsson,1,Mr,N,S,young,single,Mr,FALSE,FALSE,FALSE
+1144,NA,1,Clark, Mr. Walter Miller,male,27,1,0,13508,136.7792,C89,C,FALSE,Clark,2,Mr,C,N,adult,medium,Mr,FALSE,FALSE,FALSE
+1145,NA,3,Salander, Mr. Karl Johan,male,24,0,0,7266,9.325,N,S,FALSE,Salander,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1146,NA,3,Wenzel, Mr. Linhart,male,32.5,0,0,345775,9.5,N,S,FALSE,Wenzel,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1147,NA,3,MacKay, Mr. George William,male,NA,0,0,C.A. 42795,7.55,N,S,FALSE,MacKay,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,TRUE
+1148,NA,3,Mahon, Mr. John,male,NA,0,0,AQ/4 3130,7.75,N,Q,FALSE,Mahon,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,TRUE
+1149,NA,3,Niklasson, Mr. Samuel,male,28,0,0,363611,8.05,N,S,FALSE,Niklasson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1150,NA,2,Bentham, Miss. Lilian W,female,19,0,0,28404,13,N,S,FALSE,Bentham,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+1151,NA,3,Midtsjo, Mr. Karl Albert,male,21,0,0,345501,7.775,N,S,FALSE,Midtsjo,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1152,NA,3,de Messemaeker, Mr. Guillaume Joseph,male,36.5,1,0,345572,17.4,N,S,FALSE,de Messemaeker,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+1153,NA,3,Nilsson, Mr. August Ferdinand,male,21,0,0,350410,7.8542,N,S,FALSE,Nilsson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1154,NA,2,Wells, Mrs. Arthur Henry (Addie" Dart Trevaskis)",female,29,0,2,29103,23,N,S,FALSE,Wells,3,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+1155,NA,3,Klasen, Miss. Gertrud Emilia,female,1,1,1,350405,12.1833,N,S,FALSE,Klasen,3,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+1156,NA,2,Portaluppi, Mr. Emilio Ilario Giuseppe,male,30,0,0,C.A. 34644,12.7375,N,C,FALSE,Portaluppi,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,FALSE
+1157,NA,3,Lyntakoff, Mr. Stanko,male,NA,0,0,349235,7.8958,N,S,FALSE,Lyntakoff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1158,NA,1,Chisholm, Mr. Roderick Robert Crispin,male,NA,0,0,112051,29.5,N,S,FALSE,Chisholm,1,Mr,N,N,adult,single,Mr,FALSE,TRUE,TRUE
+1159,NA,3,Warren, Mr. Charles William,male,NA,0,0,C.A. 49867,7.55,N,S,FALSE,Warren,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,TRUE
+1160,NA,3,Howard, Miss. May Elizabeth,female,NA,0,0,A. 2. 39186,8.05,N,S,FALSE,Howard,1,Miss,N,A,young,single,Miss,FALSE,FALSE,TRUE
+1161,NA,3,Pokrnic, Mr. Mate,male,17,0,0,315095,8.6625,N,S,FALSE,Pokrnic,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+1162,NA,1,McCaffry, Mr. Thomas Francis,male,46,0,0,13050,75.2417,C6,C,FALSE,McCaffry,1,Mr,C,N,adult,single,Mr,FALSE,FALSE,FALSE
+1163,NA,3,Fox, Mr. Patrick,male,NA,0,0,368573,7.75,N,Q,FALSE,Fox,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1164,NA,1,Clark, Mrs. Walter Miller (Virginia McDowell),female,26,1,0,13508,136.7792,C89,C,FALSE,Clark,2,Mrs,C,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+1165,NA,3,Lennon, Miss. Mary,female,NA,1,0,370371,15.5,N,Q,FALSE,Lennon,2,Miss,N,N,young,medium,Miss,FALSE,FALSE,TRUE
+1166,NA,3,Saade, Mr. Jean Nassr,male,NA,0,0,2676,7.225,N,C,FALSE,Saade,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1167,NA,2,Bryhl, Miss. Dagmar Jenny Ingeborg ,female,20,1,0,236853,26,N,S,FALSE,Bryhl,2,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+1168,NA,2,Parker, Mr. Clifford Richard,male,28,0,0,SC 14888,10.5,N,S,FALSE,Parker,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+1169,NA,2,Faunthorpe, Mr. Harry,male,40,1,0,2926,26,N,S,FALSE,Faunthorpe,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+1170,NA,2,Ware, Mr. John James,male,30,1,0,CA 31352,21,N,S,FALSE,Ware,2,Mr,N,C,adult,medium,Mr,FALSE,FALSE,FALSE
+1171,NA,2,Oxenham, Mr. Percy Thomas,male,22,0,0,W./C. 14260,10.5,N,S,FALSE,Oxenham,1,Mr,N,W,adult,single,Mr,FALSE,FALSE,FALSE
+1172,NA,3,Oreskovic, Miss. Jelka,female,23,0,0,315085,8.6625,N,S,FALSE,Oreskovic,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+1173,NA,3,Peacock, Master. Alfred Edward,male,0.75,1,1,SOTON/O.Q. 3101315,13.775,N,S,FALSE,Peacock,3,Master,N,S,young,medium,Master,FALSE,FALSE,FALSE
+1174,NA,3,Fleming, Miss. Honora,female,NA,0,0,364859,7.75,N,Q,FALSE,Fleming,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+1175,NA,3,Touma, Miss. Maria Youssef,female,9,1,1,2650,15.2458,N,C,FALSE,Touma,3,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+1176,NA,3,Rosblom, Miss. Salli Helena,female,2,1,1,370129,20.2125,N,S,FALSE,Rosblom,3,Miss,N,N,young,medium,Miss,FALSE,FALSE,FALSE
+1177,NA,3,Dennis, Mr. William,male,36,0,0,A/5 21175,7.25,N,S,FALSE,Dennis,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,FALSE
+1178,NA,3,Franklin, Mr. Charles (Charles Fardon),male,NA,0,0,SOTON/O.Q. 3101314,7.25,N,S,FALSE,Franklin,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,TRUE
+1179,NA,1,Snyder, Mr. John Pillsbury,male,24,1,0,21228,82.2667,B45,S,FALSE,Snyder,2,Mr,B,N,adult,medium,Mr,FALSE,FALSE,FALSE
+1180,NA,3,Mardirosian, Mr. Sarkis,male,NA,0,0,2655,7.2292,F E46,C,FALSE,Mardirosian,1,Mr,F,N,adult,single,Mr,FALSE,FALSE,TRUE
+1181,NA,3,Ford, Mr. Arthur,male,NA,0,0,A/5 1478,8.05,N,S,FALSE,Ford,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,TRUE
+1182,NA,1,Rheims, Mr. George Alexander Lucien,male,NA,0,0,PC 17607,39.6,N,S,FALSE,Rheims,1,Mr,N,P,adult,single,Mr,FALSE,FALSE,TRUE
+1183,NA,3,Daly, Miss. Margaret Marcella Maggie"",female,30,0,0,382650,6.95,N,Q,FALSE,Daly,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+1184,NA,3,Nasr, Mr. Mustafa,male,NA,0,0,2652,7.2292,N,C,FALSE,Nasr,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1185,NA,1,Dodge, Dr. Washington,male,53,1,1,33638,81.8583,A34,S,FALSE,Dodge,3,Dr,A,N,adult,medium,Other,FALSE,FALSE,FALSE
+1186,NA,3,Wittevrongel, Mr. Camille,male,36,0,0,345771,9.5,N,S,FALSE,Wittevrongel,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1187,NA,3,Angheloff, Mr. Minko,male,26,0,0,349202,7.8958,N,S,FALSE,Angheloff,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1188,NA,2,Laroche, Miss. Louise,female,1,1,2,SC/Paris 2123,41.5792,N,C,FALSE,Laroche,4,Miss,N,S,young,large,Miss,FALSE,FALSE,FALSE
+1189,NA,3,Samaan, Mr. Hanna,male,NA,2,0,2662,21.6792,N,C,FALSE,Samaan,3,Mr,N,N,adult,medium,Mr,FALSE,FALSE,TRUE
+1190,NA,1,Loring, Mr. Joseph Holland,male,30,0,0,113801,45.5,N,S,FALSE,Loring,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1191,NA,3,Johansson, Mr. Nils,male,29,0,0,347467,7.8542,N,S,FALSE,Johansson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1192,NA,3,Olsson, Mr. Oscar Wilhelm,male,32,0,0,347079,7.775,N,S,FALSE,Olsson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1193,NA,2,Malachard, Mr. Noel,male,NA,0,0,237735,15.0458,D,C,FALSE,Malachard,1,Mr,D,N,adult,single,Mr,FALSE,FALSE,TRUE
+1194,NA,2,Phillips, Mr. Escott Robert,male,43,0,1,S.O./P.P. 2,21,N,S,FALSE,Phillips,2,Mr,N,S,adult,medium,Mr,FALSE,FALSE,FALSE
+1195,NA,3,Pokrnic, Mr. Tome,male,24,0,0,315092,8.6625,N,S,FALSE,Pokrnic,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1196,NA,3,McCarthy, Miss. Catherine Katie"",female,NA,0,0,383123,7.75,N,Q,FALSE,McCarthy,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+1197,NA,1,Crosby, Mrs. Edward Gifford (Catherine Elizabeth Halstead),female,64,1,1,112901,26.55,B26,S,FALSE,Crosby,3,Mrs,B,N,senior,medium,Mrs,FALSE,FALSE,FALSE
+1198,NA,1,Allison, Mr. Hudson Joshua Creighton,male,30,1,2,113781,151.55,C22 C26,S,FALSE,Allison,4,Mr,C,N,adult,large,Mr,FALSE,FALSE,FALSE
+1199,NA,3,Aks, Master. Philip Frank,male,0.83,0,1,392091,9.35,N,S,FALSE,Aks,2,Master,N,N,young,medium,Master,FALSE,FALSE,FALSE
+1200,NA,1,Hays, Mr. Charles Melville,male,55,1,1,12749,93.5,B69,S,FALSE,Hays,3,Mr,B,N,adult,medium,Mr,FALSE,FALSE,FALSE
+1201,NA,3,Hansen, Mrs. Claus Peter (Jennie L Howard),female,45,1,0,350026,14.1083,N,S,FALSE,Hansen,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+1202,NA,3,Cacic, Mr. Jego Grga,male,18,0,0,315091,8.6625,N,S,FALSE,Cacic,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+1203,NA,3,Vartanian, Mr. David,male,22,0,0,2658,7.225,N,C,FALSE,Vartanian,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1204,NA,3,Sadowitz, Mr. Harry,male,NA,0,0,LP 1588,7.575,N,S,FALSE,Sadowitz,1,Mr,N,L,adult,single,Mr,FALSE,FALSE,TRUE
+1205,NA,3,Carr, Miss. Jeannie,female,37,0,0,368364,7.75,N,Q,FALSE,Carr,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+1206,NA,1,White, Mrs. John Stuart (Ella Holmes),female,55,0,0,PC 17760,135.6333,C32,C,FALSE,White,1,Mrs,C,P,adult,single,Mrs,FALSE,FALSE,FALSE
+1207,NA,3,Hagardon, Miss. Kate,female,17,0,0,AQ/3. 30631,7.7333,N,Q,FALSE,Hagardon,1,Miss,N,A,young,single,Miss,FALSE,FALSE,FALSE
+1208,NA,1,Spencer, Mr. William Augustus,male,57,1,0,PC 17569,146.5208,B78,C,FALSE,Spencer,2,Mr,B,P,adult,medium,Mr,FALSE,FALSE,FALSE
+1209,NA,2,Rogers, Mr. Reginald Harry,male,19,0,0,28004,10.5,N,S,FALSE,Rogers,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+1210,NA,3,Jonsson, Mr. Nils Hilding,male,27,0,0,350408,7.8542,N,S,FALSE,Jonsson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1211,NA,2,Jefferys, Mr. Ernest Wilfred,male,22,2,0,C.A. 31029,31.5,N,S,FALSE,Jefferys,3,Mr,N,C,adult,medium,Mr,FALSE,FALSE,FALSE
+1212,NA,3,Andersson, Mr. Johan Samuel,male,26,0,0,347075,7.775,N,S,FALSE,Andersson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1213,NA,3,Krekorian, Mr. Neshan,male,25,0,0,2654,7.2292,F E57,C,FALSE,Krekorian,1,Mr,F,N,adult,single,Mr,FALSE,FALSE,FALSE
+1214,NA,2,Nesson, Mr. Israel,male,26,0,0,244368,13,F2,S,FALSE,Nesson,1,Mr,F,N,adult,single,Mr,FALSE,FALSE,FALSE
+1215,NA,1,Rowe, Mr. Alfred G,male,33,0,0,113790,26.55,N,S,FALSE,Rowe,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1216,NA,1,Kreuchen, Miss. Emilie,female,39,0,0,24160,211.3375,N,S,FALSE,Kreuchen,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+1217,NA,3,Assam, Mr. Ali,male,23,0,0,SOTON/O.Q. 3101309,7.05,N,S,FALSE,Assam,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+1218,NA,2,Becker, Miss. Ruth Elizabeth,female,12,2,1,230136,39,F4,S,FALSE,Becker,4,Miss,F,N,young,large,Miss,FALSE,FALSE,FALSE
+1219,NA,1,Rosenshine, Mr. George (Mr George Thorne")",male,46,0,0,PC 17585,79.2,N,C,FALSE,Rosenshine,1,Mr,N,P,adult,single,Mr,FALSE,FALSE,FALSE
+1220,NA,2,Clarke, Mr. Charles Valentine,male,29,1,0,2003,26,N,S,FALSE,Clarke,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+1221,NA,2,Enander, Mr. Ingvar,male,21,0,0,236854,13,N,S,FALSE,Enander,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1222,NA,2,Davies, Mrs. John Morgan (Elizabeth Agnes Mary White) ,female,48,0,2,C.A. 33112,36.75,N,S,FALSE,Davies,3,Mrs,N,C,adult,medium,Mrs,FALSE,FALSE,FALSE
+1223,NA,1,Dulles, Mr. William Crothers,male,39,0,0,PC 17580,29.7,A18,C,FALSE,Dulles,1,Mr,A,P,adult,single,Mr,FALSE,FALSE,FALSE
+1224,NA,3,Thomas, Mr. Tannous,male,NA,0,0,2684,7.225,N,C,FALSE,Thomas,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1225,NA,3,Nakid, Mrs. Said (Waika Mary" Mowad)",female,19,1,1,2653,15.7417,N,C,FALSE,Nakid,3,Mrs,N,N,young,medium,Mrs,FALSE,FALSE,FALSE
+1226,NA,3,Cor, Mr. Ivan,male,27,0,0,349229,7.8958,N,S,FALSE,Cor,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1227,NA,1,Maguire, Mr. John Edward,male,30,0,0,110469,26,C106,S,FALSE,Maguire,1,Mr,C,N,adult,single,Mr,FALSE,FALSE,FALSE
+1228,NA,2,de Brito, Mr. Jose Joaquim,male,32,0,0,244360,13,N,S,FALSE,de Brito,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1229,NA,3,Elias, Mr. Joseph,male,39,0,2,2675,7.2292,N,C,FALSE,Elias,3,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+1230,NA,2,Denbury, Mr. Herbert,male,25,0,0,C.A. 31029,31.5,N,S,FALSE,Denbury,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,FALSE
+1231,NA,3,Betros, Master. Seman,male,NA,0,0,2622,7.2292,N,C,FALSE,Betros,1,Master,N,N,young,single,Master,FALSE,FALSE,FALSE
+1232,NA,2,Fillbrook, Mr. Joseph Charles,male,18,0,0,C.A. 15185,10.5,N,S,FALSE,Fillbrook,1,Mr,N,C,young,single,Mr,FALSE,FALSE,FALSE
+1233,NA,3,Lundstrom, Mr. Thure Edvin,male,32,0,0,350403,7.5792,N,S,FALSE,Lundstrom,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1234,NA,3,Sage, Mr. John George,male,NA,1,9,CA. 2343,69.55,N,S,FALSE,Sage,11,Mr,N,C,adult,large,Mr,FALSE,FALSE,TRUE
+1235,NA,1,Cardeza, Mrs. James Warburton Martinez (Charlotte Wardle Drake),female,58,0,1,PC 17755,512.3292,B51 B53 B55,C,FALSE,Cardeza,2,Mrs,B,P,adult,medium,Mrs,FALSE,FALSE,FALSE
+1236,NA,3,van Billiard, Master. James William,male,NA,1,1,A/5. 851,14.5,N,S,FALSE,van Billiard,3,Master,N,A,young,medium,Master,FALSE,FALSE,FALSE
+1237,NA,3,Abelseth, Miss. Karen Marie,female,16,0,0,348125,7.65,N,S,FALSE,Abelseth,1,Miss,N,N,young,single,Miss,FALSE,FALSE,FALSE
+1238,NA,2,Botsford, Mr. William Hull,male,26,0,0,237670,13,N,S,FALSE,Botsford,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1239,NA,3,Whabee, Mrs. George Joseph (Shawneene Abi-Saab),female,38,0,0,2688,7.2292,N,C,FALSE,Whabee,1,Mrs,N,N,adult,single,Mrs,FALSE,FALSE,FALSE
+1240,NA,2,Giles, Mr. Ralph,male,24,0,0,248726,13.5,N,S,FALSE,Giles,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1241,NA,2,Walcroft, Miss. Nellie,female,31,0,0,F.C.C. 13528,21,N,S,FALSE,Walcroft,1,Miss,N,F,adult,single,Miss,FALSE,FALSE,FALSE
+1242,NA,1,Greenfield, Mrs. Leo David (Blanche Strouse),female,45,0,1,PC 17759,63.3583,D10 D12,C,FALSE,Greenfield,2,Mrs,D,P,adult,medium,Mrs,FALSE,FALSE,FALSE
+1243,NA,2,Stokes, Mr. Philip Joseph,male,25,0,0,F.C.C. 13540,10.5,N,S,FALSE,Stokes,1,Mr,N,F,adult,single,Mr,FALSE,FALSE,FALSE
+1244,NA,2,Dibden, Mr. William,male,18,0,0,S.O.C. 14879,73.5,N,S,FALSE,Dibden,1,Mr,N,S,young,single,Mr,FALSE,FALSE,FALSE
+1245,NA,2,Herman, Mr. Samuel,male,49,1,2,220845,65,N,S,FALSE,Herman,4,Mr,N,N,adult,large,Mr,FALSE,FALSE,FALSE
+1246,NA,3,Dean, Miss. Elizabeth Gladys Millvina"",female,0.17,1,2,C.A. 2315,20.575,N,S,FALSE,Dean,4,Miss,N,C,young,large,Miss,FALSE,FALSE,FALSE
+1247,NA,1,Julian, Mr. Henry Forbes,male,50,0,0,113044,26,E60,S,FALSE,Julian,1,Mr,E,N,adult,single,Mr,FALSE,FALSE,FALSE
+1248,NA,1,Brown, Mrs. John Murray (Caroline Lane Lamson),female,59,2,0,11769,51.4792,C101,S,FALSE,Brown,3,Mrs,C,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+1249,NA,3,Lockyer, Mr. Edward,male,NA,0,0,1222,7.8792,N,S,FALSE,Lockyer,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1250,NA,3,O'Keefe, Mr. Patrick,male,NA,0,0,368402,7.75,N,Q,FALSE,O'Keefe,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1251,NA,3,Lindell, Mrs. Edvard Bengtsson (Elin Gerda Persson),female,30,1,0,349910,15.55,N,S,FALSE,Lindell,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+1252,NA,3,Sage, Master. William Henry,male,14.5,8,2,CA. 2343,69.55,N,S,FALSE,Sage,11,Master,N,C,young,large,Master,FALSE,FALSE,FALSE
+1253,NA,2,Mallet, Mrs. Albert (Antoinette Magnin),female,24,1,1,S.C./PARIS 2079,37.0042,N,C,FALSE,Mallet,3,Mrs,N,S,adult,medium,Mrs,FALSE,FALSE,FALSE
+1254,NA,2,Ware, Mrs. John James (Florence Louise Long),female,31,0,0,CA 31352,21,N,S,FALSE,Ware,1,Mrs,N,C,adult,single,Mrs,FALSE,FALSE,FALSE
+1255,NA,3,Strilic, Mr. Ivan,male,27,0,0,315083,8.6625,N,S,FALSE,Strilic,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1256,NA,1,Harder, Mrs. George Achilles (Dorothy Annan),female,25,1,0,11765,55.4417,E50,C,FALSE,Harder,2,Mrs,E,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+1257,NA,3,Sage, Mrs. John (Annie Bullen),female,NA,1,9,CA. 2343,69.55,N,S,FALSE,Sage,11,Mrs,N,C,adult,large,Mrs,FALSE,FALSE,TRUE
+1258,NA,3,Caram, Mr. Joseph,male,NA,1,0,2689,14.4583,N,C,FALSE,Caram,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,TRUE
+1259,NA,3,Riihivouri, Miss. Susanna Juhantytar Sanni"",female,22,0,0,3101295,39.6875,N,S,FALSE,Riihivouri,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+1260,NA,1,Gibson, Mrs. Leonard (Pauline C Boeson),female,45,0,1,112378,59.4,N,C,FALSE,Gibson,2,Mrs,N,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+1261,NA,2,Pallas y Castello, Mr. Emilio,male,29,0,0,SC/PARIS 2147,13.8583,N,C,FALSE,Pallas y Castello,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+1262,NA,2,Giles, Mr. Edgar,male,21,1,0,28133,11.5,N,S,FALSE,Giles,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+1263,NA,1,Wilson, Miss. Helen Alice,female,31,0,0,16966,134.5,E39 E41,C,FALSE,Wilson,1,Miss,E,N,adult,single,Miss,FALSE,FALSE,FALSE
+1264,NA,1,Ismay, Mr. Joseph Bruce,male,49,0,0,112058,83.25,B52 B54 B56,S,FALSE,Ismay,1,Mr,B,N,adult,single,Mr,FALSE,TRUE,FALSE
+1265,NA,2,Harbeck, Mr. William H,male,44,0,0,248746,13,N,S,FALSE,Harbeck,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1266,NA,1,Dodge, Mrs. Washington (Ruth Vidaver),female,54,1,1,33638,81.8583,A34,S,FALSE,Dodge,3,Mrs,A,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+1267,NA,1,Bowen, Miss. Grace Scott,female,45,0,0,PC 17608,262.375,N,C,FALSE,Bowen,1,Miss,N,P,adult,single,Miss,FALSE,FALSE,FALSE
+1268,NA,3,Kink, Miss. Maria,female,22,2,0,315152,8.6625,N,S,FALSE,Kink,3,Miss,N,N,adult,medium,Miss,FALSE,FALSE,FALSE
+1269,NA,2,Cotterill, Mr. Henry Harry"",male,21,0,0,29107,11.5,N,S,FALSE,Cotterill,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1270,NA,1,Hipkins, Mr. William Edward,male,55,0,0,680,50,C39,S,FALSE,Hipkins,1,Mr,C,N,adult,single,Mr,FALSE,FALSE,FALSE
+1271,NA,3,Asplund, Master. Carl Edgar,male,5,4,2,347077,31.3875,N,S,FALSE,Asplund,7,Master,N,N,young,large,Master,FALSE,FALSE,FALSE
+1272,NA,3,O'Connor, Mr. Patrick,male,NA,0,0,366713,7.75,N,Q,FALSE,O'Connor,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1273,NA,3,Foley, Mr. Joseph,male,26,0,0,330910,7.8792,N,Q,FALSE,Foley,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1274,NA,3,Risien, Mrs. Samuel (Emma),female,NA,0,0,364498,14.5,N,S,FALSE,Risien,1,Mrs,N,N,adult,single,Mrs,FALSE,FALSE,TRUE
+1275,NA,3,McNamee, Mrs. Neal (Eileen O'Leary),female,19,1,0,376566,16.1,N,S,FALSE,McNamee,2,Mrs,N,N,young,medium,Mrs,FALSE,FALSE,FALSE
+1276,NA,2,Wheeler, Mr. Edwin Frederick"",male,NA,0,0,SC/PARIS 2159,12.875,N,S,FALSE,Wheeler,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,TRUE
+1277,NA,2,Herman, Miss. Kate,female,24,1,2,220845,65,N,S,FALSE,Herman,4,Miss,N,N,adult,large,Miss,FALSE,FALSE,FALSE
+1278,NA,3,Aronsson, Mr. Ernst Axel Algot,male,24,0,0,349911,7.775,N,S,FALSE,Aronsson,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1279,NA,2,Ashby, Mr. John,male,57,0,0,244346,13,N,S,FALSE,Ashby,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1280,NA,3,Canavan, Mr. Patrick,male,21,0,0,364858,7.75,N,Q,FALSE,Canavan,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1281,NA,3,Palsson, Master. Paul Folke,male,6,3,1,349909,21.075,N,S,FALSE,Palsson,5,Master,N,N,young,large,Master,FALSE,FALSE,FALSE
+1282,NA,1,Payne, Mr. Vivian Ponsonby,male,23,0,0,12749,93.5,B24,S,FALSE,Payne,1,Mr,B,N,adult,single,Mr,FALSE,FALSE,FALSE
+1283,NA,1,Lines, Mrs. Ernest H (Elizabeth Lindsey James),female,51,0,1,PC 17592,39.4,D28,S,FALSE,Lines,2,Mrs,D,P,adult,medium,Mrs,FALSE,FALSE,FALSE
+1284,NA,3,Abbott, Master. Eugene Joseph,male,13,0,2,C.A. 2673,20.25,N,S,FALSE,Abbott,3,Master,N,C,young,medium,Master,FALSE,FALSE,FALSE
+1285,NA,2,Gilbert, Mr. William,male,47,0,0,C.A. 30769,10.5,N,S,FALSE,Gilbert,1,Mr,N,C,adult,single,Mr,FALSE,FALSE,FALSE
+1286,NA,3,Kink-Heilmann, Mr. Anton,male,29,3,1,315153,22.025,N,S,FALSE,Kink-Heilmann,5,Mr,N,N,adult,large,Mr,FALSE,FALSE,FALSE
+1287,NA,1,Smith, Mrs. Lucien Philip (Mary Eloise Hughes),female,18,1,0,13695,60,C31,S,FALSE,Smith,2,Mrs,C,N,young,medium,Mrs,FALSE,FALSE,FALSE
+1288,NA,3,Colbert, Mr. Patrick,male,24,0,0,371109,7.25,N,Q,FALSE,Colbert,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1289,NA,1,Frolicher-Stehli, Mrs. Maxmillian (Margaretha Emerentia Stehli),female,48,1,1,13567,79.2,B41,C,FALSE,Frolicher-Stehli,3,Mrs,B,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+1290,NA,3,Larsson-Rondberg, Mr. Edvard A,male,22,0,0,347065,7.775,N,S,FALSE,Larsson-Rondberg,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1291,NA,3,Conlon, Mr. Thomas Henry,male,31,0,0,21332,7.7333,N,Q,FALSE,Conlon,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,FALSE
+1292,NA,1,Bonnell, Miss. Caroline,female,30,0,0,36928,164.8667,C7,S,FALSE,Bonnell,1,Miss,C,N,adult,single,Miss,FALSE,FALSE,FALSE
+1293,NA,2,Gale, Mr. Harry,male,38,1,0,28664,21,N,S,FALSE,Gale,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+1294,NA,1,Gibson, Miss. Dorothy Winifred,female,22,0,1,112378,59.4,N,C,FALSE,Gibson,2,Miss,N,N,adult,medium,Miss,FALSE,FALSE,FALSE
+1295,NA,1,Carrau, Mr. Jose Pedro,male,17,0,0,113059,47.1,N,S,FALSE,Carrau,1,Mr,N,N,young,single,Mr,FALSE,FALSE,FALSE
+1296,NA,1,Frauenthal, Mr. Isaac Gerald,male,43,1,0,17765,27.7208,D40,C,FALSE,Frauenthal,2,Mr,D,N,adult,medium,Mr,FALSE,FALSE,FALSE
+1297,NA,2,Nourney, Mr. Alfred (Baron von Drachstedt")",male,20,0,0,SC/PARIS 2166,13.8625,D38,C,FALSE,Nourney,1,Mr,D,S,young,single,Mr,FALSE,FALSE,FALSE
+1298,NA,2,Ware, Mr. William Jeffery,male,23,1,0,28666,10.5,N,S,FALSE,Ware,2,Mr,N,N,adult,medium,Mr,FALSE,FALSE,FALSE
+1299,NA,1,Widener, Mr. George Dunton,male,50,1,1,113503,211.5,C80,C,FALSE,Widener,3,Mr,C,N,adult,medium,Mr,FALSE,FALSE,FALSE
+1300,NA,3,Riordan, Miss. Johanna Hannah"",female,NA,0,0,334915,7.7208,N,Q,FALSE,Riordan,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+1301,NA,3,Peacock, Miss. Treasteall,female,3,1,1,SOTON/O.Q. 3101315,13.775,N,S,FALSE,Peacock,3,Miss,N,S,young,medium,Miss,FALSE,FALSE,FALSE
+1302,NA,3,Naughton, Miss. Hannah,female,NA,0,0,365237,7.75,N,Q,FALSE,Naughton,1,Miss,N,N,young,single,Miss,FALSE,FALSE,TRUE
+1303,NA,1,Minahan, Mrs. William Edward (Lillian E Thorpe),female,37,1,0,19928,90,C78,Q,FALSE,Minahan,2,Mrs,C,N,adult,medium,Mrs,FALSE,FALSE,FALSE
+1304,NA,3,Henriksson, Miss. Jenny Lovisa,female,28,0,0,347086,7.775,N,S,FALSE,Henriksson,1,Miss,N,N,adult,single,Miss,FALSE,FALSE,FALSE
+1305,NA,3,Spector, Mr. Woolf,male,NA,0,0,A.5. 3236,8.05,N,S,FALSE,Spector,1,Mr,N,A,adult,single,Mr,FALSE,FALSE,TRUE
+1306,NA,1,Oliva y Ocana, Dona. Fermina,female,39,0,0,PC 17758,108.9,C105,C,FALSE,Oliva y Ocana,1,Dona,C,P,adult,single,Other,FALSE,FALSE,FALSE
+1307,NA,3,Saether, Mr. Simon Sivertsen,male,38.5,0,0,SOTON/O.Q. 3101262,7.25,N,S,FALSE,Saether,1,Mr,N,S,adult,single,Mr,FALSE,FALSE,FALSE
+1308,NA,3,Ware, Mr. Frederick,male,NA,0,0,359309,8.05,N,S,FALSE,Ware,1,Mr,N,N,adult,single,Mr,FALSE,FALSE,TRUE
+1309,NA,3,Peter, Master. Michael J,male,NA,1,1,2668,22.3583,N,C,FALSE,Peter,3,Master,N,N,young,medium,Master,FALSE,FALSE,FALSE
